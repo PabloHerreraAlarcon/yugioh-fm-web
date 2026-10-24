@@ -39,7 +39,7 @@ export async function prepareNativeMods(progress=()=>{}) {
    const res=await fetch(url);const ct=res.headers.get('content-type')||'';
    if(!res.ok||ct.includes('text/html'))throw Error('No se pudo cargar el archivo: '+f.folder+'/'+f.path);
    const bytes=new Uint8Array(await res.arrayBuffer());
-   if(bytes.length === 0) throw Error('Archivo de mod vacío: '+f.path);
+   if(bytes.length === 0) throw Error('Archivo de mod vacio: '+f.path);
    files.push({path:'/mods/'+f.folder+'/'+f.path,bytes});loaded+=bytes.length;progress(loaded,total);
   }
  }));
