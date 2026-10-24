@@ -7,11 +7,16 @@ cards.dat
 skins.dat
 settings.cfg
 
-# Imagenes de disco propietarias
-*.bin
+# Imagenes de disco de juego (ROM privada del usuario)
+/rom/
+yfm.bin
 *.iso
 *.cue
 *.chd
+
+# No ignorar recursos y texturas binarias de los mods
+!/mod-files/**
+!/assets/**
 
 # Temporales y caches
 *.tmp
