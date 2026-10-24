@@ -22,7 +22,28 @@ const info=document.createElement('div');info.className='reference-nav-info';inf
 const hero=$('.entry-invitation');$('.entry-kicker').innerHTML='<span aria-hidden="true">◆　◆　◆</span>';hero.querySelector('h2').innerHTML='Yu-Gi-Oh! <span>Forbidden Memories</span>';$('.entry-description').textContent='Juega directamente en tu navegador.';$('#btn-play-solo').innerHTML='Jugar ahora';$('#entry-online').innerHTML='Jugar online';$('#entry-online').onclick=()=>{select('online',true);$('#entry-online').setAttribute('aria-expanded','true')};$('#online-development-note').hidden=true;
 const section=$('.game-viewport-section');const helper=document.createElement('div');helper.className='reference-controller-tip';helper.innerHTML='<span aria-hidden="true">⌘</span><p><strong>Para usar el mando:</strong> cuando aparezca el juego, haz clic dentro de su imagen y pulsa cualquier botón del mando.</p>';const toolbar=$('.duel-toolbar');toolbar.before(helper);const status=document.createElement('div');status.className='reference-status';status.innerHTML='<span><i aria-hidden="true"></i> <span id="reference-status-text">Listo para jugar.</span></span>';toolbar.before(status);
 const full=$('#btn-fullscreen');toolbar.replaceChildren(full);const controls=document.createElement('button');controls.textContent='Controles';controls.onclick=()=>select('controls',true);const restart=document.createElement('button');restart.textContent='Reiniciar';restart.onclick=window.yfmRestartGame=()=>{if(confirm(window.yfmT?.('¿Reiniciar el juego? Se perderá el progreso que no hayas guardado.')||'¿Reiniciar el juego? Se perderá el progreso que no hayas guardado.'))location.reload()};toolbar.append(controls,restart);$('.ui-live').hidden=true;
-const disc=$('#btn-pick-custom-rom');disc.textContent='Seleccionar mi disco';disc.hidden=false;saves.prepend(disc);
+const disc=$('#btn-pick-custom-rom');
+if(disc){
+ disc.textContent='Seleccionar mi disco (.bin)';
+ disc.hidden=false;
+ const actions=$('#entry-actions')||$('.entry-actions');
+ if(actions){actions.prepend(disc);}else{saves.prepend(disc);}
+ $('#rom-file-input')?.addEventListener('change',e=>{
+  const f=e.target.files?.[0];
+  if(f){
+   disc.textContent='✓ ' + f.name + ' (' + Math.round(f.size/(1024*1024)) + ' MB)';
+   disc.style.background='#065f46';
+   disc.style.borderColor='#34d399';
+   disc.style.color='#ffffff';
+  }
+ });
+ $('#btn-play-solo')?.addEventListener('click',e=>{
+  if(!$('#rom-file-input')?.files?.[0]){
+   e.stopImmediatePropagation();
+   disc.click();
+  }
+ },true);
+}
 new MutationObserver(()=>{const loading=!$('#sync-modal').classList.contains('hidden');const active=$('#start-screen').classList.contains('hidden');$('#reference-status-text').textContent=loading?'Cargando el juego…':active?'Juego en ejecución.':'Listo para jugar.'}).observe($('#sync-modal'),{attributes:true,attributeFilter:['class']});
 const aspectControl=$('#widescreen-toggle');const updateFit=()=>{$('#screen-container').style.setProperty('--player-aspect',aspectControl.checked?'16/9':'4/3')};aspectControl.addEventListener('change',updateFit);window.addEventListener('DOMContentLoaded',updateFit);updateFit();
 const footer=document.createElement('footer');footer.className='reference-footer';footer.innerHTML='<strong>YU-GI-OH! FORBIDDEN MEMORIES</strong><span>Anime Duel Cutins · Proyecto independiente</span>';$('.app-layout').append(footer);
