@@ -5,7 +5,7 @@ const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () =>
     const status = document.getElementById('save-storage-status');
     if (status) status.textContent = 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=botones-01-fit-player-v1';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=v3';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.

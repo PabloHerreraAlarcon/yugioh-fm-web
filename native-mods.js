@@ -35,11 +35,11 @@ export async function prepareNativeMods(progress=()=>{}) {
  }
  const total=jobs.reduce((n,f)=>n+f.bytes,0),files=[];let next=0,loaded=0;
  await Promise.all(Array.from({length:6},async()=>{
-  while(next<jobs.length){const f=jobs[next++];const url='/mod-files/'+[f.folder,...f.path.split('/')].map(encodeURIComponent).join('/')+'?v='+f.version;
-   const res=await fetch(url);if(!res.ok)throw Error('No se pudo cargar el mod: '+f.folder+'/'+f.path);
+  while(next<jobs.length){const f=jobs[next++];const url='/mod-files/'+[f.folder,...f.path.split('/')].map(encodeURIComponent).join('/')+'?v='+f.version+'&b=2';
+   const res=await fetch(url);const ct=res.headers.get('content-type')||'';
+   if(!res.ok||ct.includes('text/html'))throw Error('No se pudo cargar el archivo: '+f.folder+'/'+f.path);
    const bytes=new Uint8Array(await res.arrayBuffer());
-   const isText = /\.(json|ini|txt|cfg|md)$/i.test(f.path);
-   if(bytes.length === 0 || (!isText && bytes.length !== f.bytes)) throw Error('Archivo de mod incompleto: '+f.path);
+   if(bytes.length === 0) throw Error('Archivo de mod vacío: '+f.path);
    files.push({path:'/mods/'+f.folder+'/'+f.path,bytes});loaded+=bytes.length;progress(loaded,total);
   }
  }));
