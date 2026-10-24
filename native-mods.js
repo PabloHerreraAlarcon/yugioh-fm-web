@@ -37,7 +37,9 @@ export async function prepareNativeMods(progress=()=>{}) {
  await Promise.all(Array.from({length:6},async()=>{
   while(next<jobs.length){const f=jobs[next++];const url='/mod-files/'+[f.folder,...f.path.split('/')].map(encodeURIComponent).join('/')+'?v='+f.version;
    const res=await fetch(url);if(!res.ok)throw Error('No se pudo cargar el mod: '+f.folder+'/'+f.path);
-   const bytes=new Uint8Array(await res.arrayBuffer());if(bytes.length!==f.bytes)throw Error('Archivo de mod incompleto: '+f.path);
+   const bytes=new Uint8Array(await res.arrayBuffer());
+   const isText = /\.(json|ini|txt|cfg|md)$/i.test(f.path);
+   if(bytes.length === 0 || (!isText && bytes.length !== f.bytes)) throw Error('Archivo de mod incompleto: '+f.path);
    files.push({path:'/mods/'+f.folder+'/'+f.path,bytes});loaded+=bytes.length;progress(loaded,total);
   }
  }));

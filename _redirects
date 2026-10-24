@@ -1,2 +1,3 @@
 /api/mods /api/mods.json 200
 /api/rom-status /api/rom-status.json 200
+/mods-preview-engine/* /:splat 200
