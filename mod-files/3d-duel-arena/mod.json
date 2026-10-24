@@ -1,0 +1,61 @@
+{
+  "id": "3d-duel-arena",
+  "name": "3D Duel Arena",
+  "version": "0.6.2",
+  "author": "jonasfelix92",
+  "description": "Tournament stadium with blue/silver tiles and persistent modern side panels; Field Spells change only the board top.",
+  "library": "3d-duel-arena",
+  "enabled": true,
+  "settings": [
+    {
+      "key": "drop",
+      "label": "Arena vertical drop",
+      "type": "int",
+      "default": 250,
+      "min": -800,
+      "max": 1600,
+      "step": 50,
+      "description": "Moves the 3D arena down relative to the duel board. Positive values make the board look more elevated."
+    },
+    {
+      "key": "mesh",
+      "label": "Render 3D terrain",
+      "type": "bool",
+      "default": 1
+    },
+    {
+      "key": "horizon",
+      "label": "Render arena horizon",
+      "type": "bool",
+      "default": 0
+    },
+    {
+      "key": "animate",
+      "label": "Animate arena",
+      "type": "bool",
+      "default": 1
+    },
+    {
+      "key": "dynamic_terrain",
+      "label": "Follow Field Spells",
+      "type": "bool",
+      "default": 1,
+      "description": "Uses the active duel terrain each frame so Field Spells immediately change the surrounding arena."
+    },
+    {
+      "key": "championship",
+      "label": "Original championship stadium",
+      "type": "bool",
+      "default": 1,
+      "description": "Use the new stadium against tournament opponents in campaign, only without an active Field Spell."
+    },
+    {
+      "key": "modern_board",
+      "label": "Modern championship board",
+      "type": "bool",
+      "default": 1,
+      "description": "Use blue, green and silver textures on all native board faces with the championship stadium."
+    }
+  ],
+  "min_api": 12
+}

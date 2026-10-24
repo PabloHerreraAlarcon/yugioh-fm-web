@@ -1,0 +1,154 @@
+{
+    "id": "duel-links-2d-arts",
+    "name": "Duel Links 2D Arts",
+    "author": "WillliTo & d02d02",
+    "version": "2.4",
+    "description": "Stands a high-resolution, Duel Links style 2D artwork on each face-up monster of the duel field, always facing the camera, with an optional outline and glow. Change any card's art by dropping art/<card id>.png in this folder; turn monsters into spells or traps (or the reverse) and add cards with the \"cards\" list in this mod.json (see README.txt). A mod of its own: it does not need 3D Monsters, and it never changes a card's name or text. Turn 3D Monsters off to use it: both draw a monster on the field, and together they would double up.",
+    "library": "duel-links-2d-arts",
+    "libraries": {
+        "i386": "code/duel-links-2d-arts.o",
+        "x86_64-windows": "code/duel-links-2d-arts.x86_64-windows.o"
+    },
+    "conflicts": [
+        "3d-monsters"
+    ],
+    "enabled": true,
+    "settings": [
+        {
+            "key": "size",
+            "label": "ART  |  Size",
+            "type": "int",
+            "default": 40,
+            "min": 8,
+            "max": 160,
+            "step": 4,
+            "description": "How tall each monster's art stands on the field, in game pixels. Bigger shows more of the detail.",
+            "suffix": " px"
+        },
+        {
+            "key": "lift",
+            "label": "ART  |  Height above the card",
+            "type": "int",
+            "default": 16,
+            "min": -4096,
+            "max": 4096,
+            "step": 128,
+            "description": "Raises (or lowers) the art above its card. 0 stands it on the card."
+        },
+        {
+            "key": "float",
+            "label": "FLOAT  |  Height",
+            "type": "choice",
+            "default": 1,
+            "description": "How far each monster's art floats up and down, in game pixels. Off keeps it still.",
+            "choices": [
+                "Off",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8"
+            ]
+        },
+        {
+            "key": "float_period",
+            "label": "FLOAT  |  Length",
+            "type": "int",
+            "default": 100,
+            "min": 20,
+            "max": 600,
+            "step": 10,
+            "description": "Frames for one full float up and down. Lower floats faster. Only used while Float height is not Off.",
+            "suffix": " frames"
+        },
+        {
+            "key": "color",
+            "label": "COLOUR  |  Outline, halos and glow",
+            "type": "choice",
+            "default": 0,
+            "choices": [
+                "Gold",
+                "Yellow",
+                "White",
+                "Red",
+                "Orange",
+                "Green",
+                "Cyan",
+                "Blue",
+                "Purple",
+                "Pink"
+            ],
+            "description": "One colour for the outline, the flowing halos and the glow."
+        },
+        {
+            "key": "outline_style",
+            "label": "OUTLINE  |  Style",
+            "type": "choice",
+            "default": 0,
+            "choices": [
+                "Off",
+                "Sharp",
+                "Flowing halos"
+            ],
+            "description": "Sharp is a thin line around the art. Flowing halos keeps the line and sends fading halos outward from it."
+        },
+        {
+            "key": "outline_width",
+            "label": "OUTLINE  |  Thickness",
+            "type": "choice",
+            "default": 0,
+            "description": "Sharp: how thick the line is (Hairline is the thinnest). Flowing halos: how far they travel. Not used while the outline is Off.",
+            "choices": [
+                "Hairline",
+                "1 pixel",
+                "2 pixels",
+                "3 pixels",
+                "4 pixels"
+            ]
+        },
+        {
+            "key": "outline_period",
+            "label": "OUTLINE  |  Halo speed",
+            "type": "int",
+            "default": 120,
+            "min": 30,
+            "max": 400,
+            "step": 10,
+            "description": "Flowing halos only: frames for a halo to travel out from the edge. Lower is faster.",
+            "suffix": " frames"
+        },
+        {
+            "key": "glow",
+            "label": "GLOW  |  On",
+            "type": "bool",
+            "default": 0,
+            "description": "A soft pulsing glow around each monster's art."
+        },
+        {
+            "key": "glow_reach",
+            "label": "GLOW  |  Size",
+            "type": "int",
+            "default": 40,
+            "min": 40,
+            "max": 300,
+            "step": 10,
+            "description": "How far the glow spreads around the art, as a percent of the art's own size. Only used while Glow is on.",
+            "suffix": "%"
+        },
+        {
+            "key": "glow_period",
+            "label": "GLOW  |  Pulse length",
+            "type": "int",
+            "default": 90,
+            "min": 4,
+            "max": 240,
+            "step": 2,
+            "description": "Frames for one full pulse, dim to bright and back. Lower pulses faster. Only used while Glow is on.",
+            "suffix": " frames"
+        }
+    ],
+    "cards": []
+}

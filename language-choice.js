@@ -1,0 +1,2 @@
+/* Browser locale resolution kept independent from DOM and game state. */
+(()=>{function resolveLanguage(preference,languages=[]){const supported=['es','en','pt'];if(supported.includes(preference))return preference;for(const candidate of languages){const code=String(candidate).toLowerCase().split(/[-_]/)[0];if(supported.includes(code))return code}return 'en'}globalThis.YfmLocale={resolveLanguage}})();

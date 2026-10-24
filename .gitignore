@@ -1,0 +1,21 @@
+# Partidas y archivos personales
+*.sav
+*.mcd
+*.mcr
+*.srm
+cards.dat
+skins.dat
+settings.cfg
+
+# Imagenes de disco propietarias
+*.bin
+*.iso
+*.cue
+*.chd
+
+# Temporales y caches
+*.tmp
+*.bak
+*.o
+.DS_Store
+Thumbs.db

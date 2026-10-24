@@ -1,0 +1,68 @@
+{
+  "id": "duel-links-base-aura",
+  "name": "2D · Aura de base",
+  "version": "0.1.2",
+  "author": "FM community project",
+  "description": "Halo ligero sobre la carta y luz corta bajo el arte 2D. Complemento opcional; no sustituye Duel Links 2D Arts.",
+  "min_api": 4,
+  "library": "duel-links-base-aura",
+  "requires": [
+    "duel-links-2d-arts"
+  ],
+  "conflicts": [
+    "3d-monsters"
+  ],
+  "enabled": false,
+  "settings": [
+    {
+      "key": "intensity",
+      "label": "Intensidad",
+      "type": "int",
+      "default": 35,
+      "min": 0,
+      "max": 65,
+      "step": 5
+    },
+    {
+      "key": "size",
+      "label": "Tamaño del halo",
+      "type": "int",
+      "default": 32,
+      "min": 20,
+      "max": 48,
+      "step": 2
+    },
+    {
+      "key": "beam",
+      "label": "Luz vertical suave",
+      "type": "bool",
+      "default": 1
+    },
+    {
+      "key": "color",
+      "label": "Color",
+      "type": "choice",
+      "default": 0,
+      "choices": [
+        "Celeste",
+        "Dorado",
+        "Blanco",
+        "Violeta"
+      ]
+    },
+    {
+      "key": "period",
+      "label": "Duración del pulso",
+      "type": "int",
+      "default": 180,
+      "min": 90,
+      "max": 360,
+      "step": 30
+    }
+  ],
+  "libraries": {
+    "i386": "code/duel-links-base-aura.o",
+    "x86_64-windows": "code/duel-links-base-aura.x86_64-windows.o"
+  },
+  "restart": false
+}

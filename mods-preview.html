@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
+    <title>Juega Yu-Gi-Oh! FM | Anime Duel Cutins</title>
+    <meta name="description" content="Juega Yu-Gi-Oh! Forbidden Memories desde tu navegador, sin instalación y con carga automática del disco disponible. Anime Duel Cutins y mods HD.">
+    
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("yfm_mockup_theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}</script><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="interface.css?v=6">
+</head>
+<body class="theme-obsidian">
+
+    <!-- Ambient Egyptian Background Effect -->
+    <div class="ancient-glow" aria-hidden="true"></div>
+
+    <!-- Header Navigation -->
+    <header class="app-header">
+        <div class="brand">
+            <div class="millennium-eye" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/>
+                    <circle cx="12" cy="12" r="3.5" fill="currentColor"/>
+                    <path d="M12 2v3M12 19v3M7 4l2 2M15 18l2 2M17 4l-2 2M9 18l-2 2"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <h1>YU-GI-OH!</h1>
+                <span class="subbrand">FORBIDDEN MEMORIES <span class="badge-online">WEB ONLINE</span></span>
+            </div>
+        </div>
+
+        <div class="header-status">
+            <div class="status-indicator" id="net-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Conectando...</span>
+            </div>
+            <div class="gamepad-badge" id="gamepad-status" title="Estado del mando">
+                <span class="icon">🎮</span>
+                <span class="label">Mando</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Layout -->
+    <div class="page-intro"><div><p class="eyebrow">FORBIDDEN MEMORIES · ANIME DUEL CUTINS</p><h1>Juega Yu-Gi-Oh! FM</h1></div><p>Sin instalación · Carga automática<br><span>Anime Duel Cutins y arte HD.</span></p></div><main class="app-layout">
+        
+        <!-- Left: Game Viewport & Quick Actions -->
+        <section class="game-viewport-section">
+            <div class="screen-frame" id="screen-container">
+                
+                <!-- Game Canvas -->
+                <canvas id="canvas" tabindex="1" width="640" height="480"></canvas>
+
+                <!-- El panel de avatares y LP se quitó: el juego dibuja los
+                     suyos dentro de la imagen y estorbaba encima del canvas. -->
+
+                <!-- Anime Duel Cut-In Dynamic Cinematic Overlay -->
+                <div class="anime-cutin-layer hidden" id="anime-cutin-layer">
+                    <div class="cutin-speedlines" aria-hidden="true"></div>
+                    <div class="cutin-character-wrap">
+                        <img id="cutin-character-img" class="cutin-character-img" src="/assets/cutins/yugi_cutin_1080x1080.png" alt="Duelist Cutin">
+                    </div>
+                    <div class="cutin-banner-wrap">
+                        <img id="cutin-header-img" class="cutin-header-img" src="/assets/cutins/hd_attack_header_640x110.png" alt="Header Action">
+                        <div class="cutin-dialog-box" id="cutin-dialog-box">
+                            <span class="cutin-speaker" id="cutin-speaker">Yugi:</span>
+                            <p class="cutin-phrase" id="cutin-phrase">¡Prepárate! ¡Mi monstruo declara un ataque directo!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Initial Splash / Play Screen -->
+                <div class="screen-overlay" id="start-screen">
+                    <div class="eye-monolith" aria-hidden="true">𓂀</div>
+                    <h2>Tu próximo duelo empieza aquí.</h2>
+                    <p class="subtitle">El disco disponible se carga al iniciar. Tus partidas se conservan en este navegador.</p>
+                    
+                    <div class="splash-buttons">
+                        <button id="btn-play-solo" class="btn btn-gold">
+                            <span class="btn-icon">⚔️</span> Jugar ahora
+                        </button>
+                        <button id="btn-play-online" class="btn btn-crimson">
+                            <span class="btn-icon">⚡</span> Jugar Online (2P)
+                        </button>
+                    </div>
+
+                    <div id="rom-detect-status" class="rom-detect-status">✦ Detectando disco en servidor local...</div>
+                    <div class="rom-custom-pick">
+                        <button id="btn-pick-custom-rom" class="btn-subtle" type="button">📁 Usar otra imagen de disco (.bin / .iso)</button>
+                        <input type="file" id="rom-file-input" accept=".bin,.cue,.iso,.chd" style="display:none">
+                    </div>
+
+                    
+                </div>
+
+                <!-- Reconnection / Loading Progress Modal -->
+                <div class="screen-overlay modal-sync hidden" id="sync-modal">
+                    <div class="spinner-ouroboros"></div>
+                    <h3 id="sync-title">Sincronizando Duelo...</h3>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar-fill" id="sync-bar" style="width: 70%;"></div>
+                    </div>
+                    <span class="sync-percent" id="sync-percent">70%</span>
+                </div>
+
+                <!-- Game Result Modal (Ganaste / Perdiste) -->
+                <div class="screen-overlay modal-result hidden" id="result-modal">
+                    <div class="result-box">
+                        <h2 class="result-title" id="result-title">¡Ganaste!</h2>
+                        <span class="result-cause" id="result-cause">Vida del adversario a 0</span>
+
+                        <div class="result-duelists" id="result-duelists">
+                            <span class="p1">Yugi</span> <span class="vs">vs</span> <span class="p2">Kaiba</span>
+                        </div>
+
+                        <div class="result-stats">
+                            <div class="stat-row">
+                                <span>Puntos de Vida:</span>
+                                <strong id="res-lp">8000 - 0</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>Turnos:</span>
+                                <strong id="res-turns">5</strong>
+                            </div>
+                            <div class="stat-row">
+                                <span>Duración:</span>
+                                <strong id="res-time">2:31</strong>
+                            </div>
+                        </div>
+
+                        <div class="result-actions">
+                            <button id="btn-result-lobby" class="btn btn-gold wide">Ir a las salas</button>
+                            <button id="btn-result-replay" class="btn btn-stone wide">Guardar repetición</button>
+                            <button id="btn-result-title" class="btn btn-transparent wide">Volver a la portada</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- In-Game Bottom Toolbar -->
+            <footer class="duel-toolbar">
+                <div class="toolbar-group">
+                    <button id="btn-quick-chat" class="tool-btn" title="Chat rápido">
+                        <span class="icon">💬</span>
+                        <span class="label">Chat rápido</span>
+                    </button>
+                    <button id="btn-fullscreen" class="tool-btn" title="Pantalla completa">
+                        <span class="icon">⛶</span>
+                        <span class="label">Pantalla</span>
+                    </button>
+                </div>
+
+                <div class="toolbar-center">
+                    <div class="quick-phrases-popup hidden" id="quick-phrases-popup">
+                        <button class="phrase-chip" data-phrase="¡Buen duelo!">¡Buen duelo!</button>
+                        <button class="phrase-chip" data-phrase="¡Espera un segundo!...">¡Espera un segundo!...</button>
+                        <button class="phrase-chip" data-phrase="¡Fusión lista!">¡Fusión lista!</button>
+                        <button class="phrase-chip" data-phrase="¡No puede ser!...">¡No puede ser!...</button>
+                        <button class="phrase-chip" data-phrase="¡Mi turno!">¡Mi turno!</button>
+                    </div>
+                </div>
+
+                <div class="toolbar-group">
+                    <button id="btn-duel-menu" class="tool-btn" title="Menú de Duelo">
+                        <span class="icon">⏸</span>
+                        <span class="label">Pausa/Menú</span>
+                    </button>
+                    <button id="btn-forfeit" class="tool-btn btn-danger-action" title="Rendirse en este duelo">
+                        <span class="icon">🏳</span>
+                        <span class="label">Rendirse</span>
+                    </button>
+                </div>
+            </footer>
+        </section>
+
+        <!-- Right: Modern Glassmorphic Egyptian Sidebar -->
+        <aside class="sidebar-section">
+            
+            <!-- Navigation Tabs -->
+            <nav class="sidebar-tabs" role="tablist">
+                <button class="tab-btn active" data-tab="online">
+                    <span class="tab-icon">⚡</span> Salas
+                </button>
+                <button class="tab-btn" data-tab="chat">
+                    <span class="tab-icon">💬</span> Chat
+                </button>
+                <button class="tab-btn" data-tab="controls">
+                    <span class="tab-icon">🎮</span> Mandos
+                </button>
+                <button class="tab-btn" data-tab="settings">
+                    <span class="tab-icon">⚙️</span> Ajustes
+                </button>
+                <button class="tab-btn" data-tab="mods">
+                    <span class="tab-icon">✨</span> Anime & HD
+                </button>
+            </nav>
+
+            <!-- Tab 1: Salas / Lobby Online -->
+            <div class="tab-content active" id="tab-online">
+                <div class="panel-card user-profile-card">
+                    <label for="input-nickname">Tu Nombre de Duelista</label>
+                    <div class="input-with-button">
+                        <input type="text" id="input-nickname" maxlength="14" placeholder="Príncipe Yugi" value="Yugi">
+                        <button id="btn-save-name" class="btn-mini">Guardar</button>
+                    </div>
+                </div>
+
+                <div class="lobby-actions">
+                    <button id="btn-create-room" class="btn btn-gold wide">
+                        <span class="btn-icon">➕</span> Crear Sala Privada
+                    </button>
+                    
+                    <div class="join-room-box">
+                        <label for="input-room-code">Unirse por Código</label>
+                        <div class="code-input-row">
+                            <input type="text" id="input-room-code" maxlength="4" placeholder="ABCD" autocomplete="off" spellcheck="false">
+                            <button id="btn-join-room" class="btn btn-crimson">Unirse</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Room Status Box (Visible when in room) -->
+                <div class="room-banner hidden" id="active-room-box">
+                    <div class="room-banner-header">
+                        <span class="room-tag">SALA ACTIVA</span>
+                        <strong class="room-code-display" id="display-room-code">ABCD</strong>
+                    </div>
+                    <div class="duelists-matchup">
+                        <div class="duel-slot p1">
+                            <span class="slot-role">J1 (Host)</span>
+                            <span class="slot-name" id="p1-name">Tú</span>
+                        </div>
+                        <span class="slot-vs">VS</span>
+                        <div class="duel-slot p2">
+                            <span class="slot-role">J2 (Rival)</span>
+                            <span class="slot-name" id="p2-name">Esperando...</span>
+                        </div>
+                    </div>
+                    <div class="room-control-buttons">
+                        <button id="btn-start-duel" class="btn btn-gold wide">Comenzar Duelo</button>
+                        <button id="btn-copy-invite" class="btn btn-stone wide" style="margin-top: 0.4rem;">🔗 Copiar Enlace de Invitación</button>
+                        <button id="btn-leave-room" class="btn btn-transparent wide">Salir de la sala</button>
+                    </div>
+                </div>
+
+                <!-- Public Rooms List -->
+                <div class="public-rooms-section">
+                    <div class="section-title-row">
+                        <h3>Salas Disponibles</h3>
+                        <button id="btn-refresh-rooms" class="btn-text">Actualizar</button>
+                    </div>
+                    <div class="rooms-list" id="rooms-container">
+                        <p class="empty-state">No hay salas públicas en este momento. ¡Crea una y comparte el código con tu amigo!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Chat -->
+            <div class="tab-content" id="tab-chat">
+                <div class="chat-container">
+                    <div class="chat-messages-log" id="chat-log">
+                        <div class="chat-system-msg">Bienvenido al Duelo Online de Forbidden Memories. Respeta las reglas de juego limpio.</div>
+                    </div>
+                    <form id="chat-form" class="chat-input-bar">
+                        <input type="text" id="chat-input" maxlength="100" placeholder="Escribe un mensaje al rival..." autocomplete="off">
+                        <button type="submit" class="btn-send">➤</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tab 3: Controles y Mandos -->
+            <div class="tab-content" id="tab-controls">
+                <div class="controls-guide">
+                    <h3>Guía de Controles</h3>
+                    
+                    <div class="controller-diagram">
+                        <div class="ctrl-group">
+                            <h4>Mando USB / Bluetooth</h4>
+                            <p class="ctrl-tip">Conecta tu mando de PS4, PS5, Xbox o genérico y pulsa cualquier botón para activarlo.</p>
+                        </div>
+                    </div>
+
+                    <div class="keymap-table">
+                        <div class="keymap-row"><span>Mover Cursor:</span> <kbd>Flechas de Dirección</kbd></div>
+                        <div class="keymap-row"><span>Confirmar (Cruz ✕):</span> <kbd>X</kbd> / Botón Sur (A/Cruz)</div>
+                        <div class="keymap-row"><span>Atrás / Cancelar (Círculo ○):</span> <kbd>S</kbd> / Botón Este (B/Círculo)</div>
+                        <div class="keymap-row"><span>Ver Detalles (Triángulo △):</span> <kbd>A</kbd> / Botón Norte (Y/Triángulo)</div>
+                        <div class="keymap-row"><span>Batalla 3D (Cuadrado □):</span> <kbd>Z</kbd> / Botón Oeste (X/Cuadrado)</div>
+                        <div class="keymap-row"><span>Girar Carta L1 / R1:</span> <kbd>Q</kbd> / <kbd>W</kbd></div>
+                        <div class="keymap-row"><span>Iniciar / Menú (Start):</span> <kbd>Enter</kbd></div>
+                        <div class="keymap-row"><span>Cambiar Filtro / Orden (Select):</span> <kbd>Shift</kbd> (Izquierdo o Derecho) / Botón Select</div>
+                        <div class="keymap-row"><span>Desplazar Página L2 / R2:</span> <kbd>E</kbd> / <kbd>R</kbd></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Ajustes y Guardado -->
+            <div class="tab-content" id="tab-settings">
+                <div class="settings-group">
+                    <h3>Ajustes de Sonido</h3>
+                    <label class="setting-slider">
+                        <span>Volumen de voces</span>
+                        <input type="range" id="volume-slider" min="0" max="100" value="80">
+                        <span id="volume-val">80%</span>
+                    </label>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Visualización</h3>
+                    <label class="setting-toggle">
+                        <span>Panorámico 16:9 (aplica al reiniciar el juego)</span>
+                        <input type="checkbox" id="widescreen-toggle" checked>
+                    </label>
+                    <label class="setting-toggle">
+                        <span>Suavizado de imagen (no activa el mod HD)</span>
+                        <input type="checkbox" id="hd-toggle" checked>
+                    </label>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Memory Card (Cartas y Progreso)</h3>
+                    <p class="ctrl-tip">Guarda desde el menú del juego. Las ranuras se conservan en este navegador. Importa .sav (8 KB) o memory cards .mcd/.mcr/.srm (128 KB); exporta tus partidas como .sav.</p>
+                    <div class="save-buttons-row">
+                        <button id="btn-export-save" class="btn btn-stone">Exportar Guardado</button>
+                        <button id="btn-import-save" class="btn btn-stone">Importar Guardado</button>
+                        <input type="file" id="save-file-input" accept=".mcd,.mcr,.srm,.sav" style="display:none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 5: Mods & HD (Cut-Ins, Avatares, Texturas 4K) -->
+            <div class="tab-content" id="tab-mods">
+                <div class="settings-group">
+                    <div class="group-header-with-badge">
+                        <h3>Anime Duel Cut-Ins (1080p)</h3>
+                        <span class="badge-gold">MOD NATIVO</span>
+                    </div>
+                    <p class="ctrl-tip">Cinemáticas de ataque e invocación de 1080x1080 con voces originales en japonés extraídas del anime.</p>
+                    
+                    <div class="mod-field">
+                        <label for="select-p1-char">Duelista P1 (Tú)</label>
+                        <select id="select-p1-char" class="select-ancient">
+                            <option value="yugi" selected>Yugi Muto (Atem / Faraón)</option>
+                            <option value="kaiba">Seto Kaiba (KaibaCorp)</option>
+                            <option value="jonouchi">Katsuya Jonouchi (Joey Wheeler)</option>
+                        </select>
+                    </div>
+
+                    <div class="mod-field">
+                        <label for="select-p1-skin">Aspecto / Skin P1</label>
+                        <select id="select-p1-skin" class="select-ancient">
+                            <option value="skin1" selected>Anime Original (Clásico)</option>
+                            <option value="skin2">Skin Alternativa / Oscuro</option>
+                            <option value="skin3">Skin Battle City / Torneo</option>
+                        </select>
+                    </div>
+
+                    <div class="mod-field">
+                        <label for="select-p2-char">Duelista P2 (Rival)</label>
+                        <select id="select-p2-char" class="select-ancient">
+                            <option value="kaiba" selected>Seto Kaiba</option>
+                            <option value="yugi">Yugi Muto</option>
+                            <option value="jonouchi">Katsuya Jonouchi</option>
+                        </select>
+                    </div>
+
+                    <div class="test-cutins-row">
+                        <button id="btn-test-cutin-atk" class="btn btn-gold wide">⚔️ Probar Cut-In Ataque</button>
+                        <button id="btn-test-cutin-summon" class="btn btn-crimson wide">🔮 Probar Invocación</button>
+                    </div>
+                </div>
+
+                <!-- Las opciones de avatares/LP se quitaron con el panel. -->
+
+                <div class="settings-group">
+                    <div class="group-header-with-badge">
+                        <h3>Visor de Cartas HD (Pack 4X)</h3>
+                        <span class="badge-gold">722 CARTAS</span>
+                    </div>
+                    <p class="ctrl-tip">Ilustraciones remasterizadas a 4x de resolución directamente del mod assets-hd.</p>
+                    
+                    <div class="card-search-box">
+                        <input type="text" id="card-search-input" placeholder="Buscar por número o nombre (ej: 035, Mago, Ojos Azules)..." class="input-ancient">
+                    </div>
+
+                    <div class="card-hd-preview-box" id="card-hd-preview-box">
+                        <div class="card-hd-img-wrap">
+                            <img id="card-hd-preview-img" src="/assets/cards-hd/card-035.png" alt="Mago Oscuro HD">
+                        </div>
+                        <div class="card-hd-meta">
+                            <strong id="card-hd-name">#035 - Mago Oscuro</strong>
+                            <span id="card-hd-type">ATK: 2500 / DEF: 2100 · Lanzador de Conjuros</span>
+                            <div class="quick-card-chips">
+                                <button class="chip-card" data-card="001">#001 Ojos Azules</button>
+                                <button class="chip-card" data-card="035">#035 Mago Oscuro</button>
+                                <button class="chip-card" data-card="082">#082 Ojos Rojos</button>
+                                <button class="chip-card" data-card="364">#364 Soldado Caos</button>
+                                <button class="chip-card" data-card="722">#722 Caos Negro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- Client Script -->
+    <script>for(const id of ["rom-detect-status","btn-pick-custom-rom","rom-file-input"]){const n=document.getElementById(id);if(n){n.dataset.discStaging="1";document.body.append(n)}}</script><script src="interface.js?v=3"></script><script src="approved-layout.js?v=2"></script><script src="reference-layout.js?v=2"></script><script src="language-choice.js?v=1"></script><script src="localization.js?v=1"></script><script type="module" src="app-mods-preview.js?v=fit-player-v1"></script>
+</body>
+</html>
+
+
+
+

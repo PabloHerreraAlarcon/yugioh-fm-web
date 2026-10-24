@@ -1,0 +1,842 @@
+{
+  "id": "anime-duel-cutins",
+  "name": "Anime Duel Cut-ins",
+  "version": "1.3",
+  "author": "TP7Projects",
+  "description": "Displays character portraits (Cut-ins), Japanese voice lines for iconic summons/attacks, and interactive Duelist Avatars HUD beside Life Points.",
+  "min_api": 4,
+  "game": "slus_01411",
+  "library": "anime-duel-cutins",
+  "enabled": true,
+  "restart": false,
+  "audio": {
+    "sfx": {
+      "0x1000": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_summon.ogg",
+        "volume": 140
+      },
+      "0x1001": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_draw_1.ogg",
+        "volume": 140
+      },
+      "0x1002": {
+        "file": "audio/jp_voices/yugi/000_yugi_duel_start_1.ogg",
+        "volume": 140
+      },
+      "0x1003": {
+        "file": "audio/jp_voices/yugi/000_yugi_duel_start_2.ogg",
+        "volume": 140
+      },
+      "0x1004": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_draw_2.ogg",
+        "volume": 140
+      },
+      "0x1005": {
+        "file": "audio/jp_voices/yugi/000_yugi_fusion_summon_1.ogg",
+        "volume": 140
+      },
+      "0x1006": {
+        "file": "audio/jp_voices/yugi/000_yugi_fusion_summon_2.ogg",
+        "volume": 140
+      },
+      "0x1008": {
+        "file": "audio/jp_voices/yugi/000_yugi_ritual_summon.ogg",
+        "volume": 140
+      },
+      "0x1010": {
+        "file": "audio/jp_voices/yugi/000_yugi_end_turn_1.ogg",
+        "volume": 140
+      },
+      "0x1011": {
+        "file": "audio/jp_voices/yugi/000_yugi_end_turn_2.ogg",
+        "volume": 140
+      },
+      "0x1012": {
+        "file": "audio/jp_voices/yugi/000_yugi_end_turn_3.ogg",
+        "volume": 140
+      },
+      "0x1020": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_monster_attack_1.ogg",
+        "volume": 140
+      },
+      "0x1021": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_monster_attack_2.ogg",
+        "volume": 140
+      },
+      "0x1025": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_monster_direct_attack_1.ogg",
+        "volume": 140
+      },
+      "0x1026": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_monster_direct_attack_2.ogg",
+        "volume": 140
+      },
+      "0x1027": {
+        "file": "audio/jp_voices/yugi/000_yugi_final_attack_1.ogg",
+        "volume": 140
+      },
+      "0x1028": {
+        "file": "audio/jp_voices/yugi/000_yugi_final_attack_2.ogg",
+        "volume": 140
+      },
+      "0x1022": {
+        "file": "audio/jp_voices/yugi/022_yugi_summoned_skull.ogg",
+        "volume": 140
+      },
+      "0x1035": {
+        "file": "audio/jp_voices/yugi/035_yugi_dark_magician.ogg",
+        "volume": 140
+      },
+      "0x1040": {
+        "file": "audio/jp_voices/yugi/000_yugi_magic_or_trap_face-down_card_1.ogg",
+        "volume": 140
+      },
+      "0x1041": {
+        "file": "audio/jp_voices/yugi/000_yugi_magic_or_trap_face-down_card_2.ogg",
+        "volume": 140
+      },
+      "0x1045": {
+        "file": "audio/jp_voices/yugi/000_yugi_normal_monster_face-down.ogg",
+        "volume": 140
+      },
+      "0x1050": {
+        "file": "audio/jp_voices/yugi/000_yugi_magic_card_activate_normal.ogg",
+        "volume": 140
+      },
+      "0x1051": {
+        "file": "audio/jp_voices/yugi/000_yugi_magic_card_activate_quick.ogg",
+        "volume": 140
+      },
+      "0x1052": {
+        "file": "audio/jp_voices/yugi/000_yugi_magic_card_continue.ogg",
+        "volume": 140
+      },
+      "0x1348": {
+        "file": "audio/jp_voices/yugi/348_yugi_spell_card_swords_of_revealing_light.ogg",
+        "volume": 140
+      },
+      "0x1055": {
+        "file": "audio/jp_voices/yugi/000_yugi_ritual_card_activate.ogg",
+        "volume": 140
+      },
+      "0x1056": {
+        "file": "audio/jp_voices/yugi/000_yugi_equip_card_activate.ogg",
+        "volume": 140
+      },
+      "0x1058": {
+        "file": "audio/jp_voices/yugi/058_yugi_kuriboh.ogg",
+        "volume": 140
+      },
+      "0x1722": {
+        "file": "audio/jp_voices/yugi/722_yugi_magician_of_black_chaos.ogg",
+        "volume": 140
+      },
+      "0x1038": {
+        "file": "audio/jp_voices/yugi/038_yugi_gaia_the_fierce_knight.ogg",
+        "volume": 140
+      },
+      "0x1364": {
+        "file": "audio/jp_voices/yugi/364_yugi_black_luster_soldier.ogg",
+        "volume": 140
+      },
+      "0x1039": {
+        "file": "audio/jp_voices/yugi/039_yugi_curse_of_dragon.ogg",
+        "volume": 140
+      },
+      "0x1082": {
+        "file": "audio/jp_voices/yugi/082_yugi_red_eyes_black_dragon.ogg",
+        "volume": 140
+      },
+      "0x1042": {
+        "file": "audio/jp_voices/yugi/041_yugi_celtic_guardian.ogg",
+        "volume": 140
+      },
+      "0x1060": {
+        "file": "audio/jp_voices/yugi/000_yugi_trap_card_activate.ogg",
+        "volume": 140
+      },
+      "0x1070": {
+        "file": "audio/jp_voices/yugi/000_yugi_take_damage_1.ogg",
+        "volume": 140
+      },
+      "0x1071": {
+        "file": "audio/jp_voices/yugi/000_yugi_take_damage_2.ogg",
+        "volume": 140
+      },
+      "0x1072": {
+        "file": "audio/jp_voices/yugi/000_yugi_take_damage_3.ogg",
+        "volume": 140
+      },
+      "0x1075": {
+        "file": "audio/jp_voices/yugi/000_yugi_take_damage_final.ogg",
+        "volume": 140
+      },
+      "0x2022": {
+        "file": "audio/jp_voices/yugi/022_yugi_summoned_skull_attack.ogg",
+        "volume": 140
+      },
+      "0x2035": {
+        "file": "audio/jp_voices/yugi/035_yugi_dark_magician_attack_1.ogg",
+        "volume": 140
+      },
+      "0x2036": {
+        "file": "audio/jp_voices/yugi/035_yugi_dark_magician_attack_2.ogg",
+        "volume": 140
+      },
+      "0x2058": {
+        "file": "audio/jp_voices/yugi/058_yugi_kuriboh_attack.ogg",
+        "volume": 140
+      },
+      "0x2722": {
+        "file": "audio/jp_voices/yugi/722_yugi_magician_of_black_chaos_attack.ogg",
+        "volume": 140
+      },
+      "0x2038": {
+        "file": "audio/jp_voices/yugi/038_yugi_gaia_the_fierce_knight_attack.ogg",
+        "volume": 140
+      },
+      "0x2364": {
+        "file": "audio/jp_voices/yugi/364_yugi_black_luster_soldier_attack.ogg",
+        "volume": 140
+      },
+      "0x2039": {
+        "file": "audio/jp_voices/yugi/039_yugi_curse_of_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x2082": {
+        "file": "audio/jp_voices/yugi/082_yugi_red_eyes_black_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x2041": {
+        "file": "audio/jp_voices/yugi/041_yugi_celtic_guardian_attack.ogg",
+        "volume": 140
+      },
+      "0x3000": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_summon.ogg",
+        "volume": 140
+      },
+      "0x3001": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_draw_1.ogg",
+        "volume": 140
+      },
+      "0x3002": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_duel_start_1.ogg",
+        "volume": 140
+      },
+      "0x3003": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_duel_start_2.ogg",
+        "volume": 140
+      },
+      "0x3004": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_draw_2.ogg",
+        "volume": 140
+      },
+      "0x3005": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_fusion_summon_1.ogg",
+        "volume": 140
+      },
+      "0x3006": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_fusion_summon_2.ogg",
+        "volume": 140
+      },
+      "0x3008": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_ritual_summon.ogg",
+        "volume": 140
+      },
+      "0x3010": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_end_turn_1.ogg",
+        "volume": 140
+      },
+      "0x3011": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_end_turn_2.ogg",
+        "volume": 140
+      },
+      "0x3012": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_end_turn_3.ogg",
+        "volume": 140
+      },
+      "0x3020": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_monster_attack_1.ogg",
+        "volume": 140
+      },
+      "0x3021": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_monster_attack_2.ogg",
+        "volume": 140
+      },
+      "0x3025": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_monster_direct_attack_1.ogg",
+        "volume": 140
+      },
+      "0x3026": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_monster_direct_attack_2.ogg",
+        "volume": 140
+      },
+      "0x3027": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_final_attack_1.ogg",
+        "volume": 140
+      },
+      "0x3028": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_final_attack_2.ogg",
+        "volume": 140
+      },
+      "0x3040": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_magic_or_trap_face-down_card_1.ogg",
+        "volume": 140
+      },
+      "0x3041": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_magic_or_trap_face-down_card_2.ogg",
+        "volume": 140
+      },
+      "0x3045": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_normal_monster_face-down.ogg",
+        "volume": 140
+      },
+      "0x3050": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_magic_card_activate_normal.ogg",
+        "volume": 140
+      },
+      "0x3051": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_magic_card_activate_quick.ogg",
+        "volume": 140
+      },
+      "0x3052": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_magic_card_continue.ogg",
+        "volume": 140
+      },
+      "0x3055": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_ritual_card_activate.ogg",
+        "volume": 140
+      },
+      "0x3056": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_equip_card_activate.ogg",
+        "volume": 140
+      },
+      "0x3060": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_trap_card_activate.ogg",
+        "volume": 140
+      },
+      "0x3070": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_take_damage_1.ogg",
+        "volume": 140
+      },
+      "0x3071": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_take_damage_2.ogg",
+        "volume": 140
+      },
+      "0x3072": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_take_damage_3.ogg",
+        "volume": 140
+      },
+      "0x3075": {
+        "file": "audio/jp_voices/kaiba/000_kaiba_take_damage_final.ogg",
+        "volume": 140
+      },
+      "0x3101": {
+        "file": "audio/jp_voices/kaiba/001_kaiba_blue_eyes_white_dragon.ogg",
+        "volume": 140
+      },
+      "0x32A3": {
+        "file": "audio/jp_voices/kaiba/675_kaiba_ritual_ultimate_dragon.ogg",
+        "volume": 140
+      },
+      "0x4001": {
+        "file": "audio/jp_voices/kaiba/001_kaiba_blue_eyes_attack_1.ogg",
+        "volume": 140
+      },
+      "0x4002": {
+        "file": "audio/jp_voices/kaiba/001_kaiba_blue_eyes_attack_2.ogg",
+        "volume": 140
+      },
+      "0x3380": {
+        "file": "audio/jp_voices/kaiba/380_kaiba_blue_eyes_ultimate_dragon.ogg",
+        "volume": 140
+      },
+      "0x4380": {
+        "file": "audio/jp_voices/kaiba/380_kaiba_blue_eyes_ultimate_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x3611": {
+        "file": "audio/jp_voices/kaiba/611_kaiba_crush_card.ogg",
+        "volume": 140
+      },
+      "0x3526": {
+        "file": "audio/jp_voices/kaiba/026_kaiba_battle_ox.ogg",
+        "volume": 140
+      },
+      "0x4026": {
+        "file": "audio/jp_voices/kaiba/026_kaiba_battle_ox_attack.ogg",
+        "volume": 140
+      },
+      "0x3090": {
+        "file": "audio/jp_voices/kaiba/090_kaiba_gyakutenno_megami.ogg",
+        "volume": 140
+      },
+      "0x4090": {
+        "file": "audio/jp_voices/kaiba/090_kaiba_gyakutenno_megami_attack.ogg",
+        "volume": 140
+      },
+      "0x3091": {
+        "file": "audio/jp_voices/kaiba/091_kaiba_mystic_horseman.ogg",
+        "volume": 140
+      },
+      "0x4091": {
+        "file": "audio/jp_voices/kaiba/091_kaiba_mystic_horseman_attack.ogg",
+        "volume": 140
+      },
+      "0x3092": {
+        "file": "audio/jp_voices/kaiba/092_kaiba_rabid_horseman.ogg",
+        "volume": 140
+      },
+      "0x4092": {
+        "file": "audio/jp_voices/kaiba/092_kaiba_rabid_horseman_attack.ogg",
+        "volume": 140
+      },
+      "0x3303": {
+        "file": "audio/jp_voices/kaiba/303_kaiba_dark_energy.ogg",
+        "volume": 140
+      },
+      "0x3378": {
+        "file": "audio/jp_voices/kaiba/378_kaiba_Swordstalker.ogg",
+        "volume": 140
+      },
+      "0x4378": {
+        "file": "audio/jp_voices/kaiba/378_kaiba_Swordstalker_attack.ogg",
+        "volume": 140
+      },
+      "0x3382": {
+        "file": "audio/jp_voices/kaiba/382_kaiba_rude_kaiser.ogg",
+        "volume": 140
+      },
+      "0x4382": {
+        "file": "audio/jp_voices/kaiba/382_kaiba_rude_kaiser_attack.ogg",
+        "volume": 140
+      },
+      "0x3425": {
+        "file": "audio/jp_voices/kaiba/425_kaiba_thunder_dragon.ogg",
+        "volume": 140
+      },
+      "0x4425": {
+        "file": "audio/jp_voices/kaiba/425_kaiba_thunder_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x3613": {
+        "file": "audio/jp_voices/kaiba/613_kaiba_Twin_headed_Thunder_Dragon.ogg",
+        "volume": 140
+      },
+      "0x4613": {
+        "file": "audio/jp_voices/kaiba/613_kaiba_Twin_headed_Thunder_Dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x5000": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_summon.ogg",
+        "volume": 140
+      },
+      "0x5001": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_draw_1.ogg",
+        "volume": 140
+      },
+      "0x5002": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_duel_start_1.ogg",
+        "volume": 140
+      },
+      "0x5003": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_duel_start_2.ogg",
+        "volume": 140
+      },
+      "0x5004": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_draw_2.ogg",
+        "volume": 140
+      },
+      "0x5005": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_fusion_summon_1.ogg",
+        "volume": 140
+      },
+      "0x5006": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_fusion_summon_1.ogg",
+        "volume": 140
+      },
+      "0x5008": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_ritual_card_activate.ogg",
+        "volume": 140
+      },
+      "0x5010": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_end_turn_1.ogg",
+        "volume": 140
+      },
+      "0x5011": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_end_turn_2.ogg",
+        "volume": 140
+      },
+      "0x5012": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_end_turn_3.ogg",
+        "volume": 140
+      },
+      "0x5020": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_attack_1.ogg",
+        "volume": 140
+      },
+      "0x5021": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_attack_2.ogg",
+        "volume": 140
+      },
+      "0x5022": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_attack_3.ogg",
+        "volume": 140
+      },
+      "0x5025": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_direct_attack_1.ogg",
+        "volume": 140
+      },
+      "0x5026": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_direct_attack_2.ogg",
+        "volume": 140
+      },
+      "0x5027": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_final_attack_1.ogg",
+        "volume": 140
+      },
+      "0x5028": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_final_attack_2.ogg",
+        "volume": 140
+      },
+      "0x5040": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_magic_or_trap_face-down_card_1.ogg",
+        "volume": 140
+      },
+      "0x5041": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_magic_or_trap_face-down_card_2.ogg",
+        "volume": 140
+      },
+      "0x5045": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_face-down.ogg",
+        "volume": 140
+      },
+      "0x5050": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_magic_card_activate_normal.ogg",
+        "volume": 140
+      },
+      "0x5051": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_magic_card_activate_quick.ogg",
+        "volume": 140
+      },
+      "0x5052": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_magic_card_continue.ogg",
+        "volume": 140
+      },
+      "0x5055": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_ritual_card_activate.ogg",
+        "volume": 140
+      },
+      "0x5056": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_equip_card_activate.ogg",
+        "volume": 140
+      },
+      "0x5060": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_trap_card_activate.ogg",
+        "volume": 140
+      },
+      "0x5070": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_1.ogg",
+        "volume": 140
+      },
+      "0x5071": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_2.ogg",
+        "volume": 140
+      },
+      "0x5072": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_3.ogg",
+        "volume": 140
+      },
+      "0x5075": {
+        "file": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_final.ogg",
+        "volume": 140
+      },
+      "0x5104": {
+        "file": "audio/jp_voices/jonouchi/004_jonouchi_baby_dragon.ogg",
+        "volume": 140
+      },
+      "0x5115": {
+        "file": "audio/jp_voices/jonouchi/015_jonouchi_flame_swordsman.ogg",
+        "volume": 140
+      },
+      "0x5116": {
+        "file": "audio/jp_voices/jonouchi/016_jonouchi_time_wizard.ogg",
+        "volume": 140
+      },
+      "0x5162": {
+        "file": "audio/jp_voices/jonouchi/062_jonouchi_harpie_lady.ogg",
+        "volume": 140
+      },
+      "0x5168": {
+        "file": "audio/jp_voices/jonouchi/068_jonouchi_garoozis.ogg",
+        "volume": 140
+      },
+      "0x5169": {
+        "file": "audio/jp_voices/jonouchi/069_jonouchi_thousand_dragon.ogg",
+        "volume": 140
+      },
+      "0x5178": {
+        "file": "audio/jp_voices/jonouchi/078_jonouchi_axe_raider.ogg",
+        "volume": 140
+      },
+      "0x5182": {
+        "file": "audio/jp_voices/jonouchi/082_jonouchi_red_eyes_black_dragon_1.ogg",
+        "volume": 140
+      },
+      "0x5183": {
+        "file": "audio/jp_voices/jonouchi/082_jonouchi_red_eyes_black_dragon_2.ogg",
+        "volume": 140
+      },
+      "0x5100": {
+        "file": "audio/jp_voices/jonouchi/100_jonouchi_battle_warrior.ogg",
+        "volume": 140
+      },
+      "0x5142": {
+        "file": "audio/jp_voices/jonouchi/142_jonouchi_flame_manipulator.ogg",
+        "volume": 140
+      },
+      "0x5217": {
+        "file": "audio/jp_voices/jonouchi/217_jonouchi_b_skull_dragon.ogg",
+        "volume": 140
+      },
+      "0x5293": {
+        "file": "audio/jp_voices/jonouchi/293_jonouchi_masaki_the_legendary_swordsman.ogg",
+        "volume": 140
+      },
+      "0x5389": {
+        "file": "audio/jp_voices/jonouchi/389_jonouchi_giltia_the_d_knight.ogg",
+        "volume": 140
+      },
+      "0x5713": {
+        "file": "audio/jp_voices/jonouchi/713_jonouchi_meteor_b_dragon.ogg",
+        "volume": 140
+      },
+      "0x6004": {
+        "file": "audio/jp_voices/jonouchi/004_jonouchi_baby_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x6015": {
+        "file": "audio/jp_voices/jonouchi/015_jonouchi_flame_swordsman_attack.ogg",
+        "volume": 140
+      },
+      "0x6016": {
+        "file": "audio/jp_voices/jonouchi/016_jonouchi_time_wizard_attack.ogg",
+        "volume": 140
+      },
+      "0x6062": {
+        "file": "audio/jp_voices/jonouchi/062_jonouchi_harpie_lady_attack.ogg",
+        "volume": 140
+      },
+      "0x6068": {
+        "file": "audio/jp_voices/jonouchi/068_jonouchi_garoozis_attack.ogg",
+        "volume": 140
+      },
+      "0x6069": {
+        "file": "audio/jp_voices/jonouchi/069_jonouchi_thousand_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x6078": {
+        "file": "audio/jp_voices/jonouchi/078_jonouchi_axe_raider_attack.ogg",
+        "volume": 140
+      },
+      "0x6082": {
+        "file": "audio/jp_voices/jonouchi/082_jonouchi_red_eyes_black_dragon_attack_1.ogg",
+        "volume": 140
+      },
+      "0x6100": {
+        "file": "audio/jp_voices/jonouchi/100_jonouchi_battle_warrior_attack.ogg",
+        "volume": 140
+      },
+      "0x6142": {
+        "file": "audio/jp_voices/jonouchi/142_jonouchi_flame_manipulator_attack.ogg",
+        "volume": 140
+      },
+      "0x6217": {
+        "file": "audio/jp_voices/jonouchi/217_jonouchi_b_skull_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x6293": {
+        "file": "audio/jp_voices/jonouchi/293_jonouchi_masaki_the_legendary_swordsman_attack.ogg",
+        "volume": 140
+      },
+      "0x6389": {
+        "file": "audio/jp_voices/jonouchi/389_jonouchi_giltia_the_d_knight_attack.ogg",
+        "volume": 140
+      },
+      "0x6713": {
+        "file": "audio/jp_voices/jonouchi/713_jonouchi_meteor_b_dragon_attack.ogg",
+        "volume": 140
+      },
+      "0x5320": {
+        "file": "audio/jp_voices/jonouchi/320_jonouchi_stop_defense.ogg",
+        "volume": 140
+      },
+      "0x5333": {
+        "file": "audio/jp_voices/jonouchi/333_jonouchi_sogen.ogg",
+        "volume": 140
+      },
+      "0x5651": {
+        "file": "audio/jp_voices/jonouchi/651_jonouchi_kunai_with_chain.ogg",
+        "volume": 140
+      },
+      "0x5654": {
+        "file": "audio/jp_voices/jonouchi/654_jonouchi_salamandra.ogg",
+        "volume": 140
+      },
+      "0x5658": {
+        "file": "audio/jp_voices/jonouchi/658_jonouchi_metalmorph.ogg",
+        "volume": 140
+      },
+      "0x5672": {
+        "file": "audio/jp_voices/jonouchi/672_jonouchi_harpies_feather_duster.ogg",
+        "volume": 140
+      },
+      "0x7A00": {
+        "file": "audio/jp_voices/life-points/sfx_lp_counter.wav",
+        "volume": 115
+      }
+    },
+    "music": {
+      "0x277": {
+        "file": "duelo.wav",
+        "loop": true,
+        "volume": 100
+      },
+      "0x276": {
+        "file": "audio/remastered/free_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x1D1": {
+        "file": "audio/remastered/preliminary_duels.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x1E1": {
+        "file": "audio/remastered/finals_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x1F1": {
+        "file": "audio/remastered/kaiba_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x201": {
+        "file": "audio/remastered/egypt_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x211": {
+        "file": "audio/remastered/mage_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x221": {
+        "file": "audio/remastered/high_mage_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x231": {
+        "file": "audio/remastered/heishin_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x241": {
+        "file": "audio/remastered/priest_seto_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x251": {
+        "file": "audio/remastered/darknite_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x252": {
+        "file": "audio/remastered/nitemare_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x271": {
+        "file": "audio/anime/duel_of_frienship.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x272": {
+        "file": "audio/anime/fang_of_critias.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x273": {
+        "file": "audio/anime/legendary_duel.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x274": {
+        "file": "audio/anime/nameless_pharaoh.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x275": {
+        "file": "audio/anime/passionate_duelist.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x278": {
+        "file": "audio/anime/vs_seto_tdotr.ogg",
+        "loop": true,
+        "volume": 100
+      },
+      "0x279": {
+        "file": "audio/anime/yugi_theme.ogg",
+        "loop": true,
+        "volume": 100
+      }
+    }
+  },
+  "settings": [
+    {
+      "key": "cutins_enabled",
+      "label": "Enable Anime Cut-ins",
+      "type": "bool",
+      "default": true,
+      "description": "Show visual face cut-ins and play Japanese voices during iconic monster summons and attacks."
+    },
+    {
+      "key": "avatar_hud_enabled",
+      "label": "Enable Duelist Avatars HUD",
+      "type": "bool",
+      "default": true,
+      "description": "Show interactive character avatars beside Life Points with turn lighting, voice reactivity, and smooth exit animations."
+    },
+    {
+      "key": "free_duel_character",
+      "label": "Free Duel Character",
+      "type": "choice",
+      "default": 0,
+      "choices": [
+        "Yami Yugi (Atem)",
+        "Seto Kaiba",
+        "Joey Wheeler (Jonouchi)"
+      ],
+      "description": "Select your playable duelist character in Free Duel mode."
+    },
+    {
+      "key": "lp_sound_enabled",
+      "label": "Anime LP Counter Sound",
+      "type": "bool",
+      "default": true,
+      "description": "Plays the authentic anime sound effect when Life Points begin discounting on screen."
+    },
+    {
+      "key": "lp_sound_volume",
+      "label": "LP Counter Sound Volume (%)",
+      "type": "int",
+      "default": 100,
+      "min": 10,
+      "max": 100,
+      "step": 10,
+      "description": "Volume percentage of the LP counter sound effect."
+    }
+  ]
+}

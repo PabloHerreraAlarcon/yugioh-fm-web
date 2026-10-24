@@ -1,0 +1,163 @@
+{
+    "id": "forbidden-memories-hd",
+    "name": "Forbidden Memories HD",
+    "version": "1.0",
+    "author": "Unchiga, X@nder",
+    "description": "HD card art, thumbnails, frames, card back, attribute balls, the Build Deck screen and the duel (arena, hand, FIELD box, life points); the Free Duel and campaign portraits. Shows best at Video > Resolution > Internal 4x with Video > HD text on.",
+    "enabled": true,
+    "textures": "textures",
+    "settings": [
+        {
+            "key": "card_art",
+            "label": "Card art",
+            "type": "bool",
+            "default": 1,
+            "description": "The redrawn pictures on the cards."
+        },
+        {
+            "key": "thumbnails",
+            "label": "Card thumbnails",
+            "type": "bool",
+            "default": 1,
+            "description": "The small pictures in the duel hand and on the field."
+        },
+        {
+            "key": "card_frames",
+            "label": "Card frames",
+            "type": "bool",
+            "default": 1,
+            "description": "Frames, card back, attribute balls, level stars and the card view's digits and labels."
+        },
+        {
+            "key": "build_deck",
+            "label": "Build Deck screen",
+            "type": "bool",
+            "default": 1,
+            "description": "The Build Deck and Trade screen's panels, icons and labels."
+        },
+        {
+            "key": "duel",
+            "label": "Duel arena and HUD",
+            "type": "bool",
+            "default": 1,
+            "description": "The platform of all seven fields, the cards' frames in the hand, their labels and numbers, the FIELD box and the life points."
+        },
+        {
+            "key": "free-duel-portraits-hd",
+            "label": "Free Duel Portraits HD",
+            "type": "bool",
+            "default": 1,
+            "description": "Redrawn 192x192 portraits for the 40 Free Duel opponents. Shows best at View > Internal 4x."
+        },
+        {
+            "key": "campaign-portraits-hd",
+            "label": "Campaign Portraits HD",
+            "type": "bool",
+            "default": 1,
+            "description": "Redrawn 192x192 portraits for the campaign's dialogue scenes. Shows best at View > Internal 4x."
+        },
+        {
+            "key": "full_bleed",
+            "label": "Anime card frame",
+            "type": "bool",
+            "default": 0,
+            "description": "An anime-style card frame representation, by d02d02 and Hr\u00e6zlyr."
+        }
+    ],
+    "card_layout": {
+        "spell": {
+            "icon": {
+                "x": 62,
+                "y": 163
+            },
+            "art": {
+                "x": 3,
+                "y": 3,
+                "width": 134,
+                "height": 139
+            }
+        },
+        "frame_styles": {
+            "gold": {
+                "image": "textures/anime_frame_monster.png",
+                "width": 140,
+                "height": 197,
+                "hand_color": "gold"
+            },
+            "green": {
+                "image": "textures/anime_frame_magic.png",
+                "width": 140,
+                "height": 197,
+                "hand_color": "green"
+            },
+            "pink": {
+                "image": "textures/anime_frame_trap.png",
+                "width": 140,
+                "height": 197,
+                "hand_color": "pink"
+            },
+            "orange": {
+                "image": "textures/anime_frame_orange.png",
+                "width": 140,
+                "height": 197,
+                "hand_color": "orange"
+            }
+        },
+        "frame_for": [
+            {
+                "class": "ritual_spell",
+                "style": "green"
+            },
+            {
+                "class": "effect_monster",
+                "style": "orange"
+            },
+            {
+                "class": "spell",
+                "style": "green"
+            },
+            {
+                "class": "equip",
+                "style": "green"
+            },
+            {
+                "class": "trap",
+                "style": "pink"
+            },
+            {
+                "class": "monster",
+                "style": "gold"
+            }
+        ],
+        "default_style": "gold",
+        "attribute": {
+            "x": 114,
+            "y": 149
+        },
+        "atk": {
+            "x": 38,
+            "y": 179
+        },
+        "def": {
+            "x": 102,
+            "y": 179
+        },
+        "stars": {
+            "x": 59,
+            "y": 153
+        },
+        "art": {
+            "x": 3,
+            "y": 3,
+            "width": 134,
+            "height": 139
+        },
+        "digits": {
+            "image": "textures/anime_digits.png",
+            "width": 10,
+            "height": 12,
+            "step": 10
+        }
+    },
+    "min_api": 11
+}

@@ -1,0 +1,10 @@
+{
+  "id": "simon-at-table-hd",
+  "name": "Adversarios a la Mesa HD",
+  "version": "0.1.0",
+  "author": "propio",
+  "description": "Los adversarios en la mesa del duelo, con retratos de alta resolucion dibujados por encima de la resolucion de consola, y la skin que elige Anime Duel Cutins. Requiere la resolucion interna por encima de 1x.",
+  "library": "simon-at-table-hd",
+  "enabled": true,
+  "requires": ["anime-duel-cutins"]
+}

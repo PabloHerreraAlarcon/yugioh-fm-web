@@ -1,0 +1,582 @@
+{
+  "Idioma": {
+    "es": "Idioma",
+    "en": "Language",
+    "pt": "Idioma"
+  },
+  "Idioma de la interfaz": {
+    "es": "Idioma de la interfaz",
+    "en": "Interface language",
+    "pt": "Idioma da interface"
+  },
+  "Automático (navegador)": {
+    "es": "Automático (navegador)",
+    "en": "Automatic (browser)",
+    "pt": "Automático (navegador)"
+  },
+  "PC · Teclado y mando": {
+    "es": "PC · Teclado y mando",
+    "en": "PC · Keyboard and controller",
+    "pt": "PC · Teclado e controle"
+  },
+  "Tema claro": {
+    "es": "Tema claro",
+    "en": "Light theme",
+    "pt": "Tema claro"
+  },
+  "Tema oscuro": {
+    "es": "Tema oscuro",
+    "en": "Dark theme",
+    "pt": "Tema escuro"
+  },
+  "Cambiar a tema claro": {
+    "es": "Cambiar a tema claro",
+    "en": "Switch to light theme",
+    "pt": "Mudar para tema claro"
+  },
+  "Cambiar a tema oscuro": {
+    "es": "Cambiar a tema oscuro",
+    "en": "Switch to dark theme",
+    "pt": "Mudar para tema escuro"
+  },
+  "Juega directamente en tu navegador.": {
+    "es": "Juega directamente en tu navegador.",
+    "en": "Play directly in your browser.",
+    "pt": "Jogue diretamente no seu navegador."
+  },
+  "Jugar ahora": {
+    "es": "Jugar ahora",
+    "en": "Play now",
+    "pt": "Jogar agora"
+  },
+  "Jugar online": {
+    "es": "Jugar online",
+    "en": "Play online",
+    "pt": "Jogar online"
+  },
+  "Sin instalación": {
+    "es": "Sin instalación",
+    "en": "No installation",
+    "pt": "Sem instalação"
+  },
+  "Carga automática": {
+    "es": "Carga automática",
+    "en": "Automatic loading",
+    "pt": "Carregamento automático"
+  },
+  "Para usar el mando:": {
+    "es": "Para usar el mando:",
+    "en": "To use a controller:",
+    "pt": "Para usar o controle:"
+  },
+  "cuando aparezca el juego, haz clic dentro de su imagen y pulsa cualquier botón del mando.": {
+    "es": "cuando aparezca el juego, haz clic dentro de su imagen y pulsa cualquier botón del mando.",
+    "en": "when the game appears, click inside its image and press any controller button.",
+    "pt": "quando o jogo aparecer, clique dentro da imagem e pressione qualquer botão do controle."
+  },
+  "Listo para jugar.": {
+    "es": "Listo para jugar.",
+    "en": "Ready to play.",
+    "pt": "Pronto para jogar."
+  },
+  "Juego en ejecución.": {
+    "es": "Juego en ejecución.",
+    "en": "Game running.",
+    "pt": "Jogo em execução."
+  },
+  "Cargando el juego…": {
+    "es": "Cargando el juego…",
+    "en": "Loading the game…",
+    "pt": "Carregando o jogo…"
+  },
+  "Pantalla completa": {
+    "es": "Pantalla completa",
+    "en": "Fullscreen",
+    "pt": "Tela cheia"
+  },
+  "Controles": {
+    "es": "Controles",
+    "en": "Controls",
+    "pt": "Controles"
+  },
+  "Reiniciar": {
+    "es": "Reiniciar",
+    "en": "Restart",
+    "pt": "Reiniciar"
+  },
+  "General": {
+    "es": "General",
+    "en": "General",
+    "pt": "Geral"
+  },
+  "Gráficos": {
+    "es": "Gráficos",
+    "en": "Graphics",
+    "pt": "Gráficos"
+  },
+  "Online": {
+    "es": "Online",
+    "en": "Online",
+    "pt": "Online"
+  },
+  "Chat": {
+    "es": "Chat",
+    "en": "Chat",
+    "pt": "Chat"
+  },
+  "Partidas": {
+    "es": "Partidas",
+    "en": "Saves",
+    "pt": "Partidas"
+  },
+  "Mods": {
+    "es": "Mods",
+    "en": "Mods",
+    "pt": "Mods"
+  },
+  "Configuración": {
+    "es": "Configuración",
+    "en": "Settings",
+    "pt": "Configurações"
+  },
+  "Configuración del juego": {
+    "es": "Configuración del juego",
+    "en": "Game settings",
+    "pt": "Configurações do jogo"
+  },
+  "Tus preferencias se guardan en este navegador.": {
+    "es": "Tus preferencias se guardan en este navegador.",
+    "en": "Your preferences are saved in this browser.",
+    "pt": "Suas preferências são salvas neste navegador."
+  },
+  "Ajustes de Sonido": {
+    "es": "Ajustes de Sonido",
+    "en": "Audio settings",
+    "pt": "Configurações de áudio"
+  },
+  "Volumen de voces": {
+    "es": "Volumen de voces",
+    "en": "Voice volume",
+    "pt": "Volume das vozes"
+  },
+  "El volumen de música y efectos se ajusta desde el menú Audio del juego.": {
+    "es": "El volumen de música y efectos se ajusta desde el menú Audio del juego.",
+    "en": "Music and effects volume can be adjusted in the game's Audio menu.",
+    "pt": "O volume da música e dos efeitos pode ser ajustado no menu Áudio do jogo."
+  },
+  "La resolución interna inicial es ×4. Puedes ajustarla en el menú Vídeo del juego.": {
+    "es": "La resolución interna inicial es ×4. Puedes ajustarla en el menú Vídeo del juego.",
+    "en": "Internal resolution starts at ×4. You can change it in the game's Video menu.",
+    "pt": "A resolução interna começa em ×4. Você pode alterá-la no menu Vídeo do jogo."
+  },
+  "Resolución de inicio": {
+    "es": "Resolución de inicio",
+    "en": "Startup resolution",
+    "pt": "Resolução inicial"
+  },
+  "Visualización": {
+    "es": "Visualización",
+    "en": "Display",
+    "pt": "Exibição"
+  },
+  "Panorámico 16:9 (aplica al reiniciar el juego)": {
+    "es": "Panorámico 16:9 (aplica al reiniciar el juego)",
+    "en": "Widescreen 16:9 (applied after restarting the game)",
+    "pt": "Tela ampla 16:9 (aplicada ao reiniciar o jogo)"
+  },
+  "Suavizado de imagen (no activa el mod HD)": {
+    "es": "Suavizado de imagen (no activa el mod HD)",
+    "en": "Image smoothing (does not enable the HD mod)",
+    "pt": "Suavização da imagem (não ativa o mod HD)"
+  },
+  "Los cambios de formato se aplican al reiniciar. El mod HD se configura en Mods.": {
+    "es": "Los cambios de formato se aplican al reiniciar. El mod HD se configura en Mods.",
+    "en": "Aspect changes apply after restarting. Configure the HD mod in Mods.",
+    "pt": "As alterações de formato são aplicadas ao reiniciar. Configure o mod HD em Mods."
+  },
+  "EN DESARROLLO": {
+    "es": "EN DESARROLLO",
+    "en": "IN DEVELOPMENT",
+    "pt": "EM DESENVOLVIMENTO"
+  },
+  "Duelo con un amigo": {
+    "es": "Duelo con un amigo",
+    "en": "Duel with a friend",
+    "pt": "Duelo com um amigo"
+  },
+  "El modo online para dos jugadores todavía no está disponible.": {
+    "es": "El modo online para dos jugadores todavía no está disponible.",
+    "en": "Two-player online mode is not available yet.",
+    "pt": "O modo online para dois jogadores ainda não está disponível."
+  },
+  "La elección de personaje, mazos y las salas se incorporarán al completar la sincronización del juego.": {
+    "es": "La elección de personaje, mazos y las salas se incorporarán al completar la sincronización del juego.",
+    "en": "Character selection, decks and rooms will be added once game synchronization is complete.",
+    "pt": "A seleção de personagens, os decks e as salas serão adicionados quando a sincronização do jogo estiver concluída."
+  },
+  "Chat de la partida": {
+    "es": "Chat de la partida",
+    "en": "Match chat",
+    "pt": "Chat da partida"
+  },
+  "Estará disponible junto al modo online. No hay una sala conectada.": {
+    "es": "Estará disponible junto al modo online. No hay una sala conectada.",
+    "en": "Available with online mode. No room is connected.",
+    "pt": "Estará disponível com o modo online. Nenhuma sala está conectada."
+  },
+  "MÁS VICTORIAS ONLINE": {
+    "es": "MÁS VICTORIAS ONLINE",
+    "en": "MOST ONLINE WINS",
+    "pt": "MAIS VITÓRIAS ONLINE"
+  },
+  "Jugadores con más duelos ganados.": {
+    "es": "Jugadores con más duelos ganados.",
+    "en": "Players with the most duels won.",
+    "pt": "Jogadores com mais duelos vencidos."
+  },
+  "Diario": {
+    "es": "Diario",
+    "en": "Daily",
+    "pt": "Diário"
+  },
+  "Semanal": {
+    "es": "Semanal",
+    "en": "Weekly",
+    "pt": "Semanal"
+  },
+  "Jugador": {
+    "es": "Jugador",
+    "en": "Player",
+    "pt": "Jogador"
+  },
+  "Victorias": {
+    "es": "Victorias",
+    "en": "Wins",
+    "pt": "Vitórias"
+  },
+  "Sin clasificación disponible.": {
+    "es": "Sin clasificación disponible.",
+    "en": "No leaderboard available.",
+    "pt": "Classificação indisponível."
+  },
+  "La clasificación estará disponible cuando se active el modo online y se puedan verificar los resultados.": {
+    "es": "La clasificación estará disponible cuando se active el modo online y se puedan verificar los resultados.",
+    "en": "The leaderboard will be available when online mode is enabled and results can be verified.",
+    "pt": "A classificação estará disponível quando o modo online estiver ativo e os resultados puderem ser verificados."
+  },
+  "Seleccionar mi disco": {
+    "es": "Seleccionar mi disco",
+    "en": "Select my disc",
+    "pt": "Selecionar meu disco"
+  },
+  "Memory Card (Cartas y Progreso)": {
+    "es": "Memory Card (Cartas y Progreso)",
+    "en": "Memory card (cards and progress)",
+    "pt": "Memory card (cartas e progresso)"
+  },
+  "Guarda desde el menú del juego. Las ranuras se conservan en este navegador. Importa .sav (8 KB) o memory cards .mcd/.mcr/.srm (128 KB); exporta tus partidas como .sav.": {
+    "es": "Guarda desde el menú del juego. Las ranuras se conservan en este navegador. Importa .sav (8 KB) o memory cards .mcd/.mcr/.srm (128 KB); exporta tus partidas como .sav.",
+    "en": "Save from the game menu. Slots are stored in this browser. Import .sav (8 KB) or .mcd/.mcr/.srm memory cards (128 KB); export saves as .sav.",
+    "pt": "Salve pelo menu do jogo. Os espaços são mantidos neste navegador. Importe .sav (8 KB) ou memory cards .mcd/.mcr/.srm (128 KB); exporte suas partidas como .sav."
+  },
+  "Exportar Guardado": {
+    "es": "Exportar Guardado",
+    "en": "Export save",
+    "pt": "Exportar partida"
+  },
+  "Importar Guardado": {
+    "es": "Importar Guardado",
+    "en": "Import save",
+    "pt": "Importar partida"
+  },
+  "Guía de Controles": {
+    "es": "Guía de Controles",
+    "en": "Control guide",
+    "pt": "Guia de controles"
+  },
+  "Mando USB / Bluetooth": {
+    "es": "Mando USB / Bluetooth",
+    "en": "USB / Bluetooth controller",
+    "pt": "Controle USB / Bluetooth"
+  },
+  "Conecta tu mando de PS4, PS5, Xbox o genérico y pulsa cualquier botón para activarlo.": {
+    "es": "Conecta tu mando de PS4, PS5, Xbox o genérico y pulsa cualquier botón para activarlo.",
+    "en": "Connect your PS4, PS5, Xbox or standard controller and press any button to activate it.",
+    "pt": "Conecte seu controle de PS4, PS5, Xbox ou genérico e pressione qualquer botão para ativá-lo."
+  },
+  "Mover Cursor:": {
+    "es": "Mover Cursor:",
+    "en": "Move cursor:",
+    "pt": "Mover cursor:"
+  },
+  "Flechas de Dirección": {
+    "es": "Flechas de Dirección",
+    "en": "Arrow keys",
+    "pt": "Teclas de direção"
+  },
+  "Confirmar (Cruz ✕):": {
+    "es": "Confirmar (Cruz ✕):",
+    "en": "Confirm (Cross ✕):",
+    "pt": "Confirmar (Cruz ✕):"
+  },
+  "Atrás / Cancelar (Círculo ○):": {
+    "es": "Atrás / Cancelar (Círculo ○):",
+    "en": "Back / Cancel (Circle ○):",
+    "pt": "Voltar / Cancelar (Círculo ○):"
+  },
+  "Ver Detalles (Triángulo △):": {
+    "es": "Ver Detalles (Triángulo △):",
+    "en": "View details (Triangle △):",
+    "pt": "Ver detalhes (Triângulo △):"
+  },
+  "Batalla 3D (Cuadrado □):": {
+    "es": "Batalla 3D (Cuadrado □):",
+    "en": "3D battle (Square □):",
+    "pt": "Batalha 3D (Quadrado □):"
+  },
+  "Girar Carta L1 / R1:": {
+    "es": "Girar Carta L1 / R1:",
+    "en": "Rotate card L1 / R1:",
+    "pt": "Girar carta L1 / R1:"
+  },
+  "Iniciar / Menú (Start):": {
+    "es": "Iniciar / Menú (Start):",
+    "en": "Start / Menu:",
+    "pt": "Iniciar / Menu (Start):"
+  },
+  "Cambiar Filtro / Orden (Select):": {
+    "es": "Cambiar Filtro / Orden (Select):",
+    "en": "Change filter / order (Select):",
+    "pt": "Alterar filtro / ordem (Select):"
+  },
+  "Desplazar Página L2 / R2:": {
+    "es": "Desplazar Página L2 / R2:",
+    "en": "Scroll page L2 / R2:",
+    "pt": "Mudar página L2 / R2:"
+  },
+  "(Izquierdo o Derecho) / Botón Select": {
+    "es": "(Izquierdo o Derecho) / Botón Select",
+    "en": "(Left or Right) / Select button",
+    "pt": "(Esquerdo ou Direito) / Botão Select"
+  },
+  "/ Botón Sur (A/Cruz)": {
+    "es": "/ Botón Sur (A/Cruz)",
+    "en": "/ South button (A/Cross)",
+    "pt": "/ Botão sul (A/Cruz)"
+  },
+  "/ Botón Este (B/Círculo)": {
+    "es": "/ Botón Este (B/Círculo)",
+    "en": "/ East button (B/Circle)",
+    "pt": "/ Botão leste (B/Círculo)"
+  },
+  "/ Botón Norte (Y/Triángulo)": {
+    "es": "/ Botón Norte (Y/Triángulo)",
+    "en": "/ North button (Y/Triangle)",
+    "pt": "/ Botão norte (Y/Triângulo)"
+  },
+  "/ Botón Oeste (X/Cuadrado)": {
+    "es": "/ Botón Oeste (X/Cuadrado)",
+    "en": "/ West button (X/Square)",
+    "pt": "/ Botão oeste (X/Quadrado)"
+  },
+  "Mods instalados": {
+    "es": "Mods instalados",
+    "en": "Installed mods",
+    "pt": "Mods instalados"
+  },
+  "Se aplican al iniciar. Recarga la página después de cambiar estas opciones.": {
+    "es": "Se aplican al iniciar. Recarga la página después de cambiar estas opciones.",
+    "en": "Applied at startup. Reload the page after changing these options.",
+    "pt": "Aplicados ao iniciar. Recarregue a página após alterar estas opções."
+  },
+  "Activado al iniciar": {
+    "es": "Activado al iniciar",
+    "en": "Enabled at startup",
+    "pt": "Ativado ao iniciar"
+  },
+  "Desactivado": {
+    "es": "Desactivado",
+    "en": "Disabled",
+    "pt": "Desativado"
+  },
+  "Opciones": {
+    "es": "Opciones",
+    "en": "Options",
+    "pt": "Opções"
+  },
+  "Representación": {
+    "es": "Representación",
+    "en": "Representation",
+    "pt": "Representação"
+  },
+  "Modelos 3D": {
+    "es": "Modelos 3D",
+    "en": "3D models",
+    "pt": "Modelos 3D"
+  },
+  "Arte de cartas (más ligero)": {
+    "es": "Arte de cartas (más ligero)",
+    "en": "Card art (lighter)",
+    "pt": "Arte das cartas (mais leve)"
+  },
+  "Cambio guardado. Recarga para aplicarlo.": {
+    "es": "Cambio guardado. Recarga para aplicarlo.",
+    "en": "Change saved. Reload to apply.",
+    "pt": "Alteração salva. Recarregue para aplicar."
+  },
+  "Requiere una versión más reciente del motor": {
+    "es": "Requiere una versión más reciente del motor",
+    "en": "Requires a newer engine version",
+    "pt": "Requer uma versão mais recente do motor"
+  },
+  "Anime Duel Cutins · Proyecto independiente": {
+    "es": "Anime Duel Cutins · Proyecto independiente",
+    "en": "Anime Duel Cutins · Independent project",
+    "pt": "Anime Duel Cutins · Projeto independente"
+  },
+  "¿Reiniciar el juego? Se perderá el progreso que no hayas guardado.": {
+    "es": "¿Reiniciar el juego? Se perderá el progreso que no hayas guardado.",
+    "en": "Restart the game? Unsaved progress will be lost.",
+    "pt": "Reiniciar o jogo? O progresso não salvo será perdido."
+  },
+  "Iniciando Forbidden Memories...": {
+    "es": "Iniciando Forbidden Memories...",
+    "en": "Starting Forbidden Memories...",
+    "pt": "Iniciando Forbidden Memories..."
+  },
+  "Cargando disco en memoria": {
+    "es": "Cargando disco en memoria",
+    "en": "Loading disc into memory",
+    "pt": "Carregando disco na memória"
+  },
+  "Cargando mods": {
+    "es": "Cargando mods",
+    "en": "Loading mods",
+    "pt": "Carregando mods"
+  },
+  "Cambios guardados en este navegador.": {
+    "es": "Cambios guardados en este navegador.",
+    "en": "Changes saved in this browser.",
+    "pt": "Alterações salvas neste navegador."
+  },
+  "Guardado local. Exporta una copia para conservar un respaldo propio.": {
+    "es": "Guardado local. Exporta una copia para conservar un respaldo propio.",
+    "en": "Local storage. Export a copy to keep your own backup.",
+    "pt": "Armazenamento local. Exporte uma cópia para manter seu próprio backup."
+  },
+  "Guarda desde el menú del juego. La última partida guardada y las opciones de los mods se conservan al recargar, en este navegador y esta dirección. No es guardado automático del progreso durante el duelo. Exporta una copia para cambiar de navegador o equipo. Importa .sav (8 KB) o memory cards .mcd/.mcr/.srm (128 KB); exporta tus partidas como .sav.": {
+    "es": "Guarda desde el menú del juego. La última partida guardada y las opciones de los mods se conservan al recargar, en este navegador y esta dirección. No es guardado automático del progreso durante el duelo. Exporta una copia para cambiar de navegador o equipo. Importa .sav (8 KB) o memory cards .mcd/.mcr/.srm (128 KB); exporta tus partidas como .sav.",
+    "en": "Save from the game menu. Your last saved game and mod options survive refresh in this browser at this address. Progress during a duel is not autosaved. Export a copy to move to another browser or device. Import .sav files (8 KB) or raw memory cards (128 KB); export saves as .sav.",
+    "pt": "Salve pelo menu do jogo. A última partida salva e as opções dos mods permanecem após recarregar neste navegador e endereço. O progresso durante o duelo não é salvo automaticamente. Exporte uma cópia para mudar de navegador ou dispositivo. Importe .sav (8 KB) ou memory cards raw (128 KB); exporte partidas como .sav."
+  },
+  "Exportar respaldo anterior": {
+    "es": "Exportar respaldo anterior",
+    "en": "Export previous backup",
+    "pt": "Exportar backup anterior"
+  },
+  "No hay una partida en el respaldo anterior.": {
+    "es": "No hay una partida en el respaldo anterior.",
+    "en": "There is no saved game in the previous backup.",
+    "pt": "Não há uma partida salva no backup anterior."
+  },
+  "Inicia el juego para ajustar sus opciones.": {
+    "es": "Inicia el juego para ajustar sus opciones.",
+    "en": "Start the game to adjust its settings.",
+    "pt": "Inicie o jogo para ajustar suas opções."
+  },
+  "Volumen general": {
+    "es": "Volumen general",
+    "en": "Master volume",
+    "pt": "Volume geral"
+  },
+  "Música": {
+    "es": "Música",
+    "en": "Music",
+    "pt": "Música"
+  },
+  "Efectos y voces del juego": {
+    "es": "Efectos y voces del juego",
+    "en": "Game effects and voices",
+    "pt": "Efeitos e vozes do jogo"
+  },
+  "Los controles de sonido modifican el audio del juego en ejecución.": {
+    "es": "Los controles de sonido modifican el audio del juego en ejecución.",
+    "en": "Sound controls change the running game audio.",
+    "pt": "Os controles de som alteram o áudio do jogo em execução."
+  },
+  "Los ajustes se aplican al juego. Resolución predeterminada: ×4.": {
+    "es": "Los ajustes se aplican al juego. Resolución predeterminada: ×4.",
+    "en": "Settings apply to the game. Default resolution: ×4.",
+    "pt": "As opções se aplicam ao jogo. Resolução padrão: ×4."
+  },
+  "Resolución interna": {
+    "es": "Resolución interna",
+    "en": "Internal resolution",
+    "pt": "Resolução interna"
+  },
+  "Panorámico 16:9": {
+    "es": "Panorámico 16:9",
+    "en": "Widescreen 16:9",
+    "pt": "Tela ampla 16:9"
+  },
+  "Mostrar FPS": {
+    "es": "Mostrar FPS",
+    "en": "Show FPS",
+    "pt": "Mostrar FPS"
+  },
+  "Texto HD": {
+    "es": "Texto HD",
+    "en": "HD text",
+    "pt": "Texto HD"
+  },
+  "Una resolución mayor exige más al equipo. El arte HD y las animaciones se activan en Mods.": {
+    "es": "Una resolución mayor exige más al equipo. El arte HD y las animaciones se activan en Mods.",
+    "en": "Higher resolution requires more processing power. Enable HD art and animations under Mods.",
+    "pt": "Uma resolução maior exige mais do dispositivo. Ative a arte HD e as animações em Mods."
+  },
+  "Configurar teclado y mando": {
+    "es": "Configurar teclado y mando",
+    "en": "Configure keyboard and controller",
+    "pt": "Configurar teclado e controle"
+  },
+  "Sin mando detectado. Conéctalo y pulsa uno de sus botones.": {
+    "es": "Sin mando detectado. Conéctalo y pulsa uno de sus botones.",
+    "en": "No controller detected. Connect one and press a button.",
+    "pt": "Nenhum controle detectado. Conecte-o e pressione um botão."
+  },
+  "El editor se abre dentro del juego. La guía inferior muestra las teclas predeterminadas.": {
+    "es": "El editor se abre dentro del juego. La guía inferior muestra las teclas predeterminadas.",
+    "en": "The editor opens inside the game. The guide below shows the default keys.",
+    "pt": "O editor abre dentro do jogo. O guia abaixo mostra as teclas padrão."
+  },
+  "Los ajustes modifican el juego y se conservan al recargar.": {
+    "es": "Los ajustes modifican el juego y se conservan al recargar.",
+    "en": "Settings change the game and survive refresh.",
+    "pt": "As opções alteram o jogo e permanecem após recarregar."
+  },
+  "Ajustes aplicados al juego y guardados.": {
+    "es": "Ajustes aplicados al juego y guardados.",
+    "en": "Settings applied to the game and saved.",
+    "pt": "Opções aplicadas ao jogo e salvas."
+  },
+  "Online · Próximamente": {
+    "es": "Online · Próximamente",
+    "en": "Online · Coming soon",
+    "pt": "Online · Em breve"
+  },
+  "Aplicar mods y reiniciar": {
+    "es": "Aplicar mods y reiniciar",
+    "en": "Apply mods and restart",
+    "pt": "Aplicar mods e reiniciar"
+  },
+  "Este motor necesita actualizarse para utilizar los ajustes.": {
+    "es": "Este motor necesita actualizarse para utilizar los ajustes.",
+    "en": "Update the game engine to use these settings.",
+    "pt": "Atualize o motor do jogo para usar estas opções."
+  },
+  "Mando detectado:": {
+    "es": "Mando detectado:",
+    "en": "Controller detected:",
+    "pt": "Controle detectado:"
+  }
+}
