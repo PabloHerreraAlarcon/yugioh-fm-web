@@ -1,4 +1,5 @@
 // Real engine mods: download before initialization, then mount in private MEMFS.
+import { cachedModBytes, finishModPreparation } from './browser-library.js?v=1';
 const STORAGE='yfm_native_mods_v1';
 let catalogPromise;
 const preferences=()=>{try{return JSON.parse(localStorage.getItem(STORAGE)||'{}');}catch{return {};}};
@@ -33,16 +34,14 @@ export async function prepareNativeMods(progress=()=>{}) {
   for(const setting of mod.settings)settings.push('mod.'+mod.id+'.'+setting.key+'='+Number(settingValue(mod,setting,prefs)));
   for(const file of mod.files){if(enabled||file.path==='mod.json')jobs.push({...file,folder:mod.folder});}
  }
- const total=jobs.reduce((n,f)=>n+f.bytes,0),files=[];let next=0,loaded=0;
+ const total=jobs.reduce((n,f)=>n+f.bytes,0),files=[];let next=0,loaded=0;const controller=new AbortController();
  await Promise.all(Array.from({length:6},async()=>{
-  while(next<jobs.length){const f=jobs[next++];const url='/mod-files/'+[f.folder,...f.path.split('/')].map(encodeURIComponent).join('/')+'?v='+f.version+'&b=2';
-   const res=await fetch(url);const ct=res.headers.get('content-type')||'';
-   if(!res.ok||ct.includes('text/html'))throw Error('No se pudo cargar el archivo: '+f.folder+'/'+f.path);
-   const bytes=new Uint8Array(await res.arrayBuffer());
-   if(bytes.length === 0) throw Error('Archivo de mod vacio: '+f.path);
+  while(next<jobs.length){const f=jobs[next++];const url='/mod-files/'+[f.folder,...f.path.split('/')].map(encodeURIComponent).join('/')+'?v='+f.version+'&b='+(/\.(json|ini)$/i.test(f.path)?3:2);
+   const bytes=await cachedModBytes(url,f,{signal:controller.signal});
    files.push({path:'/mods/'+f.folder+'/'+f.path,bytes});loaded+=bytes.length;progress(loaded,total);
   }
- }));
+ })).catch(error=>{controller.abort();throw error;});
+ finishModPreparation();
  return {env,files,nativeAnime:catalog.mods.some(m=>m.id==='anime-duel-cutins'&&active.has(m.id)),mount(module){
   try{module.FS.mkdir('/game');}catch(e){if(!module.FS.analyzePath('/game').exists)throw e;}
   module.FS.writeFile('/game/settings.cfg',settings.join('\n')+'\n');

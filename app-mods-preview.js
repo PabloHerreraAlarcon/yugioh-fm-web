@@ -1,3 +1,4 @@
+import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
 import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=1';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=2';
@@ -5,7 +6,7 @@ const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () =>
     const status = document.getElementById('save-storage-status');
     if (status) status.textContent = 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=botones-01-fit-player-v1';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=library-01';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.
@@ -421,8 +422,9 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
         }
 
         syncTitle.textContent = 'Iniciando Forbidden Memories Recompiled nativo (WebAssembly)...';
-        syncBar.style.width = '90%';
-        syncPercent.textContent = '90%';
+        syncBar.style.width = '0%';
+        syncPercent.textContent = '';
+        syncTitle.textContent = 'Leyendo disco…';
 
         // Obtener el buffer del disco de juego
         let romBuffer;
@@ -434,8 +436,13 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
         }
         const romBytes = new Uint8Array(romBuffer);
         const nativeMods = await prepareNativeMods((loaded, total) => {
-            syncTitle.textContent = `Cargando mods (${Math.round(loaded / 1048576)} / ${Math.round(total / 1048576)} MB)...`;
+            syncTitle.textContent = `Preparando mods (${Math.round(loaded / 1048576)} / ${Math.round(total / 1048576)} MB)...`;
+            const percent = total ? Math.min(100, Math.round(100 * loaded / total)) : 100;
+            syncBar.style.width = percent + '%';
+            syncPercent.textContent = percent + '%';
         });
+        syncTitle.textContent = 'Mods listos. Iniciando el juego…';
+        syncPercent.textContent = '';
         state.nativeAnime = nativeMods.nativeAnime;
         const fontResponse = await fetch('/assets/ui/Montserrat.ttf');
         if (!fontResponse.ok) throw new Error('No se pudo cargar la tipografía del juego.');
@@ -920,6 +927,13 @@ function setupEventListeners() {
         const file = e.target.files[0];
         if (file) {
             state.romSource = file;
+            window.yfmRememberedDisc = true;
+            const discStatus=document.getElementById('disc-storage-status');
+            if(discStatus&&shouldRememberDisc())discStatus.textContent='Guardando copia local del disco… Puedes iniciar el juego.';
+            rememberDisc(file).then(()=>{if(discStatus&&shouldRememberDisc()&&state.romSource===file)discStatus.textContent='Disco guardado para la próxima visita.';}).catch(() => {
+                if(discStatus&&state.romSource===file)discStatus.textContent='No se pudo guardar la copia local. Puedes jugar igualmente.';
+                if(el.romDetectStatus) el.romDetectStatus.textContent = 'Disco listo para esta sesión. No se pudo guardar una copia local.';
+            });
             if (el.romDetectStatus) {
                 el.romDetectStatus.textContent = `✦ Disco cargado: ${file.name} (${(file.size / (1024*1024)).toFixed(1)} MB) · Listo`;
                 el.romDetectStatus.style.color = '#38bdf8';
@@ -1208,24 +1222,25 @@ function setupEventListeners() {
     });
 }
 
-function checkServerRom() {
-    fetch('/api/rom-status')
-        .then(res => res.json())
-        .then(data => {
-            if (data.available && el.romDetectStatus) {
-                state.romSource = data.path;
-                el.romDetectStatus.textContent = `✦ Disco detectado en servidor local (${(data.size / (1024*1024)).toFixed(0)} MB) · Listo para jugar`;
-                el.romDetectStatus.style.color = '#4ade80';
-            } else if (el.romDetectStatus) {
-                el.romDetectStatus.textContent = '✦ Selecciona una imagen .bin de Yu-Gi-Oh! FM para comenzar';
-                el.romDetectStatus.style.color = '#f59e0b';
-            }
-        })
-        .catch(() => {
-            if (el.romDetectStatus) {
-                el.romDetectStatus.textContent = '✦ Servidor local activo · Listo';
-            }
-        });
+async function checkServerRom() {
+    el.btnPlaySolo.disabled = true;
+    try {
+        const file = await getRememberedDisc();
+        if (file && !(state.romSource instanceof Blob)) {
+            state.romSource = file; window.yfmRememberedDisc = true;
+            if(el.btnPickCustomRom) el.btnPickCustomRom.textContent = 'Disco recordado · Cambiar disco';
+            if(el.romDetectStatus) el.romDetectStatus.textContent = 'Disco recordado en este navegador. Listo para jugar.';
+            return;
+        }
+        if (state.romSource instanceof Blob) return;
+        const response = await fetch('/api/rom-status'), data = await response.json();
+        if (state.romSource instanceof Blob) return;
+        if(data.available) {
+            state.romSource = data.path; window.yfmRememberedDisc = true;
+            if(el.romDetectStatus) el.romDetectStatus.textContent = 'Disco local detectado. Listo para jugar.';
+        } else if(el.romDetectStatus) el.romDetectStatus.textContent = 'Selecciona tu disco una vez para comenzar.';
+    } catch { /* Manual disc selection remains available. */ }
+    finally { el.btnPlaySolo.disabled = false; }
 }
 
 function checkUrlRoomCode() {
@@ -1359,6 +1374,9 @@ window.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
     setupGamepadPolling();
     restoreUserSettings();
+    setupBrowserLibrary(() => state.romSource,()=>{
+        if(!el.romFileInput?.files?.length){state.romSource='/rom/yfm.bin';window.yfmRememberedDisc=false;if(el.btnPickCustomRom)el.btnPickCustomRom.textContent='Seleccionar mi disco (.bin)';}
+    });
     checkServerRom();
     connectWebSocket();
 });

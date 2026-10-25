@@ -1,0 +1,3 @@
+# Runtime hashes and byte counts must survive Git publication unchanged.
+mod-files/** -text
+*.wasm -text

@@ -38,7 +38,7 @@ if(disc){
   }
  });
  $('#btn-play-solo')?.addEventListener('click',e=>{
-  if(!$('#rom-file-input')?.files?.[0]){
+  if(!$('#rom-file-input')?.files?.[0]&&!window.yfmRememberedDisc){
    e.stopImmediatePropagation();
    disc.click();
   }

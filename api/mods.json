@@ -2256,12 +2256,22 @@
         {
           "path": "textures/cutins/jonouchi_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "fbdd39e60493af95"
+          "version": "fbdd39e60493af95",
+          "compressed": {
+            "path": "textures/cutins/jonouchi_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 1059416,
+            "version": "07849079fb59941a"
+          }
         },
         {
           "path": "textures/cutins/jonouchi_green_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "9ecf7e86d9a797af"
+          "version": "9ecf7e86d9a797af",
+          "compressed": {
+            "path": "textures/cutins/jonouchi_green_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 979313,
+            "version": "8765f782ba2b8040"
+          }
         },
         {
           "path": "textures/cutins/jonouchi_hd_attack_axe_raider_header_640x110_bgra.bin",
@@ -2416,17 +2426,32 @@
         {
           "path": "textures/cutins/jonouchi_skin3_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "80e3b3df50d2c84b"
+          "version": "80e3b3df50d2c84b",
+          "compressed": {
+            "path": "textures/cutins/jonouchi_skin3_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 902882,
+            "version": "1b30ba320ce50ec9"
+          }
         },
         {
           "path": "textures/cutins/jonouchi_villager_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "98791434eb9d1b31"
+          "version": "98791434eb9d1b31",
+          "compressed": {
+            "path": "textures/cutins/jonouchi_villager_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 953631,
+            "version": "337c19d57ebc645f"
+          }
         },
         {
           "path": "textures/cutins/kaiba_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "5a134451884a7545"
+          "version": "5a134451884a7545",
+          "compressed": {
+            "path": "textures/cutins/kaiba_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 1118680,
+            "version": "7e2032f60b25a6ee"
+          }
         },
         {
           "path": "textures/cutins/kaiba_hd_attack_battle_ox_header_640x110_bgra.bin",
@@ -2531,12 +2556,22 @@
         {
           "path": "textures/cutins/kaiba_skin2_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "06dfe10c8e77691f"
+          "version": "06dfe10c8e77691f",
+          "compressed": {
+            "path": "textures/cutins/kaiba_skin2_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 1364166,
+            "version": "911b0ae22d2c954f"
+          }
         },
         {
           "path": "textures/cutins/yugi_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "3e55963aba269154"
+          "version": "3e55963aba269154",
+          "compressed": {
+            "path": "textures/cutins/yugi_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 1146214,
+            "version": "557984372325404d"
+          }
         },
         {
           "path": "textures/cutins/yugi_hd_attack_black_chaos_header_640x110_bgra.bin",
@@ -2621,12 +2656,22 @@
         {
           "path": "textures/cutins/yugi_skin2_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "ef553bbe133f7524"
+          "version": "ef553bbe133f7524",
+          "compressed": {
+            "path": "textures/cutins/yugi_skin2_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 789135,
+            "version": "72a000fd1b50aa64"
+          }
         },
         {
           "path": "textures/cutins/yugi_skin3_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "3e98675522a82b2b"
+          "version": "3e98675522a82b2b",
+          "compressed": {
+            "path": "textures/cutins/yugi_skin3_cutin_1080x1080_bgra.bin.gz",
+            "bytes": 1301774,
+            "version": "fb4b6f480b28d31a"
+          }
         },
         {
           "path": "textures/ui/keyboard_naming_1024x768_bgra.bin",
