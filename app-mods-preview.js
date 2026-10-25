@@ -551,7 +551,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
              * el script: sin esto el glue de ab-opt pide /memories-pc.wasm y
              * falla con "env invoke_i: function import requires a callable". */
             window.Module = window.Module || {};
-            window.Module.locateFile = (file) => abDir + file + '?v=mods-674c750574d1';
+            window.Module.locateFile = (file) => abDir + file + '?v=cutin-e2a34c521433';
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';

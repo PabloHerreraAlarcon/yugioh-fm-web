@@ -729,11 +729,6 @@
       "conflicts": [],
       "files": [
         {
-          "path": "mod.json",
-          "bytes": 26351,
-          "version": "47960d5971206323"
-        },
-        {
           "path": "audio/anime/duel_of_frienship.ogg",
           "bytes": 2450576,
           "version": "e84d6ed39bb890bb"
@@ -1989,6 +1984,16 @@
           "version": "ca37882a619f45a2"
         },
         {
+          "path": "duelo.wav",
+          "bytes": 66318380,
+          "version": "a2de669bdbd2bd2e"
+        },
+        {
+          "path": "mod.json",
+          "bytes": 26351,
+          "version": "47960d5971206323"
+        },
+        {
           "path": "textures/avatars/avatar_00.bin",
           "bytes": 147456,
           "version": "151c32128fb7bd98"
@@ -2254,14 +2259,14 @@
           "version": "85efcd3a484cb2db"
         },
         {
-          "path": "textures/cutins/jonouchi_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "870d73b5255e48d4"
+          "path": "textures/cutins/jonouchi_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "fbdd39e60493af95"
         },
         {
-          "path": "textures/cutins/jonouchi_green_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "efdddcd34377e750"
+          "path": "textures/cutins/jonouchi_green_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "9ecf7e86d9a797af"
         },
         {
           "path": "textures/cutins/jonouchi_hd_attack_axe_raider_header_640x110_bgra.bin",
@@ -2414,19 +2419,19 @@
           "version": "4045904d4ca1c1a0"
         },
         {
-          "path": "textures/cutins/jonouchi_skin3_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "5934f2c13f3f9493"
+          "path": "textures/cutins/jonouchi_skin3_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "80e3b3df50d2c84b"
         },
         {
-          "path": "textures/cutins/jonouchi_villager_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "15f9348de05b461d"
+          "path": "textures/cutins/jonouchi_villager_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "98791434eb9d1b31"
         },
         {
-          "path": "textures/cutins/kaiba_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "659bd6c6cd1d3c4a"
+          "path": "textures/cutins/kaiba_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "5a134451884a7545"
         },
         {
           "path": "textures/cutins/kaiba_hd_attack_battle_ox_header_640x110_bgra.bin",
@@ -2529,14 +2534,14 @@
           "version": "2bd60935f63427df"
         },
         {
-          "path": "textures/cutins/kaiba_skin2_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "1f474ee6909132fc"
+          "path": "textures/cutins/kaiba_skin2_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "06dfe10c8e77691f"
         },
         {
-          "path": "textures/cutins/yugi_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "4d3346421cd855d4"
+          "path": "textures/cutins/yugi_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "3e55963aba269154"
         },
         {
           "path": "textures/cutins/yugi_hd_attack_black_chaos_header_640x110_bgra.bin",
@@ -2619,14 +2624,14 @@
           "version": "0317d5f517748eba"
         },
         {
-          "path": "textures/cutins/yugi_skin2_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "4baac6c99d1b4c6b"
+          "path": "textures/cutins/yugi_skin2_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "ef553bbe133f7524"
         },
         {
-          "path": "textures/cutins/yugi_skin3_cutin_720x720_bgra.bin",
-          "bytes": 2073600,
-          "version": "a7561fb0ac7018d1"
+          "path": "textures/cutins/yugi_skin3_cutin_1080x1080_bgra.bin",
+          "bytes": 4665600,
+          "version": "3e98675522a82b2b"
         },
         {
           "path": "textures/ui/keyboard_naming_1024x768_bgra.bin",
