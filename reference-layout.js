@@ -53,3 +53,10 @@ const footer=document.createElement('footer');footer.className='reference-footer
 
 
 
+/* Character choice belongs exclusively to the in-game selector. */
+(()=>{
+ const hide=()=>document.querySelectorAll('#tab-mods label').forEach(label=>{
+  if(label.querySelector('select')&&/Free Duel Character/i.test(label.textContent))label.hidden=true,label.style.display='none';
+ });
+ hide();new MutationObserver(hide).observe(document.getElementById('tab-mods'),{childList:true,subtree:true});
+})();
