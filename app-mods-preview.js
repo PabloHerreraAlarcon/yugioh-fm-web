@@ -1,12 +1,12 @@
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=1';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=web-options-01';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=2';
 const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () => {
     const status = document.getElementById('save-storage-status');
     if (status) status.textContent = 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=library-01';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=web-options-01';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.

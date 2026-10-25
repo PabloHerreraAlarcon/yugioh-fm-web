@@ -14,11 +14,11 @@ if(localStorage.getItem(PC_PRESET)!=='1') {
 }
 
 function getCatalog(){return catalogPromise ||= fetch('/api/mods',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('No se pudo consultar los mods');return r.json();});}
-function selected(mod,prefs){return mod.compatible&&(prefs[mod.id]?.enabled??mod.enabled);}
+function selected(mod,prefs){return mod.compatible&&(mod.id==='my-mod'||(prefs[mod.id]?.enabled??mod.enabled));}
 // Explicit choices take precedence over defaults; conflicts are symmetric.
 export function resolvedMods(mods,prefs) {
  const enabled=new Set();
- const candidates=mods.filter(m=>selected(m,prefs)).sort((a,b)=>Number(prefs[b.id]?.enabled===true)-Number(prefs[a.id]?.enabled===true));
+ const candidates=mods.filter(m=>selected(m,prefs)).sort((a,b)=>Number(b.id==='my-mod')-Number(a.id==='my-mod')||Number(prefs[b.id]?.enabled===true)-Number(prefs[a.id]?.enabled===true));
  for(const mod of candidates) {
   if(!mods.some(other=>enabled.has(other.id)&&((mod.conflicts||[]).includes(other.id)||(other.conflicts||[]).includes(mod.id))))enabled.add(mod.id);
  }
@@ -31,7 +31,7 @@ export async function prepareNativeMods(progress=()=>{}) {
  for(const mod of catalog.mods){
   if(!mod.compatible)continue;
   const enabled=active.has(mod.id);settings.push('mod.'+mod.id+'='+Number(enabled));
-  for(const setting of mod.settings)settings.push('mod.'+mod.id+'.'+setting.key+'='+Number(settingValue(mod,setting,prefs)));
+  for(const setting of mod.settings)if(!(mod.id==='anime-duel-cutins'&&setting.key==='free_duel_character'))settings.push('mod.'+mod.id+'.'+setting.key+'='+Number(settingValue(mod,setting,prefs)));
   for(const file of mod.files){if(enabled||file.path==='mod.json')jobs.push({...file,folder:mod.folder});}
  }
  const total=jobs.reduce((n,f)=>n+f.bytes,0),files=[];let next=0,loaded=0;const controller=new AbortController();
@@ -60,6 +60,7 @@ export async function setupNativeModsUI(){
   const heading=document.createElement('h3');heading.textContent='Mods instalados';group.append(heading);
   const note=document.createElement('p');note.className='ctrl-tip';note.textContent='Se aplican al iniciar. Recarga la página después de cambiar estas opciones.';group.append(note);
   for(const mod of mods){
+   if(mod.id==='my-mod'||mod.id==='duel-links-base-aura')continue;
    const section=document.createElement('div');section.className='mod-field';section.style.marginBottom='18px';
    const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.disabled=!mod.compatible;check.checked=active.has(mod.id);
    label.append(check,document.createTextNode(' '+mod.name));section.append(label);
@@ -76,6 +77,7 @@ export async function setupNativeModsUI(){
    if(mod.compatible&&mod.settings.length){
     const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Opciones';details.append(summary);
     for(const setting of mod.settings){
+     if(mod.id==='anime-duel-cutins'&&setting.key==='free_duel_character')continue;
      const row=document.createElement('label');row.style.display='block';row.style.margin='10px 0';row.textContent=(mod.id==='3d-monsters'&&setting.key==='style'?'Representación':setting.label||setting.key)+' ';
      let control;
      if(setting.type==='choice'){control=document.createElement('select');control.className='select-ancient';for(const [i,name] of setting.choices.entries()){const opt=document.createElement('option');opt.value=i;opt.textContent=mod.id==='3d-monsters'&&setting.key==='style'?['Modelos 3D','Arte de cartas (más ligero)'][i]:name;control.append(opt);}control.value=settingValue(mod,setting,prefs);}

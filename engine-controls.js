@@ -12,7 +12,8 @@ export function engineStartupOptions() {
             if(pair && Object.hasOwn(saved,pair[1])) saved[pair[1]]=Number(pair[2]);
         }
     } catch { /* Keep valid web choices when an old profile cannot be read. */ }
-    const bounds = [[0,100],[0,100],[0,100],[1,8],[0,2],[0,2],[0,2],[0,1]];
+    if(Number.isInteger(saved.internal_scale))saved.internal_scale=Math.min(4,Math.max(1,saved.internal_scale));
+    const bounds = [[0,100],[0,100],[0,100],[1,4],[0,2],[0,2],[0,2],[0,1]];
     for (const [i,key] of fields.entries()) if (Number.isInteger(saved[key]) && saved[key]>=bounds[i][0] && saved[key]<=bounds[i][1]) result[key]=saved[key];
     return result;
 }
@@ -51,7 +52,7 @@ export function setupEngineControls(getModule) {
     const preset=graphics.querySelector('.reference-setting');if(preset)preset.remove();
     const intro=graphics.querySelector('.reference-intro');if(intro)intro.textContent='Los ajustes se aplican al juego. Resolución predeterminada: ×4.';
     const row=document.createElement('label');row.className='setting-slider';const title=document.createElement('span');title.textContent='Resolución interna';const resolution=document.createElement('select');resolution.setAttribute('aria-label','Resolución interna');
-    for(const scale of [1,2,3,4,6,8]){const option=document.createElement('option');option.value=scale;option.textContent='×'+scale;resolution.append(option);}row.append(title,resolution);graphics.prepend(row);
+    for(const scale of [1,2,3,4]){const option=document.createElement('option');option.value=scale;option.textContent='×'+scale;resolution.append(option);}row.append(title,resolution);graphics.prepend(row);
     bind(resolution,3,n=>Number(n.value),(n,v)=>n.value=v);
     const wide=document.getElementById('widescreen-toggle');wide.parentElement.querySelector('span').textContent='Panorámico 16:9';bind(wide,4,n=>n.checked?2:0,(n,v)=>{n.checked=v===2;localStorage.setItem('yfm_widescreen',n.checked?'1':'0');const screen=document.getElementById('screen-container');screen.style.aspectRatio=n.checked?'16/9':'4/3';screen.style.setProperty('--player-aspect',n.checked?'16/9':'4/3');});
     const smooth=document.getElementById('hd-toggle');bind(smooth,5,n=>n.checked?1:0,(n,v)=>{n.checked=v!==0;getModule().canvas.style.imageRendering=v?'auto':'pixelated';});
@@ -68,6 +69,7 @@ export function setupEngineControls(getModule) {
     window.addEventListener('yfm-engine-ready',()=>{
         const module=getModule();ready=typeof module?._YfmWeb_GetSetting==='function' && typeof module?._YfmWeb_SetSetting==='function';
         if(!ready){hint.textContent='Este motor necesita actualizarse para utilizar los ajustes.';return;}
+        if(module._YfmWeb_GetSetting(3)>4)module._YfmWeb_SetSetting(3,4);
         for(const control of controls){control.node.disabled=false;control.write(control.node,module._YfmWeb_GetSetting(control.index));}
         edit.disabled=false;hint.textContent='Los ajustes modifican el juego y se conservan al recargar.';gamepadStatus();
     });
