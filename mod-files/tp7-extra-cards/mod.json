@@ -1,0 +1,7174 @@
+{
+  "id": "tp7-extra-cards",
+  "name": "TP7 Projects - Extra Cards",
+  "version": "1.0",
+  "author": "TP7 Projects (Art assets by fujarra)",
+  "description": "Colección limpia de 360 cartas adicionales para TP7 Projects / Anime Duel Cutins.\nCampaña vanilla 100% preservada (sin alteraciones de drops, fusiones ni decks originales).\nCada carta cuenta con soporte preparado para asignación de modelos 3D futuros mediante el parámetro 'model'.",
+  "min_api": 16,
+  "enabled": true,
+  "card_types": {
+    "types": [
+      {
+        "id": 24,
+        "name": "Divine-Beast",
+        "icon": "icons/divine_beast.png"
+      }
+    ]
+  },
+  "attributes": {
+    "attributes": [
+      {
+        "id": 8,
+        "name": "Divine",
+        "icon": "icons/divine.png"
+      }
+    ]
+  },
+  "cards": [
+    {
+      "copy": 722,
+      "id": "card-1",
+      "name": "Slot Machine",
+      "description": "The machine's ability is said to vary according to its slot results.",
+      "attack": 2000,
+      "defense": 2300,
+      "type": "Machine",
+      "level": 7,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Monster",
+      "password": "03797883",
+      "art": "art/card-1.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-2",
+      "name": "Space Megatron",
+      "description": "A robot that is constructed primarily with sets of semicircles.\nIt attacks with lasers mounted at its sides and the center.",
+      "attack": 1400,
+      "defense": 2000,
+      "type": "Machine",
+      "level": 5,
+      "stars": [
+        "Mars",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "39181897",
+      "art": "art/card-2.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-3",
+      "name": "Red Archery Girl",
+      "description": "Reduces the ATK/DEF of all opponent's monsters by 300.",
+      "attack": 1400,
+      "defense": 1500,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Orange",
+      "password": "65570596",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "opponent",
+          "attack": 300,
+          "defense": 300
+        }
+      ],
+      "art": "art/card-3.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-4",
+      "name": "Ryu-Ran",
+      "description": "A vicious little dragon sheltered in an egg that looks deceptively harmless.",
+      "attack": 2200,
+      "type": "Dragon",
+      "attribute": "Fire",
+      "level": 7,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "02964201",
+      "art": "art/card-4.png",
+      "tags": [
+        "fire"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-8",
+      "name": "Dark-Eyes Illusionist",
+      "description": "FLIP: Enemy monsters are unable to attack for 3 rounds.",
+      "attack": 0,
+      "defense": 1400,
+      "level": 2,
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Orange",
+      "password": "38247752",
+      "monster_effects": [
+        {
+          "when": "flip",
+          "do": "magic",
+          "card": 348
+        }
+      ],
+      "art": "art/card-8.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-9",
+      "name": "Relinquished",
+      "description": "An evil spirit that steals the abilities of the strongest monster on the opponent's side.",
+      "attack": 0,
+      "defense": 0,
+      "level": 1,
+      "stars": [
+        "Venus",
+        "Uranus"
+      ],
+      "password": "64631466",
+      "art": "art/card-9.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-10",
+      "name": "Jigen Bakudan",
+      "description": "FLIP: Destroy all monsters your opponent controls.",
+      "attack": 200,
+      "defense": 1000,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 2,
+      "stars": [
+        "Mars",
+        "Venus"
+      ],
+      "frame": "Orange",
+      "password": "90020065",
+      "monster_effects": [
+        {
+          "when": "flip",
+          "do": "magic",
+          "card": 337
+        }
+      ],
+      "art": "art/card-10.png",
+      "tags": [
+        "fire"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-11",
+      "name": "Thousand-Eyes Idol",
+      "description": "A wicked entity that controls the hearts of men, its thousand eyes are able to see and expand the negative influences in an individual's soul.",
+      "attack": 0,
+      "defense": 0,
+      "level": 1,
+      "stars": [
+        "Venus",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "27125110",
+      "art": "art/card-11.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-12",
+      "name": "Thousand-Eyes Restrict",
+      "description": "(Relinquished + Thousand-Eyes Idol)",
+      "attack": 0,
+      "defense": 0,
+      "level": 1,
+      "stars": [
+        "Venus",
+        "Moon"
+      ],
+      "frame": "Purple",
+      "password": "63519819",
+      "art": "art/card-12.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-13",
+      "name": "Steel Ogre Grotto #2",
+      "description": "A mechanized iron doll with tremendous strength.",
+      "attack": 1900,
+      "defense": 2200,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "90908427",
+      "art": "art/card-13.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-14",
+      "name": "Blast Sphere",
+      "description": "FLIP: Destroy the attacking monster.",
+      "attack": 1400,
+      "defense": 1400,
+      "type": "Machine",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Mars"
+      ],
+      "frame": "Orange",
+      "password": "26302522",
+      "monster_effects": [
+        {
+          "when": "flip",
+          "do": "destroy",
+          "target": "battle"
+        }
+      ],
+      "art": "art/card-14.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-15",
+      "name": "Hyozanryu",
+      "description": "A dragon created from a massive diamond that sparkles with blinding light.",
+      "attack": 2100,
+      "defense": 2800,
+      "type": "Dragon",
+      "attribute": "Light",
+      "level": 7,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "62397231",
+      "art": "art/card-15.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-16",
+      "name": "Alpha The Magnet Warrior",
+      "description": "Alpha, Beta, and Gamma meld as one to form a powerful monster.",
+      "attack": 1400,
+      "defense": 1700,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "99785935",
+      "art": "art/card-16.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-17",
+      "name": "Legion the Fiend Jester",
+      "description": "A magician on the dark side in the guise of a jester.\nIt bobs and weaves to avoid attack, then strikes sharply.",
+      "attack": 1300,
+      "defense": 1500,
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "25280974",
+      "art": "art/card-17.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-18",
+      "name": "Invitation to a Dark Sleep",
+      "description": "Increases the ATK/DEF of all DARK monsters by 500.",
+      "attack": 1500,
+      "defense": 1800,
+      "level": 5,
+      "stars": [
+        "Venus",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "52675689",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "all",
+          "attack": 500,
+          "defense": 500,
+          "attribute": "Dark"
+        }
+      ],
+      "art": "art/card-18.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-19",
+      "name": "Lord of D.",
+      "description": "(DRAGON + SPELLCASTER)\n\nWhen summoned, increases the ATK/DEF of Dragon-Type monsters by 300.",
+      "attack": 1200,
+      "defense": 1100,
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Sun"
+      ],
+      "frame": "Purple",
+      "password": "17985575",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "own",
+          "attack": 300,
+          "defense": 300,
+          "type": "Dragon"
+        }
+      ],
+      "art": "art/card-19.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-20",
+      "name": "Red-Eyes Black Metal Dragon",
+      "description": "(Red-Eyes Black Dragon + Metalmorph)",
+      "defense": 2400,
+      "type": "Machine",
+      "stars": [
+        "Moon",
+        "Mars"
+      ],
+      "frame": "Purple",
+      "password": "64335804",
+      "art": "art/card-20.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-21",
+      "name": "Barrel Dragon",
+      "description": "Bullets shot from its three barrels can conduct simultaneous attacks.",
+      "attack": 2600,
+      "defense": 2200,
+      "type": "Machine",
+      "level": 7,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "81480460",
+      "art": "art/card-21.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-22",
+      "name": "Hannibal Necromancer",
+      "description": "Souls of the dead gathered and became Hannibal Necromancer.",
+      "attack": 1400,
+      "defense": 1800,
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "05640330",
+      "art": "art/card-22.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-23",
+      "name": "Panther Warrior",
+      "description": "Attacks faster than the wind. Its speed exceeds 100 kilo.",
+      "attack": 2000,
+      "defense": 1600,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "42035044",
+      "art": "art/card-23.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-24",
+      "name": "Three-Headed Geedo",
+      "description": "A three-headed nocturnal monster that is absolutely ruthless when fighting.",
+      "attack": 1200,
+      "defense": 1400,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "78423643",
+      "art": "art/card-24.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-25",
+      "name": "Gazelle the King of M. Beasts",
+      "description": "This monster moves so fast that it looks like an illusion to mortal eyes.",
+      "attack": 1500,
+      "defense": 1200,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "05818798",
+      "art": "art/card-25.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-26",
+      "name": "Stone Statue of the Aztecs",
+      "description": "Long ago, tens of thousands of sacrifices were made at this alter.",
+      "attack": 300,
+      "defense": 2000,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "31812496",
+      "art": "art/card-26.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-27",
+      "name": "Berfomet",
+      "description": "Its big wings are said to be able to repel any wind.",
+      "attack": 1400,
+      "defense": 1800,
+      "type": "Fiend",
+      "level": 5,
+      "stars": [
+        "Mercury",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "77207191",
+      "art": "art/card-27.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-28",
+      "name": "Chimera the Flying Mythical",
+      "description": "(Gazelle the King of M. Beasts + Berfomet)",
+      "attack": 2100,
+      "defense": 1800,
+      "type": "Beast",
+      "attribute": "Wind",
+      "level": 6,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "frame": "Purple",
+      "password": "04796100",
+      "art": "art/card-28.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-29",
+      "name": "Gear Golem the Moving Fortress",
+      "description": "A fortress combining mobility and defense. It is made of enchanted stones.",
+      "attack": 800,
+      "defense": 2200,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "30190809",
+      "art": "art/card-29.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-30",
+      "name": "Jinzo",
+      "description": "Destroy all Set Spell/Trap Cards your opponent controls.",
+      "attack": 2400,
+      "defense": 1500,
+      "type": "Machine",
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Orange",
+      "password": "77585513",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "magic",
+          "card": 672
+        }
+      ],
+      "art": "art/card-30.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-31",
+      "name": "Swordsman of Landstar",
+      "description": "An amateur with a sword, this fairy warrior relies on its mysterious powers.",
+      "attack": 500,
+      "defense": 1200,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Sun",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "03573512",
+      "art": "art/card-31.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-32",
+      "name": "Cyber Raider",
+      "description": "A villain who perpetrated evil deeds in cyberspace. His identity remains a secret.",
+      "attack": 1400,
+      "defense": 1000,
+      "type": "Machine",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "39978267",
+      "art": "art/card-32.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-33",
+      "name": "The Fiend Megacyber",
+      "description": "Gained power by fusing electronics and magic.",
+      "attack": 2200,
+      "defense": 1200,
+      "type": "Warrior",
+      "level": 6,
+      "stars": [
+        "Pluto",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "66362965",
+      "art": "art/card-33.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-34",
+      "name": "Reflect Bounder",
+      "description": "A magician who uses a mirror to reflect attacks.",
+      "attack": 1700,
+      "defense": 1000,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "02851070",
+      "art": "art/card-34.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-35",
+      "name": "Beta The Magnet Warrior",
+      "description": "Alpha, Beta, and Gamma meld as one to form a powerful monster.",
+      "attack": 1700,
+      "defense": 1600,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "39256679",
+      "art": "art/card-35.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-36",
+      "name": "Big Shield Gardna",
+      "description": "Increases the DEF of all your monsters by 500.",
+      "attack": 100,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Orange",
+      "password": "65240384",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "defense": 500
+        }
+      ],
+      "art": "art/card-36.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-37",
+      "name": "Doll of Demise",
+      "description": "A fiendish doll that was once beloved, but discarded later.\nIt came to life to exact revenge for abandonment.",
+      "attack": 1600,
+      "defense": 1700,
+      "type": "Fiend",
+      "level": 5,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "91635482",
+      "art": "art/card-37.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-38",
+      "name": "Dark Magician Girl",
+      "description": "A beautiful female counterpart to the male Dark Magician.",
+      "attack": 2000,
+      "defense": 1700,
+      "level": 6,
+      "stars": [
+        "Venus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "38033121",
+      "art": "art/card-38.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-39",
+      "name": "Alligator's Sword",
+      "description": "(REPTILE + WARRIOR)",
+      "attack": 1500,
+      "defense": 1200,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "64428736",
+      "art": "art/card-39.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-40",
+      "name": "Insect Queen",
+      "description": "A powerful creature that rules over the insects.",
+      "attack": 2200,
+      "defense": 2400,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Jupiter",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "91512835",
+      "art": "art/card-40.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-41",
+      "name": "Parasite Paracide",
+      "description": "A nasty being who parasitizes every living thing to increase its offspring.",
+      "attack": 500,
+      "defense": 300,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "27911549",
+      "art": "art/card-41.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-42",
+      "name": "Skull-Mark Ladybug",
+      "description": "When destroyed, increase your LP by 1000.",
+      "attack": 500,
+      "defense": 1500,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "64306248",
+      "monster_effects": [
+        {
+          "when": "destroyed",
+          "do": "heal",
+          "amount": 1000
+        }
+      ],
+      "art": "art/card-42.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-43",
+      "name": "Little-Winguard",
+      "description": "The eyes hidden in the shadow of its hat, do not miss any movement of its opponents.",
+      "attack": 1400,
+      "defense": 1800,
+      "type": "Warrior",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "90790253",
+      "art": "art/card-43.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-44",
+      "name": "Pinch Hopper",
+      "description": "At first glance, it is an ordinary grasshopper, but when pinched, it can bring a helper",
+      "attack": 1000,
+      "defense": 1200,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "26185991",
+      "art": "art/card-44.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-46",
+      "name": "The Unhappy Maiden",
+      "description": "Poor girl who makes her living selling things in town daily.",
+      "attack": 0,
+      "defense": 100,
+      "attribute": "Light",
+      "level": 1,
+      "stars": [
+        "Venus",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "51275027",
+      "art": "art/card-46.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-47",
+      "name": "Wall of Illusion",
+      "description": "Shows illusions to the opponent to curb attacks.",
+      "attack": 1000,
+      "defense": 1850,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "13945283",
+      "art": "art/card-47.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-48",
+      "name": "Neo the Magic Swordsman",
+      "description": "(SPELLCASTER + WARRIOR)",
+      "attack": 1700,
+      "defense": 1000,
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Mercury"
+      ],
+      "frame": "Purple",
+      "password": "50930991",
+      "art": "art/card-48.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-49",
+      "name": "Man-Eating Treasure Chest",
+      "description": "A monster disguised as a treasure chest that is known to attack the unwary adventurer.",
+      "attack": 1600,
+      "defense": 1000,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "13723605",
+      "art": "art/card-49.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-50",
+      "name": "Sorcerer of the Doomed",
+      "description": "(SPELLCASTER + ZOMBIE)",
+      "attack": 1450,
+      "defense": 1200,
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Purple",
+      "password": "49218300",
+      "art": "art/card-50.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-51",
+      "name": "Sword Hunter",
+      "description": "Each time it destroys a monster, increase its ATK by 200.",
+      "attack": 2450,
+      "defense": 1700,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Orange",
+      "password": "51345461",
+      "monster_effects": [
+        {
+          "when": "destroy_opponent",
+          "do": "boost",
+          "target": "self",
+          "attack": 200
+        }
+      ],
+      "art": "art/card-51.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-52",
+      "name": "Drill Bug",
+      "description": "Kills people by entering their body and draining all life fluids.",
+      "attack": 1100,
+      "defense": 200,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "88733579",
+      "art": "art/card-52.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-53",
+      "name": "Deepsea Warrior",
+      "description": "(AQUA + WARRIOR)\n\nIncreases the ATK/DEF of all WATER monsters by 500.",
+      "attack": 1600,
+      "defense": 1800,
+      "type": "Warrior",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Sun"
+      ],
+      "frame": "Purple",
+      "password": "24128274",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "all",
+          "attack": 500,
+          "defense": 500,
+          "attribute": "Water"
+        }
+      ],
+      "art": "art/card-53.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-54",
+      "name": "Bite Shoes",
+      "description": "If anyone were to put their foot in the mouth, it would surely be torn off.",
+      "attack": 500,
+      "defense": 300,
+      "type": "Fiend",
+      "level": 2,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "50122883",
+      "art": "art/card-54.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-55",
+      "name": "Spikebot",
+      "description": "A mechanical soldier created by a wicked sorcerer, it attacks with the two steel balls attached to its arms.",
+      "attack": 1800,
+      "defense": 1700,
+      "type": "Machine",
+      "level": 5,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "87511987",
+      "art": "art/card-55.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-56",
+      "name": "Ooashi",
+      "description": "Loves to step on and crush enemies",
+      "attack": 1300,
+      "defense": 1000,
+      "type": "Beast",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "13906696",
+      "art": "art/card-56.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-57",
+      "name": "Satellite Cannon",
+      "description": "Increase this card's ATK by 1000 during each Draw Phase.",
+      "attack": 0,
+      "defense": 0,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 5,
+      "stars": [
+        "Pluto",
+        "Sun"
+      ],
+      "frame": "Orange",
+      "password": "50400231",
+      "monster_effects": [
+        {
+          "when": "draw",
+          "do": "boost",
+          "target": "self",
+          "attack": 1000
+        }
+      ],
+      "art": "art/card-57.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-58",
+      "name": "Mutant Crab",
+      "description": "Took on this form after repeated genetic manipulations.",
+      "attack": 950,
+      "defense": 1200,
+      "type": "Aqua",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "86495330",
+      "art": "art/card-58.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-69",
+      "name": "Gate Sword",
+      "description": "A dark warrior that has assumed the guise of a caped sword. It cleaves everything it touches in half.",
+      "attack": 1800,
+      "defense": 1950,
+      "type": "Warrior",
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "46211326",
+      "art": "art/card-69.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-70",
+      "name": "Steel Fan Fighter",
+      "description": "A warrior who uses a steel fan that is etched with a dragon. He battles as if he were dancing.",
+      "attack": 2200,
+      "defense": 1850,
+      "type": "Warrior",
+      "attribute": "Wind",
+      "level": 7,
+      "stars": [
+        "Saturn",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "13616074",
+      "art": "art/card-70.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-71",
+      "name": "Leopard Girl",
+      "description": "A beast warrior that breathes on the neck of its foe. The startled foe is then shredded by this quick being.",
+      "attack": 1950,
+      "defense": 1700,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Jupiter",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "49000779",
+      "art": "art/card-71.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-72",
+      "name": "The Last Warrior from A. Planet",
+      "description": "(MACHINE + WARRIOR)",
+      "attack": 2350,
+      "defense": 2300,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "86099788",
+      "art": "art/card-72.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-73",
+      "name": "Dunames Dark Witch",
+      "description": "Even when all odds are against this brave fairy, she will press onwards in battle and never retreat.",
+      "attack": 1800,
+      "defense": 1050,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "12493482",
+      "art": "art/card-73.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-74",
+      "name": "Garnecia Elefantis",
+      "description": "(BEAST-WARRIOR + WARRIOR)",
+      "attack": 2400,
+      "defense": 2000,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Uranus",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "49888191",
+      "art": "art/card-74.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-75",
+      "name": "Total Defense Shogun",
+      "description": "A brave general who kept defending for 1000 days to protect an important person.",
+      "attack": 1550,
+      "defense": 2500,
+      "type": "Warrior",
+      "level": 6,
+      "stars": [
+        "Uranus",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "75372290",
+      "art": "art/card-75.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-76",
+      "name": "Beast of Talwar",
+      "description": "(FIEND + WARRIOR)",
+      "attack": 2400,
+      "defense": 2150,
+      "type": "Fiend",
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "11761845",
+      "art": "art/card-76.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-77",
+      "name": "Cyber-Tech Alligator",
+      "description": "(MACHINE + REPTILE)",
+      "attack": 2500,
+      "defense": 1600,
+      "type": "Machine",
+      "attribute": "Wind",
+      "level": 5,
+      "stars": [
+        "Saturn",
+        "Neptune"
+      ],
+      "frame": "Purple",
+      "password": "48766543",
+      "art": "art/card-77.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-78",
+      "name": "Talons of Shurilane",
+      "description": "Those who have seen it within the mirage are scratched to death by its claws.",
+      "attack": 2100,
+      "defense": 2050,
+      "type": "Fiend",
+      "attribute": "Light",
+      "level": 6,
+      "stars": [
+        "Venus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "74150658",
+      "art": "art/card-78.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-79",
+      "name": "The Stern Mystic",
+      "description": "FLIP: Reveal all face-down monsters your opponent controls.",
+      "attack": 1500,
+      "defense": 1200,
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Sun"
+      ],
+      "frame": "Orange",
+      "password": "87557188",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "magic",
+          "card": 350
+        }
+      ],
+      "art": "art/card-79.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-80",
+      "name": "Baron of the Fiend Sword",
+      "description": "An aristocrat who wields a sword possessed by a malicious spirit that preys on the weak.",
+      "attack": 1550,
+      "defense": 800,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "86325596",
+      "art": "art/card-80.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-81",
+      "name": "Shining Abyss",
+      "description": "This monster employs the powers of both Light and Darkness.",
+      "attack": 1600,
+      "defense": 1800,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "87303357",
+      "art": "art/card-81.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-82",
+      "name": "Soldier Ari",
+      "description": "An ant that turned vicious as a result of spontaneous mutation. Its body is relatively stiff and durable.",
+      "attack": 500,
+      "defense": 1200,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Jupiter",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "73038060",
+      "art": "art/card-82.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-83",
+      "name": "Gearfried the Iron Knight",
+      "description": "A warrior that has been constructed out of tensile steel. Its steel hands have sharp cutting edges.",
+      "attack": 1800,
+      "defense": 1600,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "00423705",
+      "art": "art/card-83.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-84",
+      "name": "Humanoid Slime",
+      "description": "This slime apparently has some human genes in its genetic makeup.",
+      "attack": 800,
+      "defense": 2000,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "46821314",
+      "art": "art/card-84.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-85",
+      "name": "Worm Drake",
+      "description": "Once this monster wraps itself around a victim, there is no escape.",
+      "attack": 1400,
+      "defense": 1500,
+      "type": "Reptile",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "73216412",
+      "art": "art/card-85.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-86",
+      "name": "Humanoid Worm Drake",
+      "description": "(Humanoid Slime + Worm Drake)",
+      "attack": 2200,
+      "defense": 2000,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 7,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "05600127",
+      "art": "art/card-86.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-87",
+      "name": "Revival Jam",
+      "description": "A being that multiplies by splitting into two identical halves.",
+      "attack": 1500,
+      "defense": 500,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "31709826",
+      "art": "art/card-87.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-88",
+      "name": "Buster Blader",
+      "description": "Gains 500 ATK/DEF if there is a Dragon-Type monster on the opponent's field.",
+      "attack": 2600,
+      "defense": 2300,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Mercury",
+        "Uranus"
+      ],
+      "frame": "Orange",
+      "password": "78193831",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "self",
+          "attack": 500,
+          "defense": 500,
+          "type": "Dragon"
+        }
+      ],
+      "art": "art/card-88.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-89",
+      "name": "Cyber Jar",
+      "description": "FLIP: Destroy all cards on the field.",
+      "attack": 900,
+      "defense": 900,
+      "type": "Rock",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Orange",
+      "password": "34124316",
+      "monster_effects": [
+        {
+          "when": "flip",
+          "do": "magic",
+          "card": 336
+        }
+      ],
+      "art": "art/card-89.png",
+      "tags": [
+        "jar"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-90",
+      "name": "Banisher of the Light",
+      "description": "A forbidding figure that has been made the guardian of light. He has been commanded to banish those who serve the dark side.",
+      "attack": 100,
+      "defense": 2000,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Sun",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "61528025",
+      "art": "art/card-90.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-91",
+      "name": "Giant Rat",
+      "description": "Increases the ATK of EARTH monsters on your side of the field by 300.",
+      "attack": 1400,
+      "defense": 1450,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Uranus"
+      ],
+      "frame": "Orange",
+      "password": "97017120",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "attribute": "Earth"
+        }
+      ],
+      "art": "art/card-91.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-92",
+      "name": "Senju of the Thousand Hands",
+      "description": "An imposing fairy that has numerous arms for attacking in droves. The flailing of its forest of arms causes major damage.",
+      "attack": 1400,
+      "defense": 1000,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "23401839",
+      "art": "art/card-92.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-93",
+      "name": "UFO Turtle",
+      "description": "(AQUA + PYRO)\n\nIncreases the ATK of FIRE monsters on your side of the field by 300.",
+      "attack": 1400,
+      "defense": 1200,
+      "type": "Machine",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Saturn"
+      ],
+      "frame": "Purple",
+      "password": "60806437",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "attribute": "Fire"
+        }
+      ],
+      "art": "art/card-93.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-94",
+      "name": "Flash Assailant",
+      "description": "An extremely quick fiend that uses its speed to best advantage. If it is seen, the witness is sure to be killed instantly.",
+      "attack": 2000,
+      "defense": 2000,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "96890582",
+      "art": "art/card-94.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-95",
+      "name": "Karate Man",
+      "description": "A lean and buff karate master with fists of steel. He has the power to shatter 10,000 roof tiles.",
+      "attack": 1000,
+      "defense": 1000,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "23289281",
+      "art": "art/card-95.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-96",
+      "name": "Dark Zebra",
+      "description": "A sinister zebra that has a unicornlike horn on its forehead. It befuddles foes by making its stripes move around quickly.",
+      "attack": 1800,
+      "defense": 400,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "59784896",
+      "art": "art/card-96.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-97",
+      "name": "Giant Germ",
+      "description": "When destroyed, it inflicts 500 damage to the opponent's LP.",
+      "attack": 1000,
+      "defense": 100,
+      "type": "Fiend",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "95178994",
+      "monster_effects": [
+        {
+          "when": "destroyed",
+          "do": "damage",
+          "amount": 500
+        }
+      ],
+      "art": "art/card-97.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-98",
+      "name": "Nimble Momonga",
+      "description": "When destroyed, increases LP by 1000.",
+      "attack": 1000,
+      "defense": 100,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Saturn",
+        "Jupiter"
+      ],
+      "frame": "Orange",
+      "password": "22567609",
+      "monster_effects": [
+        {
+          "when": "destroyed",
+          "do": "heal",
+          "amount": 1000
+        }
+      ],
+      "art": "art/card-98.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-99",
+      "name": "Spear Cretin",
+      "description": "A impish fiend that roams about in the darkness aimlessly. If it spots prey, it goes on the attack with its spear in hand.",
+      "attack": 500,
+      "defense": 500,
+      "type": "Fiend",
+      "level": 2,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "58551308",
+      "art": "art/card-99.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-100",
+      "name": "Shining Angel",
+      "description": "Increases the ATK of LIGHT monsters on your side of the field by 300.",
+      "attack": 1400,
+      "defense": 800,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Mars"
+      ],
+      "frame": "Orange",
+      "password": "95956346",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "attribute": "Light"
+        }
+      ],
+      "art": "art/card-100.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-101",
+      "name": "Boar Soldier",
+      "description": "A porcine beast warrior that wields a massive stone axe.It destroys everything that happens to be within sight.",
+      "attack": 2000,
+      "defense": 500,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "21340051",
+      "art": "art/card-101.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-102",
+      "name": "Mother Grizzly",
+      "description": "Increases the ATK of WATER monsters on your side of the field by 300.",
+      "attack": 1400,
+      "defense": 1000,
+      "type": "Beast-Warrior",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Orange",
+      "password": "57839750",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "attribute": "Water"
+        }
+      ],
+      "art": "art/card-102.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-103",
+      "name": "Flying Kamakiri #1",
+      "description": "Increases the ATK of WIND monsters on your side of the field by 300.",
+      "attack": 1400,
+      "defense": 900,
+      "type": "Insect",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Jupiter"
+      ],
+      "frame": "Orange",
+      "password": "84834865",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "attribute": "Wind"
+        }
+      ],
+      "art": "art/card-103.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-104",
+      "name": "Ceremonial Bell",
+      "description": "A gleaming bell that is used to mark celebratory occasions. Its pealing brings solace to those that hear it.",
+      "attack": 0,
+      "defense": 1850,
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "20228463",
+      "art": "art/card-104.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-105",
+      "name": "Sonic Bird",
+      "description": "A goggled bird monster with jet units slung over its back. It is a supersonic monster that travels faster than sound.",
+      "attack": 1400,
+      "defense": 1000,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "57617178",
+      "art": "art/card-105.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-106",
+      "name": "Mystic Tomato",
+      "description": "(FIEND + PLANT)\n\nIncreases the ATK of DARK monsters on your side of the field by 300.",
+      "attack": 1400,
+      "defense": 1100,
+      "type": "Plant",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "83011277",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "attribute": "Dark"
+        }
+      ],
+      "art": "art/card-106.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-107",
+      "name": "Kotodama",
+      "description": "A freaky fairy whose body is scored with peculiar red lines. Hearing its voice results in ten days of agony, then death.",
+      "attack": 0,
+      "defense": 1600,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Venus",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "19406822",
+      "art": "art/card-107.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-108",
+      "name": "Flying Fish",
+      "description": "(FISH + WINGED BEAST)",
+      "attack": 800,
+      "defense": 500,
+      "type": "Fish",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Neptune"
+      ],
+      "frame": "Purple",
+      "password": "31987274",
+      "art": "art/card-108.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-109",
+      "name": "Amphibian Beast",
+      "description": "On land or in the sea, the speed of this monster is unmatchable.",
+      "attack": 2400,
+      "defense": 2000,
+      "type": "Fish",
+      "attribute": "Water",
+      "level": 6,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "67371383",
+      "art": "art/card-109.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-110",
+      "name": "Alligator's Sword Dragon",
+      "description": "(Baby Dragon + Alligator's Sword)",
+      "attack": 1700,
+      "defense": 1500,
+      "type": "Dragon",
+      "attribute": "Wind",
+      "level": 5,
+      "stars": [
+        "Uranus",
+        "Saturn"
+      ],
+      "frame": "Purple",
+      "password": "03366982",
+      "art": "art/card-110.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-111",
+      "name": "Rocket Warrior",
+      "description": "The monster attacked by this monster loses 500 ATK.",
+      "attack": 1500,
+      "defense": 1300,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Sun"
+      ],
+      "frame": "Orange",
+      "password": "30860696",
+      "monster_effects": [
+        {
+          "when": "combat",
+          "do": "boost",
+          "target": "battle",
+          "attack": -500
+        }
+      ],
+      "art": "art/card-111.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-112",
+      "name": "Aqua Serpent",
+      "description": "An aquatic serpent that crawls along the bottom of the sea. It suddenly appears and attacks when it spots prey.",
+      "attack": 1500,
+      "defense": 1200,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "66259795",
+      "art": "art/card-112.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-113",
+      "name": "The Legendary Fisherman",
+      "description": "(AQUA + WARRIOR)",
+      "attack": 1850,
+      "defense": 1600,
+      "type": "Warrior",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Sun"
+      ],
+      "frame": "Purple",
+      "password": "03643300",
+      "art": "art/card-113.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-114",
+      "name": "Morphing Jar #2",
+      "description": "A jar that was constructed in the world of fiends.\nAnything placed inside it can never be recovered.",
+      "attack": 800,
+      "defense": 700,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "79106360",
+      "art": "art/card-114.png",
+      "tags": [
+        "jar"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-115",
+      "name": "Vorse Raider",
+      "description": "This wicked Beast-Warrior does every horrid thing imaginable, and loves it! His axe bears the marks of his countless victims.",
+      "attack": 1900,
+      "defense": 1200,
+      "type": "Beast-Warrior",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "14898066",
+      "art": "art/card-115.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-116",
+      "name": "Flame Champion",
+      "description": "(PYRO + WARRIOR)",
+      "attack": 1900,
+      "defense": 1300,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 5,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "frame": "Purple",
+      "password": "42599677",
+      "art": "art/card-116.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-117",
+      "name": "Twin-Headed Fire Dragon",
+      "description": "(DRAGON + PYRO)",
+      "attack": 2200,
+      "defense": 1700,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 6,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "78984772",
+      "art": "art/card-117.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-118",
+      "name": "Darkfire Soldier #1",
+      "description": "An explosive expert from a special elite force.",
+      "attack": 1700,
+      "defense": 1150,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "05388481",
+      "art": "art/card-118.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-119",
+      "name": "Mr. Volcano",
+      "description": "(PYRO + SPELLCASTER)",
+      "attack": 2100,
+      "defense": 1300,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 5,
+      "stars": [
+        "Mars",
+        "Mercury"
+      ],
+      "frame": "Purple",
+      "password": "31477025",
+      "art": "art/card-119.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-120",
+      "name": "Darkfire Soldier #2",
+      "description": "A warrior who gained immeasurable power from the heart of a volcano.",
+      "attack": 1700,
+      "defense": 1100,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "78861134",
+      "art": "art/card-120.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-121",
+      "name": "Kiseitai",
+      "description": "A parasitic, wormlike fiend that affects the actions of its host. If you do something you know to be wrong, this is to blame.",
+      "attack": 300,
+      "defense": 800,
+      "type": "Fiend",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "04266839",
+      "art": "art/card-121.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-122",
+      "name": "Cyber Falcon",
+      "description": "(MACHINE + WINGED BEAST)",
+      "attack": 1400,
+      "defense": 1200,
+      "type": "Machine",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Moon"
+      ],
+      "frame": "Purple",
+      "password": "30655537",
+      "art": "art/card-122.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-123",
+      "name": "Gamma The Magnet Warrior",
+      "description": "Alpha, Beta, and Gamma meld as one to form a powerful monster.",
+      "attack": 1500,
+      "defense": 1800,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "11549357",
+      "art": "art/card-123.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-124",
+      "name": "Flying Kamakiri #2",
+      "description": "A flying mantis that feeds primarily on insects.",
+      "attack": 1500,
+      "defense": 800,
+      "type": "Insect",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "03134241",
+      "art": "art/card-124.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-125",
+      "name": "Sky Scout",
+      "description": "With eyes like a hawk and a flying speed exceeding Mach 5, this monster is a master of the sky.",
+      "attack": 1800,
+      "defense": 600,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "30532390",
+      "art": "art/card-125.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-126",
+      "name": "Grand Tiki Elder",
+      "description": "A masked monster that wields the most deadly of curses.",
+      "attack": 1500,
+      "defense": 800,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "13676474",
+      "art": "art/card-126.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-127",
+      "name": "The Masked Beast",
+      "description": "When summoned, it inflicts 500 damage to the opponent's LP.",
+      "attack": 3200,
+      "defense": 1800,
+      "type": "Fiend",
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "password": "49064413",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "damage",
+          "amount": 500
+        }
+      ],
+      "art": "art/card-127.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-128",
+      "name": "Ogre Head Zombie",
+      "description": "Its rotten spine is about to break.",
+      "attack": 450,
+      "defense": 0,
+      "type": "Zombie",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "25840722",
+      "art": "art/card-128.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-129",
+      "name": "Boneheimer",
+      "description": "This monster wanders the seas, sucking dry any creatures it may encounter.",
+      "attack": 850,
+      "defense": 400,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "98456117",
+      "art": "art/card-129.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-130",
+      "name": "Flame Dancer",
+      "description": "This monster moves while swinging its burning rope.",
+      "attack": 550,
+      "defense": 450,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 2,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "12883044",
+      "art": "art/card-130.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-131",
+      "name": "Burning Phoenix",
+      "description": "Its searing flames do more than burn.",
+      "attack": 850,
+      "defense": 350,
+      "type": "Winged Beast",
+      "attribute": "Fire",
+      "level": 3,
+      "stars": [
+        "Mars",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "49278143",
+      "art": "art/card-131.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-132",
+      "name": "Emperor of Flames",
+      "description": "United his land with fiery power.",
+      "attack": 500,
+      "defense": 950,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 3,
+      "stars": [
+        "Mars",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "85672752",
+      "art": "art/card-132.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-133",
+      "name": "Soul Scissors",
+      "description": "Scissors possessed by an evil spirit.",
+      "attack": 550,
+      "defense": 350,
+      "type": "Fiend",
+      "level": 2,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "12061457",
+      "art": "art/card-133.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-134",
+      "name": "Owl Hermit of the Black Forest",
+      "description": "An elder who knows the entire forest.",
+      "attack": 450,
+      "defense": 900,
+      "type": "Beast-Warrior",
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "48156505",
+      "art": "art/card-134.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-135",
+      "name": "Sonic Jammer",
+      "description": "A robotic cicada relying on sound.",
+      "attack": 350,
+      "defense": 650,
+      "type": "Machine",
+      "attribute": "Wind",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "84550200",
+      "art": "art/card-135.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-136",
+      "name": "Southern Ocean Diabolos",
+      "description": "Increases the ATK/DEF of Sea Serpent-Type monsters by 300.",
+      "attack": 2100,
+      "defense": 1900,
+      "type": "Sea Serpent",
+      "level": 7,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "11949819",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "defense": 300,
+          "type": "Sea Serpent"
+        }
+      ],
+      "art": "art/card-136.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-137",
+      "name": "Rough Missile Launcher",
+      "description": "It shoots lots of missiles when mad.",
+      "attack": 700,
+      "defense": 100,
+      "type": "Machine",
+      "attribute": "Fire",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "47333913",
+      "art": "art/card-137.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-138",
+      "name": "Dragon Pirate Soldier",
+      "description": "A dragon soldier turned pirate.",
+      "attack": 350,
+      "defense": 800,
+      "type": "Beast-Warrior",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "74738622",
+      "art": "art/card-138.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-139",
+      "name": "Captain Leo",
+      "description": "A pirate who knows to fear the sea.",
+      "attack": 700,
+      "defense": 1600,
+      "type": "Beast-Warrior",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "10722221",
+      "art": "art/card-139.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-140",
+      "name": "Spectre",
+      "description": "Before you notice, it's at your neck.",
+      "attack": 350,
+      "defense": 850,
+      "type": "Fiend",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "39638048",
+      "art": "art/card-140.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-141",
+      "name": "Spirit of the Gems - Hassan",
+      "description": "A djinn who shoots beams from a gem.",
+      "attack": 200,
+      "defense": 400,
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Uranus",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "65037153",
+      "art": "art/card-141.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-142",
+      "name": "Robolady",
+      "description": "A warrior fully covered with metal. It upgrades by fusing with \"Roboyarou\".",
+      "attack": 450,
+      "defense": 900,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "92421852",
+      "art": "art/card-142.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-143",
+      "name": "Roboyarou",
+      "description": "A warrior fully covered with metal. It upgrades by fusing with \"Robolady\".",
+      "attack": 900,
+      "defense": 450,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "38916461",
+      "art": "art/card-143.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-144",
+      "name": "Legend Nymph",
+      "description": "Mirage dolphin who swims the skies.",
+      "attack": 350,
+      "defense": 200,
+      "type": "Fairy",
+      "attribute": "Water",
+      "level": 2,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "65310565",
+      "art": "art/card-144.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-145",
+      "name": "Boomerang Boy",
+      "description": "The hunter crafted his own boomerang.",
+      "attack": 950,
+      "defense": 400,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "91309264",
+      "art": "art/card-145.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-146",
+      "name": "Beauty Lip",
+      "description": "A beautiful mouth in the darkness.",
+      "attack": 550,
+      "defense": 1250,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "27793919",
+      "art": "art/card-146.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-147",
+      "name": "Mechanical Ninja - Raikoh",
+      "description": "A lightning-using mechanical ninja.",
+      "attack": 450,
+      "defense": 300,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 2,
+      "stars": [
+        "Pluto",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "64198918",
+      "art": "art/card-147.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-148",
+      "name": "Lightning Wallaby",
+      "description": "Uses the legendary Lightning Punch.",
+      "attack": 900,
+      "defense": 350,
+      "type": "Beast",
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Jupiter",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "90587622",
+      "art": "art/card-148.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-149",
+      "name": "Lightning Conger",
+      "description": "This massive eel generates huge charges of electricity and unleashes them as thunderbolts.",
+      "attack": 350,
+      "defense": 750,
+      "type": "Thunder",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "27671321",
+      "art": "art/card-149.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-150",
+      "name": "Iron Face",
+      "description": "Loses his fervor if he loses his mask.",
+      "attack": 1150,
+      "defense": 550,
+      "type": "Warrior",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "53076430",
+      "art": "art/card-150.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-151",
+      "name": "Umbrella Chimera",
+      "description": "As it slept, an umbrella attached.",
+      "attack": 650,
+      "defense": 1350,
+      "type": "Winged Beast",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "90460034",
+      "art": "art/card-151.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-152",
+      "name": "Gadget Soldier",
+      "description": "A rust-free machine warrior born to battle.",
+      "attack": 1800,
+      "defense": 2000,
+      "type": "Machine",
+      "attribute": "Fire",
+      "level": 6,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "86281779",
+      "art": "art/card-152.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-153",
+      "name": "Melchid the Four-Face Beast",
+      "description": "This monster has four different masks for four different attacks.",
+      "attack": 1500,
+      "defense": 1200,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "86569121",
+      "art": "art/card-153.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-154",
+      "name": "Nuvia the Wicked",
+      "description": "A dark fiend that had once been a woman fixated on revenge. She changed to this form by selling her soul to a dark entity.",
+      "attack": 2000,
+      "defense": 800,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "12953226",
+      "art": "art/card-154.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-155",
+      "name": "Masked Beast Des Gardius",
+      "description": "A fiendish masked monster that makes prey of human beings. The mask is said to show the faces of the people it has eaten.",
+      "attack": 3300,
+      "defense": 2500,
+      "type": "Fiend",
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "48948935",
+      "art": "art/card-155.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-156",
+      "name": "Valkyrion the Magna Warrior",
+      "description": "When summoned, it eliminates negative boost effects on your monsters.",
+      "attack": 3500,
+      "defense": 3850,
+      "type": "Rock",
+      "attribute": "Earth",
+      "stars": [
+        "Uranus",
+        "Pluto"
+      ],
+      "password": "75347539",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "magic",
+          "card": 655
+        }
+      ],
+      "art": "art/card-156.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-157",
+      "name": "Soulicer Crystal",
+      "description": "Cold as the snow, hard as a crystal.",
+      "attack": 300,
+      "defense": 1900,
+      "type": "Aqua",
+      "attribute": "Light",
+      "level": 6,
+      "stars": [
+        "Sun",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "24514503",
+      "art": "art/card-157.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-158",
+      "name": "Red Main Blutches",
+      "description": "With two blades, it revels in pain.",
+      "attack": 700,
+      "defense": 1100,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "88526905",
+      "art": "art/card-158.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-159",
+      "name": "Spherous Lady",
+      "description": "(REPTILE + ROCK)",
+      "attack": 400,
+      "defense": 1400,
+      "type": "Rock",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "52121290",
+      "art": "art/card-159.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-160",
+      "name": "Long Nose Mammoth",
+      "description": "It fights by swinging its nose.",
+      "attack": 800,
+      "defense": 900,
+      "type": "Dinosaur",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "25737191",
+      "art": "art/card-160.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-161",
+      "name": "Angler Fat Fish",
+      "description": "It moves very fast for a fat fish.",
+      "attack": 500,
+      "defense": 1300,
+      "type": "Fish",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "89248487",
+      "art": "art/card-161.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-162",
+      "name": "Light Law Medium",
+      "description": "Its dazzling beam charms enemies",
+      "attack": 400,
+      "defense": 300,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 2,
+      "stars": [
+        "Venus",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "52253888",
+      "art": "art/card-162.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-163",
+      "name": "Root Wood",
+      "description": "Made of wood, it burns itself.",
+      "attack": 1200,
+      "defense": 1900,
+      "type": "Dinosaur",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Jupiter",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "26859743",
+      "art": "art/card-163.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-173",
+      "name": "7 Completed",
+      "description": "+700 to Machine type.",
+      "password": "86198326",
+      "art": "art/card-173.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-180",
+      "name": "Archfiend of Gilfer",
+      "description": "A peculiar, dragonlike fiend. In return for its own\ndemise, it can power down all monsters on the foe's field.",
+      "attack": 2200,
+      "defense": 2500,
+      "type": "Fiend",
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "50287060",
+      "art": "art/card-180.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-181",
+      "name": "The Portrait's Secret",
+      "description": "A portrait cursed by the artist, it is said to bring ill fortune to anyone who owns it.",
+      "attack": 1200,
+      "defense": 1500,
+      "type": "Fiend",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "32541773",
+      "art": "art/card-181.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-182",
+      "name": "The Gross Ghost of Fled Dreams",
+      "description": "This monster feeds on the dreams of an unwary sleeper, dragging the victim into eternal slumber.",
+      "attack": 1300,
+      "defense": 1800,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "68049471",
+      "art": "art/card-182.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-183",
+      "name": "Headless Knight",
+      "description": "A haunted spirit of a falsely accused knight who wanders in search of truth and justice.",
+      "attack": 1450,
+      "defense": 1700,
+      "type": "Fiend",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "05434080",
+      "art": "art/card-183.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-184",
+      "name": "Dark Necrofear",
+      "description": "Born from the souls of the damned, this fiend feeds on fear and traps its victims in eternal darkness.",
+      "attack": 2200,
+      "defense": 2800,
+      "type": "Fiend",
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "31829185",
+      "art": "art/card-184.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-185",
+      "name": "The Earl of Demise",
+      "description": "This gentlemanly creature is extremely wicked, feared by man and fiend alike.",
+      "attack": 2000,
+      "defense": 700,
+      "type": "Fiend",
+      "level": 5,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "66989694",
+      "art": "art/card-185.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-186",
+      "name": "Embodiment of Apophis",
+      "description": "A giant that is the living embodiment of an enormous snake.\nThe snake is described in Egyptian myths as the ruler of darkness.",
+      "attack": 1600,
+      "defense": 1800,
+      "type": "Reptile",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "28649820",
+      "art": "art/card-186.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-187",
+      "name": "Zombyra the Dark",
+      "description": "A superhero on the dark side.",
+      "attack": 2100,
+      "defense": 500,
+      "type": "Warrior",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "88472456",
+      "art": "art/card-187.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-188",
+      "name": "Earthbound Spirit",
+      "description": "A vengeful creature formed by the spirits of fallen warriors, it drags any who dare approach it into the deepest bowels of the earth.",
+      "attack": 500,
+      "defense": 2000,
+      "type": "Fiend",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "67105242",
+      "art": "art/card-188.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-189",
+      "name": "Ancient Lamp",
+      "description": "An animated magic lamp, house of La Jinn.",
+      "attack": 900,
+      "defense": 1400,
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Mercury",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "54912977",
+      "art": "art/card-189.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-190",
+      "name": "Amazoness Chain Master",
+      "description": "A combative female warrior who is skilled at using a chain. She lives in northern outlands where she hunts for pleasure.",
+      "attack": 1500,
+      "defense": 1300,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "29654737",
+      "art": "art/card-190.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-191",
+      "name": "Thunder Nyan Nyan",
+      "description": "A clumsy elemental infant who lives on the tops of clouds.\nShe often falls, causing lightning to crash down each time.",
+      "attack": 1900,
+      "defense": 800,
+      "type": "Thunder",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "70797118",
+      "art": "art/card-191.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-192",
+      "name": "Injection Fairy Lily",
+      "description": "Just before the battle, this monster gains 3000 ATK points.",
+      "attack": 400,
+      "defense": 1500,
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Sun",
+        "Saturn"
+      ],
+      "frame": "Orange",
+      "password": "79575620",
+      "monster_effects": [
+        {
+          "when": "combat",
+          "do": "boost",
+          "target": "self",
+          "attack": 3000
+        }
+      ],
+      "art": "art/card-192.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-193",
+      "name": "Makyura the Destructor",
+      "description": "A menacing monster that has been given the role of an executioner. It slices up the condemned with the sharp claws on its forelegs.",
+      "attack": 1600,
+      "defense": 1200,
+      "type": "Warrior",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "21593977",
+      "art": "art/card-193.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-194",
+      "name": "Viser Des",
+      "description": "A torture monster that use a vise as its weapon of choice. It flies at its target's head, then tightens the vise.",
+      "attack": 500,
+      "defense": 1200,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "56043446",
+      "art": "art/card-194.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-195",
+      "name": "Amazoness Swords Woman",
+      "description": "A female warrior who is an expert at battling with a sword. She easily wields a heavy sword in one hand.",
+      "attack": 1500,
+      "defense": 1600,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "94004268",
+      "art": "art/card-195.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-197",
+      "name": "Des Volstgalph",
+      "description": "Inflicts 500 damage to the opponent's LP when destroying a monster.",
+      "attack": 2200,
+      "defense": 1700,
+      "type": "Dragon",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Uranus",
+        "Mercury"
+      ],
+      "frame": "Orange",
+      "password": "81059524",
+      "monster_effects": [
+        {
+          "when": "destroy_opponent",
+          "do": "damage",
+          "amount": 500
+        }
+      ],
+      "art": "art/card-197.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-199",
+      "name": "Gilford the Lightning",
+      "description": "(THUNDER + WARRIOR)",
+      "defense": 1400,
+      "type": "Warrior",
+      "attribute": "Light",
+      "stars": [
+        "Pluto",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "36354007",
+      "art": "art/card-199.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-200",
+      "name": "Mystical Beast of Serket",
+      "description": "Gains 500 ATK when it destroys a monster.",
+      "attack": 2500,
+      "defense": 2000,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Jupiter",
+        "Mercury"
+      ],
+      "frame": "Orange",
+      "password": "89194033",
+      "monster_effects": [
+        {
+          "when": "destroy_opponent",
+          "do": "boost",
+          "target": "self",
+          "attack": 500
+        }
+      ],
+      "art": "art/card-200.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-201",
+      "name": "Cyber Harpie Lady",
+      "description": "(Harpie Lady + Metalmorph)",
+      "attack": 1800,
+      "defense": 1300,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "80316585",
+      "art": "art/card-201.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-202",
+      "name": "Exarion Universe",
+      "description": "A centaur capable of attacking with immense power, in exchange for a portion of its vitality.",
+      "attack": 1800,
+      "defense": 1900,
+      "type": "Beast-Warrior",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "63749102",
+      "art": "art/card-202.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-203",
+      "name": "Legendary Fiend",
+      "description": "It gains 700 ATK during each of your Draw Phases.",
+      "attack": 1500,
+      "defense": 1800,
+      "type": "Fiend",
+      "level": 6,
+      "stars": [
+        "Saturn",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "99747800",
+      "monster_effects": [
+        {
+          "when": "draw",
+          "do": "boost",
+          "target": "self",
+          "attack": 700
+        }
+      ],
+      "art": "art/card-203.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-204",
+      "name": "Dark Sage",
+      "description": "(Time Wizard + Dark Magician)",
+      "defense": 3200,
+      "level": 9,
+      "stars": [
+        "Mercury",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "92377303",
+      "art": "art/card-204.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-205",
+      "name": "Five-Headed Dragon",
+      "description": "A gargantuan dragon with five heads that is simply invincible. It is formed by the fusion of five strong dragons.",
+      "attack": 5000,
+      "defense": 5000,
+      "type": "Dragon",
+      "level": 12,
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "99267150",
+      "art": "art/card-205.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-206",
+      "name": "Dragon Master Knight",
+      "description": "(Blue-Eyes Ultimate Dragon + Black Luster Soldier)\n\nIncreases the ATK/DEF of Dragon-Type monsters by 500.",
+      "attack": 5000,
+      "defense": 5000,
+      "type": "Dragon",
+      "attribute": "Light",
+      "level": 12,
+      "stars": [
+        "Sun",
+        "Mercury"
+      ],
+      "frame": "Purple",
+      "password": "62873545",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "type": "Dragon"
+        }
+      ],
+      "art": "art/card-206.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-207",
+      "name": "Ruklamba the Spirit King",
+      "description": "A reptilian creature that is said to be the ruler of all fairies. It is a rare being that is not commonly seen.",
+      "attack": 1000,
+      "defense": 2000,
+      "type": "Reptile",
+      "attribute": "Light",
+      "stars": [
+        "Neptune",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "28913279",
+      "art": "art/card-207.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-208",
+      "name": "Keldo",
+      "description": "A user of light magic that stands guard over a graveyard. It wards off disturbers of the dead with a sacred light.",
+      "attack": 1200,
+      "defense": 1600,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "80441106",
+      "art": "art/card-208.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-209",
+      "name": "XYZ-Dragon Cannon",
+      "description": "(X+YZ or Y+XZ or Z+XY)",
+      "type": "Machine",
+      "attribute": "Light",
+      "stars": [
+        "Pluto",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "91998119",
+      "art": "art/card-209.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-210",
+      "name": "X-Head Cannon",
+      "description": "A monster with a mighty cannon barrel, it is able to integrate its attacks. It attacks in many ways.",
+      "attack": 1800,
+      "defense": 1500,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "62651957",
+      "art": "art/card-210.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-211",
+      "name": "Orgoth the Relentless",
+      "description": "An earth warrior clad in armor and bearing a huge sword. It takes great pride in its strength.",
+      "attack": 2500,
+      "defense": 2450,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "55908887",
+      "art": "art/card-211.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-212",
+      "name": "Des Feral Imp",
+      "description": "Increases the ATK/DEF of Reptile-Type monsters by 300.",
+      "attack": 1600,
+      "defense": 1800,
+      "type": "Reptile",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "81985784",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "defense": 300,
+          "type": "Reptile"
+        }
+      ],
+      "art": "art/card-212.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-213",
+      "name": "Cyclon Laser",
+      "description": "+300 to Gradius.",
+      "password": "05494820",
+      "art": "art/card-213.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-214",
+      "name": "Nightmare Penguin",
+      "description": "FLIP: Destroy the monster that attacks this card.\nIncrease the ATK of all WATER monsters you control by 200.",
+      "attack": 900,
+      "defense": 1800,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Mercury"
+      ],
+      "frame": "Orange",
+      "password": "81306586",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "own",
+          "attack": 200,
+          "attribute": "Water"
+        },
+        {
+          "when": "flip",
+          "do": "destroy",
+          "target": "battle"
+        }
+      ],
+      "art": "art/card-214.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-216",
+      "name": "Perfect Machine King",
+      "description": "(Machine King + Metalmorph)\n\nIncreases the ATK/DEF of Machine-Type monsters by 500.",
+      "attack": 2700,
+      "defense": 1500,
+      "type": "Machine",
+      "attribute": "Earth",
+      "stars": [
+        "Mars",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "18891691",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Machine"
+        }
+      ],
+      "art": "art/card-216.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-217",
+      "name": "Kaiser Sea Horse",
+      "description": "A fierce sea dragon of a massive and intimdating stature.\nIts very sight causes others to cower in fear.",
+      "attack": 1700,
+      "defense": 1650,
+      "type": "Sea Serpent",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "17444133",
+      "art": "art/card-217.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-218",
+      "name": "Gradius",
+      "description": "A high-performance jet fighter with power capsules for variable attack capabilities.",
+      "attack": 1200,
+      "defense": 800,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "10992251",
+      "art": "art/card-218.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-219",
+      "name": "Aeris",
+      "description": "An earth fairy that has a rare quality about its style.\nIt prefers to fight with weapons rather than spells.",
+      "attack": 1800,
+      "defense": 1400,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "54285230",
+      "art": "art/card-219.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-220",
+      "name": "Giant Rex",
+      "description": "An earth dinosaur with a finned back that boasts a high ATK. It never fails to bring down targeted prey.",
+      "attack": 2000,
+      "defense": 1200,
+      "type": "Dinosaur",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "80280944",
+      "art": "art/card-220.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-221",
+      "name": "Penguin Torpedo",
+      "description": "An aqua monster that propels itself at high speed to ram.",
+      "attack": 550,
+      "defense": 300,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "17679043",
+      "art": "art/card-221.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-222",
+      "name": "Asura Priest",
+      "description": "A fairy of dreams, and a deity of war in the Far East.\nUsing its six arms, it effortlessly mows down enemies.",
+      "attack": 1700,
+      "defense": 1200,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "02134346",
+      "art": "art/card-222.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-223",
+      "name": "Last Tusk Mammoth",
+      "description": "An imposing mammoth with a massive pair of curved tusks. Its hairy coat provides a superb level of protection.",
+      "attack": 800,
+      "defense": 1200,
+      "type": "Dinosaur",
+      "attribute": "Water",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "43063758",
+      "art": "art/card-223.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-224",
+      "name": "Queen's Knight",
+      "description": "This knight catches her opponents off guard, dominating them with swift yet graceful attacks.",
+      "attack": 1500,
+      "defense": 1600,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "25652259",
+      "art": "art/card-224.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-225",
+      "name": "Jack's Knight",
+      "description": "A strong master swordsman. His loyalty is to justice, his duty to protect the weak.",
+      "attack": 1900,
+      "defense": 1000,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 5,
+      "stars": [
+        "Sun",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "90876561",
+      "art": "art/card-225.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-226",
+      "name": "King's Knight",
+      "description": "The brave king fights alongside his queen to protect the kingdom from the forces of evil.",
+      "attack": 1600,
+      "defense": 1400,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "64788463",
+      "art": "art/card-226.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-227",
+      "name": "Gil Garth",
+      "description": "This steel-armored terror machine ruthlessly strikes down enemies with its giant katana.",
+      "attack": 1800,
+      "defense": 1200,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "38445524",
+      "art": "art/card-227.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-228",
+      "name": "Blade Knight",
+      "description": "Wielding a powerful sword, this warrior fights best when alone.",
+      "attack": 1600,
+      "defense": 1000,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "39507162",
+      "art": "art/card-228.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-229",
+      "name": "Gernia",
+      "description": "A fiend whose arms end in large and cruelly curved talons. It uses its powerful jumps to attack foes from above.",
+      "attack": 1300,
+      "defense": 1200,
+      "type": "Zombie",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "77936940",
+      "art": "art/card-229.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-230",
+      "name": "Y-Dragon Head",
+      "description": "A combative machine that can combine with one or two other\nspecific war machines on the own field to form a new monster.",
+      "attack": 1500,
+      "defense": 1600,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "65622692",
+      "art": "art/card-230.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-231",
+      "name": "Dark Magician Knight",
+      "description": "A Dark Magician that has earned the title of a knight. It has gained the mighty power of a warrior.",
+      "attack": 2500,
+      "defense": 2100,
+      "type": "Warrior",
+      "level": 7,
+      "stars": [
+        "Mars",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "50725996",
+      "art": "art/card-231.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-232",
+      "name": "Z-Metal Tank",
+      "description": "A combative machine that can combine with one or two other\nspecific war machines on the own field to form a new monster.",
+      "attack": 1500,
+      "defense": 1300,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "64500000",
+      "art": "art/card-232.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-233",
+      "name": "XY-Dragon Cannon",
+      "description": "(X-Head Cannon + Y-Dragon Head)",
+      "attack": 2200,
+      "defense": 1900,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 6,
+      "stars": [
+        "Saturn",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "02111707",
+      "art": "art/card-233.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-234",
+      "name": "XZ-Tank Cannon",
+      "description": "(X-Head Cannon + Z-Metal Tank)",
+      "attack": 2400,
+      "defense": 2100,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 6,
+      "stars": [
+        "Pluto",
+        "Mars"
+      ],
+      "frame": "Purple",
+      "password": "99724761",
+      "art": "art/card-234.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-235",
+      "name": "YZ-Tank Dragon",
+      "description": "(Y-Dragon Head + Z-Metal Tank)",
+      "attack": 2100,
+      "defense": 2200,
+      "type": "Machine",
+      "attribute": "Light",
+      "level": 6,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Purple",
+      "password": "25119460",
+      "art": "art/card-235.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-236",
+      "name": "Exodia Necross",
+      "description": "(2 Exodia pieces)",
+      "attack": 1800,
+      "defense": 0,
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Neptune"
+      ],
+      "frame": "Purple",
+      "password": "12600382",
+      "art": "art/card-236.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-237",
+      "name": "Helpoemer",
+      "description": "A bizarre creature that reveals its true power when it dies.",
+      "attack": 2000,
+      "defense": 1400,
+      "type": "Fiend",
+      "level": 5,
+      "stars": [
+        "Venus",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "76052811",
+      "art": "art/card-237.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-238",
+      "name": "Lava Golem",
+      "description": "(PYRO + ROCK)\n\nInflict 500 damage to your opponent's LP.",
+      "attack": 3000,
+      "defense": 2500,
+      "type": "Fiend",
+      "attribute": "Fire",
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "00102380",
+      "monster_effects": [
+        {
+          "when": "draw",
+          "do": "damage",
+          "amount": 500
+        }
+      ],
+      "art": "art/card-238.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-239",
+      "name": "Newdoria",
+      "description": "Your embrace drags even the strongest creatures of darkness down into the depths.",
+      "attack": 1200,
+      "defense": 800,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "04335645",
+      "art": "art/card-239.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-240",
+      "name": "Dark Jeroid",
+      "description": "Decrease the ATK of all your opponent's monsters by 800.",
+      "attack": 1200,
+      "defense": 1500,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "90980792",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "opponent",
+          "attack": -800
+        }
+      ],
+      "art": "art/card-240.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-241",
+      "name": "Byser Shock",
+      "description": "An ancient torture device possessed by the soul of a mischievous demon.",
+      "attack": 800,
+      "defense": 600,
+      "type": "Fiend",
+      "level": 5,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "17597059",
+      "art": "art/card-241.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-242",
+      "name": "Puppet Master",
+      "description": "A puppeteer capable of manipulating the souls of the dead, tormenting them.",
+      "attack": 0,
+      "defense": 0,
+      "type": "Fiend",
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "41442341",
+      "art": "art/card-242.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-243",
+      "name": "Amazoness Fighter",
+      "description": "A female warrior who is an expert at hand-to-hand combat.\nShe scatters foes with a wild dance of brutal kicks.",
+      "attack": 1500,
+      "defense": 1300,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "55821894",
+      "art": "art/card-243.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-244",
+      "name": "Vampire Lord",
+      "description": "The vampire lord always finds a way to return to life to seduce new maidens.",
+      "attack": 2000,
+      "defense": 1500,
+      "type": "Zombie",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "53839837",
+      "art": "art/card-244.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-245",
+      "name": "Dark Paladin",
+      "description": "(Dark Magician + Buster Blader)",
+      "attack": 2900,
+      "defense": 2400,
+      "stars": [
+        "Mercury",
+        "Venus"
+      ],
+      "frame": "Purple",
+      "password": "98502113",
+      "art": "art/card-245.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-246",
+      "name": "Different Dimension Dragon",
+      "description": "There are legends about this strange dragon, as if it had come from another reality.",
+      "attack": 1200,
+      "defense": 1500,
+      "type": "Dragon",
+      "attribute": "Light",
+      "level": 5,
+      "stars": [
+        "Venus",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "50939127",
+      "art": "art/card-246.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-247",
+      "name": "Yamata Dragon",
+      "description": "A legendary dragon of the orient with eight serpentlike heads. It easily succumbs to the allure of alcohol.",
+      "attack": 2600,
+      "defense": 3100,
+      "type": "Dragon",
+      "attribute": "Fire",
+      "level": 7,
+      "stars": [
+        "Mars",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "76862289",
+      "art": "art/card-247.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-248",
+      "name": "Shinato, King of a Higher Plane",
+      "description": "Reduces the ATK/DEF of all opponent's Spellcaster monsters by 500.",
+      "attack": 3300,
+      "defense": 3000,
+      "type": "Fairy",
+      "attribute": "Light",
+      "stars": [
+        "Pluto",
+        "Venus"
+      ],
+      "password": "86327225",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "opponent",
+          "attack": -500,
+          "defense": -500,
+          "type": "Spellcaster"
+        }
+      ],
+      "art": "art/card-248.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-249",
+      "name": "Dark Flare Knight",
+      "description": "A Dark Magician who became a master swordsman and, using his magical abilities, learned to summon a powerful warrior to fight by his side.",
+      "attack": 2200,
+      "defense": 800,
+      "type": "Warrior",
+      "level": 6,
+      "stars": [
+        "Mars",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "13722870",
+      "art": "art/card-249.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-250",
+      "name": "Mirage Knight",
+      "description": "This formidable warrior fights alongside its summoner with honor and loyalty.",
+      "defense": 2000,
+      "type": "Warrior",
+      "attribute": "Light",
+      "stars": [
+        "Venus",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "49217579",
+      "art": "art/card-250.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-251",
+      "name": "Berserk Dragon",
+      "description": "(DRAGON + ZOMBIE)",
+      "attack": 3500,
+      "defense": 0,
+      "type": "Zombie",
+      "stars": [
+        "Moon",
+        "Mars"
+      ],
+      "frame": "Purple",
+      "password": "85605684",
+      "art": "art/card-251.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-252",
+      "name": "Command Angel",
+      "description": "(FAIRY + WARRIOR)",
+      "attack": 1200,
+      "defense": 1900,
+      "type": "Fairy",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Saturn"
+      ],
+      "frame": "Purple",
+      "password": "80558357",
+      "art": "art/card-252.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-254",
+      "name": "Chiron the Mage",
+      "description": "A centaur soldier that is clad in a knight's armor for war.",
+      "attack": 1800,
+      "defense": 1000,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "16956455",
+      "art": "art/card-254.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-255",
+      "name": "Twin-Headed Behemoth",
+      "description": "This two-headed dragon is capable of surviving even if one of its heads is cut off.",
+      "attack": 1500,
+      "defense": 1200,
+      "type": "Dragon",
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "43586926",
+      "art": "art/card-255.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-256",
+      "name": "The Illusory Gentleman",
+      "description": "Wearing odd fashions, this gentleman is very fickle. He sometimes saves people and at other times commits crimes.",
+      "attack": 1500,
+      "defense": 1600,
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "83764996",
+      "art": "art/card-256.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-257",
+      "name": "Patrician of Darkness",
+      "description": "A former friend of the Vampire Lord, today they fight against each other in pursuit of territory.",
+      "attack": 2000,
+      "defense": 1400,
+      "type": "Zombie",
+      "level": 5,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "19153634",
+      "art": "art/card-257.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-258",
+      "name": "Luminous Soldier",
+      "description": "A warrior of light and peace, he avoids battles until the very last moment.",
+      "attack": 2100,
+      "defense": 1400,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 5,
+      "stars": [
+        "Sun",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "57482479",
+      "art": "art/card-258.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-259",
+      "name": "Command Knight",
+      "description": "Increases the ATK of Warrior-Type monsters by 400.",
+      "attack": 1200,
+      "defense": 1900,
+      "type": "Warrior",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "frame": "Orange",
+      "password": "10375182",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "own",
+          "attack": 400,
+          "type": "Warrior"
+        }
+      ],
+      "art": "art/card-259.png",
+      "tags": [
+        "fire"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-260",
+      "name": "Wolf Axwielder",
+      "description": "Once it has started battle, this monster attacks fiercely and cannot stop.",
+      "attack": 1650,
+      "defense": 1000,
+      "type": "Beast-Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "56369281",
+      "art": "art/card-260.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-261",
+      "name": "King Tiger Wanghu",
+      "description": "The king of a group of tigers, unstoppable in battle.",
+      "attack": 1700,
+      "defense": 1000,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "83986578",
+      "art": "art/card-261.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-262",
+      "name": "Birdface",
+      "description": "A winged beast, an ally of the Harpies. It is capable of tearing through diamonds with its sharp beak.",
+      "attack": 1600,
+      "defense": 1600,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "45547649",
+      "art": "art/card-262.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-263",
+      "name": "Kryuel",
+      "description": "With its staff of darkness, this powerful fiend is capable of destroying cities with a single blow.",
+      "attack": 1000,
+      "defense": 1700,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "82642348",
+      "art": "art/card-263.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-264",
+      "name": "Airknight Parshath",
+      "description": "A celestial being who customarily receives the souls of brave warriors.",
+      "attack": 1900,
+      "defense": 1400,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 5,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "18036057",
+      "art": "art/card-264.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-265",
+      "name": "Arsenal Bug",
+      "description": "An ancient wizard transformed an entire swarm into a single-insect army. It flies overhead at incredible speeds.",
+      "attack": 2000,
+      "defense": 2000,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Jupiter",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "42364374",
+      "art": "art/card-265.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-266",
+      "name": "Serpentine Princess",
+      "description": "A snake princess; her bite destroys even the strongest of shells.",
+      "attack": 1400,
+      "defense": 2000,
+      "type": "Reptile",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "71829750",
+      "art": "art/card-266.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-267",
+      "name": "Robotic Knight",
+      "description": "The Commander of Machine-Types, he serves the Machine King. He is famous for the way he controls his troops.",
+      "attack": 1600,
+      "defense": 1800,
+      "type": "Machine",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "44203504",
+      "art": "art/card-267.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-268",
+      "name": "Cipher Soldier",
+      "description": "A human transformed into a battle machine, capable of eliminating any warrior who crosses his path.",
+      "attack": 1350,
+      "defense": 1800,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Mars"
+      ],
+      "frame": "Type",
+      "password": "79853073",
+      "art": "art/card-268.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-269",
+      "name": "Maiden of the Aqua",
+      "description": "A maiden with great attributes; she can summon the sea to protect herself.",
+      "attack": 700,
+      "defense": 2000,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "17214465",
+      "art": "art/card-269.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-270",
+      "name": "Molten Behemoth",
+      "description": "(PYRO + ROCK)",
+      "attack": 1000,
+      "defense": 2200,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 5,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Purple",
+      "password": "17192817",
+      "art": "art/card-270.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-271",
+      "name": "Woodland Sprite",
+      "description": "Spirit of the forest—they say that whoever encounters it wandering will have eternal good fortune.",
+      "attack": 900,
+      "defense": 400,
+      "type": "Plant",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Jupiter",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "06979239",
+      "art": "art/card-271.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-272",
+      "name": "Fairy King Truesdale",
+      "description": "(FAIRY + PLANT)\n\nIncreases the ATK of Plant-Type monsters by 500.\n",
+      "attack": 2200,
+      "defense": 1500,
+      "type": "Plant",
+      "attribute": "Water",
+      "level": 6,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Purple",
+      "password": "45425051",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Plant"
+        }
+      ],
+      "art": "art/card-272.png",
+      "tags": [
+        "elf"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-273",
+      "name": "Jowls of Dark Demise",
+      "description": "This monster hides among the coral, looking for prey to attack. Its bite leaves anyone in a state of eternal confusion.",
+      "attack": 200,
+      "defense": 100,
+      "type": "Fiend",
+      "attribute": "Water",
+      "level": 2,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "05257687",
+      "art": "art/card-273.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-274",
+      "name": "Souleater",
+      "description": "Increases the ATK of Fish-Type monsters by 300.",
+      "attack": 1200,
+      "defense": 0,
+      "type": "Fish",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Jupiter"
+      ],
+      "frame": "Orange",
+      "password": "31242786",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 300,
+          "defense": 300,
+          "type": "Fish"
+        }
+      ],
+      "art": "art/card-274.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-275",
+      "name": "Slate Warrior",
+      "description": "This slate warrior possesses hypnotic nipples capable of keeping his victims in deep agony.",
+      "attack": 1900,
+      "defense": 400,
+      "type": "Fiend",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "78636495",
+      "art": "art/card-275.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-276",
+      "name": "Shapesnatch",
+      "description": "A bow tie with horrible power, it attacks an opponent by controlling others.",
+      "attack": 1200,
+      "defense": 1700,
+      "type": "Machine",
+      "level": 5,
+      "stars": [
+        "Moon",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "04035199",
+      "art": "art/card-276.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-277",
+      "name": "Carat Idol",
+      "description": "This strange creature holds the thread of space-time, preventing everything from splitting in two.",
+      "attack": 2600,
+      "defense": 3100,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 9,
+      "stars": [
+        "Pluto",
+        "Venus"
+      ],
+      "frame": "Type",
+      "password": "06101989",
+      "art": "art/card-277.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-278",
+      "name": "Electromagnetic Bagworm",
+      "description": "When destroyed, all Machine monsters your opponent controls lose 500 ATK/DEF.",
+      "attack": 200,
+      "defense": 1400,
+      "type": "Insect",
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Orange",
+      "password": "07914843",
+      "monster_effects": [
+        {
+          "when": "destroyed",
+          "do": "boost",
+          "target": "opponent",
+          "attack": -500,
+          "defense": -500,
+          "type": "Machine"
+        }
+      ],
+      "art": "art/card-278.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-279",
+      "name": "Timeater",
+      "description": "Time is always running late.",
+      "attack": 1900,
+      "defense": 1700,
+      "type": "Machine",
+      "level": 6,
+      "stars": [
+        "Saturn",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "44913552",
+      "art": "art/card-279.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-280",
+      "name": "Mucus Yolk",
+      "description": "A mucus that clings to the walls of time and destroys everything it sees.",
+      "attack": 0,
+      "defense": 100,
+      "type": "Aqua",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "70307656",
+      "art": "art/card-280.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-281",
+      "name": "Servant of Catabolism",
+      "description": "A translucent snail enters its victims' bodies and attacks them from the inside out.",
+      "attack": 700,
+      "defense": 500,
+      "type": "Aqua",
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "02792265",
+      "art": "art/card-281.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-282",
+      "name": "Rigorous Reaver",
+      "description": "When destroyed, all of the opponent's monsters lose 500 ATK/DEF.",
+      "attack": 1600,
+      "defense": 100,
+      "type": "Plant",
+      "attribute": "Fire",
+      "level": 3,
+      "stars": [
+        "Jupiter",
+        "Mars"
+      ],
+      "frame": "Orange",
+      "password": "39180960",
+      "monster_effects": [
+        {
+          "when": "destroyed",
+          "do": "boost",
+          "target": "opponent",
+          "attack": -500,
+          "defense": -500
+        }
+      ],
+      "art": "art/card-282.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-283",
+      "name": "Moisture Creature",
+      "description": "No one knows what this creature is. Not even the creature itself.",
+      "defense": 2900,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 9,
+      "stars": [
+        "Pluto",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "75285069",
+      "art": "art/card-283.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-284",
+      "name": "Copycat",
+      "description": "What do you see when you look in the mirror?",
+      "attack": 0,
+      "defense": 0,
+      "attribute": "Light",
+      "level": 1,
+      "stars": [
+        "Mercury",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "26376390",
+      "art": "art/card-284.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-253",
+      "name": "Burning Spear",
+      "description": "+400 ATK -200 DEF to FIRE attribute.",
+      "password": "18937875",
+      "art": "art/card-253.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-285",
+      "name": "Gust Fan",
+      "description": "+400 ATK -200 DEF to WIND attribute.",
+      "password": "55321970",
+      "art": "art/card-285.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-286",
+      "name": "Germ Infection",
+      "description": "+300 to Plant type.",
+      "password": "24668830",
+      "art": "art/card-286.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-287",
+      "name": "Stim-Pack",
+      "description": "+700",
+      "password": "83225447",
+      "art": "art/card-287.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-288",
+      "name": "Ring of Magnetism",
+      "description": "+500 to Thunder type.",
+      "password": "20436034",
+      "art": "art/card-288.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-289",
+      "name": "Mage Power",
+      "description": "+500",
+      "password": "83746708",
+      "art": "art/card-289.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-290",
+      "name": "St. Joan",
+      "description": "(The Forgiving Maiden + Darklord Marie)",
+      "defense": 2000,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 7,
+      "stars": [
+        "Venus",
+        "Mercury"
+      ],
+      "frame": "Purple",
+      "password": "21175632",
+      "art": "art/card-290.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-291",
+      "name": "The Forgiving Maiden",
+      "description": "This nun forgives everyone who persecutes them.",
+      "attack": 850,
+      "defense": 2000,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "84080938",
+      "art": "art/card-291.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-292",
+      "name": "Darklord Marie",
+      "description": "Gain 200 LP during each of your Draw Phases.",
+      "attack": 1700,
+      "defense": 1200,
+      "type": "Fiend",
+      "level": 5,
+      "stars": [
+        "Venus",
+        "Saturn"
+      ],
+      "frame": "Orange",
+      "password": "57579381",
+      "monster_effects": [
+        {
+          "when": "draw",
+          "do": "heal",
+          "amount": 200
+        }
+      ],
+      "art": "art/card-292.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-293",
+      "name": "Empress Mantis",
+      "description": "Queen of an army of giant mantises whose command moves legions.",
+      "attack": 2200,
+      "defense": 1400,
+      "type": "Insect",
+      "attribute": "Wind",
+      "level": 6,
+      "stars": [
+        "Jupiter",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "58818411",
+      "art": "art/card-293.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-294",
+      "name": "Warrior Dai Grepher",
+      "description": "The warrior who can manipulate dragons. Nobody knows his mysterious past.",
+      "attack": 1700,
+      "defense": 1600,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "75953262",
+      "art": "art/card-294.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-295",
+      "name": "Super Robolady",
+      "description": "(Robolady + Metalmorph)",
+      "attack": 1200,
+      "defense": 500,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Venus",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "75923050",
+      "art": "art/card-295.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-296",
+      "name": "Super Roboyarou",
+      "description": "(Roboyarou + Metalmorph)",
+      "attack": 1200,
+      "defense": 500,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 6,
+      "stars": [
+        "Mercury",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "01412158",
+      "art": "art/card-296.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-297",
+      "name": "Slifer the Sky Dragon",
+      "description": "The heavens twist and thunder roars, signaling the coming of this ancient creature, and the dawn of true power.",
+      "attack": 4000,
+      "defense": 4000,
+      "type": "Divine-Beast",
+      "attribute": "Divine",
+      "level": 10,
+      "stars": [
+        "Mars",
+        "Mercury"
+      ],
+      "frame": "Trap",
+      "art": "art/card-297.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-298",
+      "name": "Obelisk the Tormentor",
+      "description": "The descent of this mighty creature shall be heralded by burning winds and twisted land.",
+      "attack": 4000,
+      "defense": 4000,
+      "type": "Divine-Beast",
+      "attribute": "Divine",
+      "level": 10,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Ritual",
+      "art": "art/card-298.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-299",
+      "name": "The Winged Dragon of Ra",
+      "description": "Spirits sing of a powerful creature that rules over all that is mystic.",
+      "attack": 4000,
+      "defense": 4000,
+      "type": "Divine-Beast",
+      "attribute": "Divine",
+      "level": 10,
+      "stars": [
+        "Pluto",
+        "Sun"
+      ],
+      "frame": "Gold",
+      "art": "art/card-299.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-300",
+      "name": "Arcana Knight Joker",
+      "description": "Increases the ATK/DEF of Warrior-Type monsters by 1000.",
+      "attack": 3800,
+      "defense": 2500,
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 9,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "password": "06150044",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 1000,
+          "defense": 1000,
+          "type": "Warrior"
+        }
+      ],
+      "art": "art/card-300.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-301",
+      "name": "Ocean Dragon Lord - Neo-Daedalus",
+      "description": "Increases the ATK/DEF of Sea Serpent-Type monsters by 500.",
+      "attack": 2900,
+      "defense": 1600,
+      "type": "Sea Serpent",
+      "attribute": "Water",
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Orange",
+      "password": "10485110",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Sea Serpent"
+        }
+      ],
+      "art": "art/card-301.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-302",
+      "name": "Infernal Flame Emperor",
+      "description": "Increases the ATK/DEF of Pyro-Type monsters by 500.",
+      "attack": 2700,
+      "defense": 1600,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 9,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "frame": "Orange",
+      "password": "19847532",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Pyro"
+        }
+      ],
+      "art": "art/card-302.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-303",
+      "name": "Vampire Genesis",
+      "description": "A powerful vampire born from the darkness. Its crimson claws and immense strength make it a terrifying predator.",
+      "attack": 3000,
+      "defense": 2100,
+      "type": "Zombie",
+      "stars": [
+        "Moon",
+        "Neptune"
+      ],
+      "frame": "Type",
+      "password": "22056710",
+      "art": "art/card-303.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-304",
+      "name": "Exxod, Master of The Guard",
+      "description": "Increases the DEF of your monsters by 1000.",
+      "attack": 0,
+      "defense": 4000,
+      "type": "Rock",
+      "attribute": "Earth",
+      "stars": [
+        "Uranus",
+        "Sun"
+      ],
+      "frame": "Orange",
+      "password": "55737443",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "defense": 1000
+        }
+      ],
+      "art": "art/card-304.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-305",
+      "name": "Simorgh, Bird of Divinity",
+      "description": "Increases the ATK of Winged Beast-Type monsters by 500.",
+      "attack": 2700,
+      "defense": 1000,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 7,
+      "stars": [
+        "Saturn",
+        "Sun"
+      ],
+      "frame": "Orange",
+      "password": "14989021",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Winged Beast"
+        }
+      ],
+      "art": "art/card-305.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-306",
+      "name": "Super Conductor Tyranno",
+      "description": "Increases the ATK of Dinosaur-Type monsters by 500.",
+      "attack": 3300,
+      "defense": 1400,
+      "type": "Dinosaur",
+      "attribute": "Light",
+      "stars": [
+        "Pluto",
+        "Uranus"
+      ],
+      "frame": "Orange",
+      "password": "85520851",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Dinosaur"
+        }
+      ],
+      "art": "art/card-306.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-307",
+      "name": "Flying Elephant",
+      "description": "A strange elephant that defies gravity. Though clumsy on the ground, its aerial charge is surprisingly powerful.",
+      "attack": 1850,
+      "defense": 1300,
+      "type": "Beast",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "66765023",
+      "art": "art/card-307.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-308",
+      "name": "Dark Bat",
+      "description": "Bats from the netherworld that use their hyper senses to detect their enemies.",
+      "attack": 1000,
+      "defense": 1000,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "67049542",
+      "art": "art/card-308.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-309",
+      "name": "Goblin Attack Force",
+      "description": "A fierce band of goblins that charges into battle without fear. Their reckless attacks overwhelm their enemies through sheer numbers.",
+      "attack": 2300,
+      "defense": 0,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Jupiter"
+      ],
+      "frame": "Type",
+      "password": "78658564",
+      "art": "art/card-309.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-310",
+      "name": "Mad Sword Beast",
+      "description": "A savage beast armed with a massive blade. Driven by rage, it charges relentlessly at anything that stands in its path.",
+      "attack": 1400,
+      "defense": 1200,
+      "type": "Dinosaur",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Mercury"
+      ],
+      "frame": "Type",
+      "password": "79870141",
+      "art": "art/card-310.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-311",
+      "name": "Oni Tank T-34",
+      "description": "An armored tank possessed by a fiend that will pursue enemies until they're crushed.",
+      "attack": 1400,
+      "defense": 1700,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "66927994",
+      "art": "art/card-311.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-312",
+      "name": "Thunder Ball",
+      "description": "A mechanical sphere that strikes with the force of thunder. Its unpredictable movements make it a dangerous weapon on the battlefield.",
+      "attack": 450,
+      "defense": 400,
+      "type": "Fiend",
+      "level": 3,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Type",
+      "password": "84813516",
+      "art": "art/card-312.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-313",
+      "name": "Knight of Twin Swords",
+      "description": "A swift knight who wields twin blades with deadly precision. Its relentless strikes leave enemies no chance to escape.",
+      "attack": 350,
+      "defense": 200,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "13450581",
+      "art": "art/card-313.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-314",
+      "name": "Mudora",
+      "description": "Increase the ATK of all Fairy-Type monsters on your side of the field by 200.",
+      "attack": 1500,
+      "defense": 1800,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "frame": "Orange",
+      "password": "82108372",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "own",
+          "attack": 200,
+          "type": "Fairy"
+        }
+      ],
+      "art": "art/card-314.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-315",
+      "name": "Zolga",
+      "description": "Gain 2000 LP when you Summon this monster.",
+      "attack": 1700,
+      "defense": 1200,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Venus"
+      ],
+      "frame": "Orange",
+      "password": "16268841",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "heal",
+          "amount": 2000
+        }
+      ],
+      "art": "art/card-315.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-316",
+      "name": "Kelbek",
+      "description": "FLIP: Destroy the attacking monster.",
+      "attack": 1500,
+      "defense": 1800,
+      "type": "Fairy",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Saturn"
+      ],
+      "frame": "Orange",
+      "password": "54878498",
+      "monster_effects": [
+        {
+          "when": "flip",
+          "do": "destroy",
+          "target": "battle"
+        }
+      ],
+      "art": "art/card-316.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-317",
+      "name": "Agido",
+      "description": "A mysterious guardian orb that commands the power of the earth, unleashing ancient magic to protect its master.",
+      "attack": 1500,
+      "defense": 1300,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "16135253",
+      "art": "art/card-317.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-318",
+      "name": "Goblin Zombie",
+      "description": "A skeletal goblin warrior that stalks the shadows, wielding a cursed blade to hunt the living and command the dead.",
+      "attack": 1100,
+      "defense": 1050,
+      "type": "Zombie",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "63665875",
+      "art": "art/card-318.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-319",
+      "name": "Drillago",
+      "description": "A ruthless mechanical assassin with a drill for a weapon, piercing through enemy defenses with relentless precision.",
+      "attack": 1600,
+      "defense": 1100,
+      "type": "Machine",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "99050989",
+      "art": "art/card-319.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-320",
+      "name": "Jowgen the Spiritualist",
+      "description": "A mysterious spiritualist who commands ancient forces, channeling sacred energy to banish even the mightiest summoned beasts.",
+      "attack": 200,
+      "defense": 1300,
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Pluto",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "41855169",
+      "art": "art/card-320.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-321",
+      "name": "Hayabusa Knight",
+      "description": "A swift warrior who strikes with blinding speed, wielding twin blades to overwhelm his foes before they can react.",
+      "attack": 1000,
+      "defense": 700,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "21015833",
+      "art": "art/card-321.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-322",
+      "name": "The Unfriendly Amazon",
+      "description": "A fierce Amazon warrior who roams the wilderness, striking down intruders with savage strength and unwavering resolve.",
+      "attack": 2000,
+      "defense": 1000,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Venus",
+        "Uranus"
+      ],
+      "frame": "Monster",
+      "password": "00000760",
+      "art": "art/card-322.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-323",
+      "name": "Holding Arms",
+      "description": "A cursed relic that binds its enemies with enchanted chains, trapping them in an unbreakable prison of darkness.",
+      "attack": 500,
+      "defense": 1200,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "43730887",
+      "art": "art/card-323.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-324",
+      "name": "Holding Legs",
+      "description": "A cursed artifact that binds its victims with enchanted chains, sealing their movements and draining their strength.",
+      "attack": 800,
+      "defense": 600,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Type",
+      "password": "70124586",
+      "art": "art/card-324.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-325",
+      "name": "Kaiser Glider",
+      "description": "A mighty golden dragon clad in blazing armor, soaring through flames with scales harder than steel and claws that crush its enemies.",
+      "attack": 2400,
+      "defense": 2200,
+      "type": "Dragon",
+      "attribute": "Light",
+      "level": 6,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "52824910",
+      "art": "art/card-325.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-326",
+      "name": "Dark Ruler Ha Des",
+      "description": "Increase the ATK of all Fiend-Type monsters you control by 700 when you Summon this card.",
+      "attack": 2450,
+      "defense": 1600,
+      "type": "Fiend",
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Orange",
+      "password": "53982768",
+      "monster_effects": [
+        {
+          "when": "summon",
+          "do": "boost",
+          "target": "others",
+          "attack": 700,
+          "type": "Fiend"
+        }
+      ],
+      "art": "art/card-326.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-327",
+      "name": "Wingweaver",
+      "description": "A six-winged fairy who prays for peace and hope.",
+      "attack": 2750,
+      "defense": 2400,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 7,
+      "stars": [
+        "Sun",
+        "Saturn"
+      ],
+      "frame": "Type",
+      "password": "31447217",
+      "art": "art/card-327.png",
+      "tags": [
+        "female"
+      ],
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-328",
+      "name": "Lizard Soldier",
+      "description": "A beast soldier derived from dragons, it is small for a Dragon-Type. Moving very quickly, this monster is an excellent strategist.",
+      "attack": 1100,
+      "defense": 800,
+      "type": "Dragon",
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Uranus"
+      ],
+      "frame": "Type",
+      "password": "20831168",
+      "art": "art/card-328.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-329",
+      "name": "Gigobyte",
+      "description": "He has a tranquil soul, but carries a destiny that one day his heart shall be tainted by evil....",
+      "attack": 350,
+      "defense": 300,
+      "type": "Reptile",
+      "attribute": "Water",
+      "level": 1,
+      "stars": [
+        "Neptune",
+        "Sun"
+      ],
+      "frame": "Type",
+      "password": "53776525",
+      "art": "art/card-329.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-330",
+      "name": "Jigabyte",
+      "description": "(Gigobyte + Level Up!)",
+      "attack": 1500,
+      "defense": 200,
+      "type": "Reptile",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "40894584",
+      "art": "art/card-330.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-331",
+      "name": "Gagagigo",
+      "description": "(Jigabyte + Level Up!)",
+      "attack": 1850,
+      "defense": 1000,
+      "type": "Reptile",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Sun"
+      ],
+      "frame": "Purple",
+      "password": "49003308",
+      "art": "art/card-331.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-332",
+      "name": "Giga Gagagigo",
+      "description": "(Gagagigo + Level Up!)",
+      "attack": 2450,
+      "defense": 1500,
+      "type": "Reptile",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Purple",
+      "password": "43793530",
+      "art": "art/card-332.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-333",
+      "name": "Gogiga Gagagigo",
+      "description": "(Giga Gagagigo + Level Up!)\n\nIncreases the ATK/DEF of Reptile-Type monsters by 500.",
+      "attack": 2950,
+      "defense": 2800,
+      "type": "Reptile",
+      "attribute": "Water",
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Purple",
+      "password": "39674352",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "others",
+          "attack": 500,
+          "defense": 500,
+          "type": "Reptile"
+        }
+      ],
+      "art": "art/card-333.png",
+      "model": 651
+    },
+    {
+      "copy": 318,
+      "id": "card-334",
+      "name": "Level Up!",
+      "description": "This card is used to evolve a monster.",
+      "password": "25290459",
+      "art": "art/card-334.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-335",
+      "name": "Legendary Flame Lord",
+      "description": "Increases the ATK/DEF of FIRE monsters by 600.",
+      "attack": 2400,
+      "defense": 2000,
+      "attribute": "Fire",
+      "level": 7,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "password": "60258960",
+      "monster_effects": [
+        {
+          "when": "face_up",
+          "do": "boost",
+          "target": "own",
+          "attack": 600,
+          "defense": 600,
+          "attribute": "Fire"
+        }
+      ],
+      "art": "art/card-335.png",
+      "model": 651
+    },
+    {
+      "copy": 668,
+      "id": "card-336",
+      "name": "Buster Rancher",
+      "description": "+2500 ATK only for monsters with 1000 or less ATK.",
+      "password": "84740193",
+      "art": "art/card-336.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-337",
+      "name": "Overdrive",
+      "description": "An all-terrain armored vehicle armed with a heavy-duty machine gun.",
+      "attack": 1600,
+      "defense": 1500,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Monster",
+      "password": "02311603",
+      "art": "art/card-337.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-338",
+      "name": "Girochin Kuwagata",
+      "description": "Despite its small size, this monster has powerful jaws that can rip metal to shreds.",
+      "attack": 1700,
+      "defense": 1000,
+      "type": "Insect",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Jupiter"
+      ],
+      "frame": "Monster",
+      "password": "84620194",
+      "art": "art/card-338.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-339",
+      "name": "Skull Mariner",
+      "description": "A pirate ship that appears out of the mist and sinks any seagoing vessels.",
+      "attack": 1600,
+      "defense": 900,
+      "type": "Warrior",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Moon"
+      ],
+      "frame": "Monster",
+      "password": "05265750",
+      "art": "art/card-339.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-340",
+      "name": "Island Turtle",
+      "description": "(Turtle + PLANT)",
+      "attack": 1100,
+      "defense": 2000,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "04042268",
+      "art": "art/card-340.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-341",
+      "name": "Souls of the Forgotten",
+      "description": "A wicked spirit created by the hateful souls of those who fell in battle. It grows by assimilating the souls of its enemies.",
+      "attack": 900,
+      "defense": 200,
+      "type": "Fiend",
+      "level": 2,
+      "stars": [
+        "Moon",
+        "Mars"
+      ],
+      "frame": "Monster",
+      "password": "04920010",
+      "art": "art/card-341.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-342",
+      "name": "Dokuroyaiba",
+      "description": "A boomerang with brains that will pursue a target to the ends of the earth.",
+      "attack": 1000,
+      "defense": 400,
+      "type": "Fiend",
+      "attribute": "Fire",
+      "level": 3,
+      "stars": [
+        "Mars",
+        "Neptune"
+      ],
+      "frame": "Monster",
+      "password": "30325729",
+      "art": "art/card-342.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-343",
+      "name": "Bio-Mage",
+      "description": "(FAIRY + MACHINE)",
+      "attack": 1150,
+      "defense": 1000,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 3,
+      "stars": [
+        "Jupiter",
+        "Venus"
+      ],
+      "frame": "Purple",
+      "password": "58696829",
+      "art": "art/card-343.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-344",
+      "name": "Opticlops",
+      "description": "A one-eyed giant that serves the \"Dark Ruler Ha Des\", it skewers its enemies with its sharp horn, shattering them to pieces.",
+      "attack": 1800,
+      "defense": 1700,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Mercury"
+      ],
+      "frame": "Monster",
+      "password": "14531242",
+      "art": "art/card-344.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-345",
+      "name": "The Dragon Dwelling in the Cave",
+      "description": "A huge dragon dwelling in a cave. It is horrible when it gets angry, although it is usually quiet. It is said to preserve certain treasures.",
+      "attack": 1300,
+      "defense": 2000,
+      "type": "Dragon",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Uranus"
+      ],
+      "frame": "Monster",
+      "password": "93346024",
+      "art": "art/card-345.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-346",
+      "name": "Kabazauls",
+      "description": "A huge monster in the shape of a hippopotamus. The sneezing from his gigantic body is so fierce that people mistake it for a hurricane.",
+      "attack": 1700,
+      "defense": 1500,
+      "type": "Dinosaur",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Mercury"
+      ],
+      "frame": "Monster",
+      "password": "51934376",
+      "art": "art/card-346.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-347",
+      "name": "People Running About",
+      "description": "Although they always suffer in silence, they swear an oath to inevitably revolt.",
+      "attack": 600,
+      "defense": 600,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 2,
+      "stars": [
+        "Mars",
+        "Venus"
+      ],
+      "frame": "Monster",
+      "password": "12143771",
+      "art": "art/card-347.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-348",
+      "name": "Oppressed People",
+      "description": "They are oppressed, but believe they will have their freedom someday.",
+      "attack": 400,
+      "defense": 2000,
+      "type": "Aqua",
+      "attribute": "Water",
+      "level": 1,
+      "stars": [
+        "Neptune",
+        "Venus"
+      ],
+      "frame": "Monster",
+      "password": "58538870",
+      "art": "art/card-348.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-349",
+      "name": "United Resistance",
+      "description": "The people that gather to swear to fight their oppressors. A revolution is coming.",
+      "attack": 1000,
+      "defense": 400,
+      "type": "Thunder",
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Pluto",
+        "Venus"
+      ],
+      "frame": "Monster",
+      "password": "00000100",
+      "art": "art/card-349.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-350",
+      "name": "Dark Blade",
+      "description": "They say he is a dragon-manipulating warrior from the dark world. His attack is tremendous, using his great swords with vicious power.",
+      "attack": 1800,
+      "defense": 1500,
+      "type": "Warrior",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Mars"
+      ],
+      "frame": "Monster",
+      "password": "11321183",
+      "art": "art/card-350.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-351",
+      "name": "Great Angus",
+      "description": "A very violent beast, it is always berserk. People say that they have never seen it silent.",
+      "attack": 1800,
+      "defense": 600,
+      "type": "Beast",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Jupiter"
+      ],
+      "frame": "Monster",
+      "password": "11813953",
+      "art": "art/card-351.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-352",
+      "name": "Aitsu",
+      "description": "He seems to be very unreliable, but he might have incredible potential.",
+      "attack": 100,
+      "defense": 100,
+      "type": "Fairy",
+      "attribute": "Fire",
+      "level": 5,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "frame": "Monster",
+      "password": "48202661",
+      "art": "art/card-352.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-353",
+      "name": "Sonic Duck",
+      "description": "A duck which can walk at a sonic speed. Sometimes, he cannot deal with his incredible pace and loses control.",
+      "attack": 1700,
+      "defense": 700,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 3,
+      "stars": [
+        "Saturn",
+        "Mercury"
+      ],
+      "frame": "Monster",
+      "password": "84696266",
+      "art": "art/card-353.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-354",
+      "name": "Battle Footballer",
+      "description": "A cyborg with high defense power. Originally it was invented for a football machine.",
+      "attack": 1000,
+      "defense": 2100,
+      "type": "Machine",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Mars"
+      ],
+      "frame": "Monster",
+      "password": "48094997",
+      "art": "art/card-354.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-355",
+      "name": "Nin-Ken Dog",
+      "description": "A Ninja dog who has mastered extreme Ninjutsu. Through hard training, it learned the technique to metamorphose into a human being.",
+      "attack": 1800,
+      "defense": 1000,
+      "type": "Beast-Warrior",
+      "attribute": "Wind",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Sun"
+      ],
+      "frame": "Monster",
+      "password": "11987744",
+      "art": "art/card-355.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-356",
+      "name": "Acrobat Monkey",
+      "description": "An autonomous monkey type robot which was developed with cutting-edge technology. It moves very acrobatically.",
+      "attack": 1000,
+      "defense": 1800,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Uranus",
+        "Pluto"
+      ],
+      "frame": "Monster",
+      "password": "47372349",
+      "art": "art/card-356.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-357",
+      "name": "D.D. Trainer",
+      "description": "A poor goblin that was sucked into a different dimension. However, he's doing his best with his new destiny.",
+      "attack": 100,
+      "defense": 2000,
+      "type": "Fiend",
+      "level": 1,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Monster",
+      "password": "86498013",
+      "art": "art/card-357.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-358",
+      "name": "Ojama Green",
+      "description": "He's one of the Ojama Trio. It's said that he butts in by any means necessary. It's also said that when the three are together, something happens.",
+      "attack": 0,
+      "defense": 1000,
+      "type": "Beast",
+      "attribute": "Light",
+      "level": 2,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Monster",
+      "password": "12482652",
+      "art": "art/card-358.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-359",
+      "name": "Archfiend Soldier",
+      "description": "An expert at battle who belongs to a crack diabolical unit. He's famous because he always gets the job done.",
+      "attack": 1900,
+      "defense": 1500,
+      "type": "Fiend",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Saturn"
+      ],
+      "frame": "Monster",
+      "password": "49881766",
+      "art": "art/card-359.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-360",
+      "name": "Ojama Yellow",
+      "description": "He's one of the Ojama Trio. It's said that he butts in by any means necessary. It's also said that when the three are together, something happens.",
+      "attack": 0,
+      "defense": 1000,
+      "type": "Beast",
+      "attribute": "Light",
+      "level": 2,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Monster",
+      "password": "42941100",
+      "art": "art/card-360.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-361",
+      "name": "Ojama Black",
+      "description": "He's one of the Ojama Trio. It's said that he butts in by any means necessary. It's also said that when the three are together, something happens.",
+      "attack": 0,
+      "defense": 1000,
+      "type": "Beast",
+      "attribute": "Light",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Monster",
+      "password": "79335209",
+      "art": "art/card-361.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-362",
+      "name": "Big Koala",
+      "description": "A species of huge Des Koala. He's meek, but people are afraid of him because he's very powerful.",
+      "attack": 2700,
+      "defense": 2000,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 7,
+      "stars": [
+        "Jupiter",
+        "Sun"
+      ],
+      "frame": "Monster",
+      "password": "42129512",
+      "art": "art/card-362.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-363",
+      "name": "Mad Dog of Darkness",
+      "description": "He used to be a normal dog who played around in a park, but was corrupted by the powers of darkness.",
+      "attack": 1900,
+      "defense": 1400,
+      "type": "Beast",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Monster",
+      "password": "79182538",
+      "art": "art/card-363.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-364",
+      "name": "Neo Bug",
+      "description": "(INSECT + MACHINE)",
+      "attack": 1800,
+      "defense": 1700,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Saturn"
+      ],
+      "frame": "Purple",
+      "password": "16587243",
+      "art": "art/card-364.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-365",
+      "name": "Sea Serpent Warrior of Darkness",
+      "description": "(SEA SERPENT + WARRIOR)",
+      "attack": 1800,
+      "defense": 1500,
+      "type": "Sea Serpent",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Neptune",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "42071342",
+      "art": "art/card-365.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-366",
+      "name": "Terrorking Salmon",
+      "description": "A feared salmon, master of the Sea of Darkness. Its roe is the best delicacy in the World of Darkness.",
+      "attack": 2400,
+      "defense": 1000,
+      "type": "Fish",
+      "attribute": "Water",
+      "level": 5,
+      "stars": [
+        "Neptune",
+        "Saturn"
+      ],
+      "frame": "Monster",
+      "password": "78060096",
+      "art": "art/card-366.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-367",
+      "name": "Blazing Inpachi",
+      "description": "A wicked wooden spirit now burning in flames. Its fire attack is powerful, but it will soon be nothing but ashes.",
+      "attack": 1850,
+      "defense": 0,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 4,
+      "stars": [
+        "Mars",
+        "Jupiter"
+      ],
+      "frame": "Monster",
+      "password": "05464695",
+      "art": "art/card-367.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-368",
+      "name": "Warrior of Zera",
+      "description": "A wandering warrior who seeks the sanctuary where he can gain the power of the Archlords.",
+      "attack": 1600,
+      "defense": 1600,
+      "type": "Warrior",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Monster",
+      "password": "66073051",
+      "art": "art/card-368.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-369",
+      "name": "Sealmaster Meisei",
+      "description": "One of the few people who has a good command of Talismans. His history is a mystery.",
+      "attack": 1100,
+      "defense": 900,
+      "level": 3,
+      "stars": [
+        "Mars",
+        "Sun"
+      ],
+      "frame": "Monster",
+      "password": "02468169",
+      "art": "art/card-369.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-370",
+      "name": "Mystical Shine Ball",
+      "description": "A soul of light covered by mystical shine. When you see its beautiful shape, your dream will come true.",
+      "attack": 500,
+      "defense": 500,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 2,
+      "stars": [
+        "Neptune",
+        "Sun"
+      ],
+      "frame": "Monster",
+      "password": "39552864",
+      "art": "art/card-370.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-371",
+      "name": "Metal Armored Bug",
+      "description": "A gigantic insect-like creature covered by thick armor. Everything in his path is destroyed.",
+      "defense": 1500,
+      "type": "Insect",
+      "attribute": "Earth",
+      "stars": [
+        "Uranus",
+        "Jupiter"
+      ],
+      "frame": "Purple",
+      "password": "65957473",
+      "art": "art/card-371.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-372",
+      "name": "Mokey Mokey",
+      "description": "An outcast angel. Nobody knows what he is thinking at all. Sometimes he gets mad and that is dreadful.",
+      "attack": 300,
+      "defense": 100,
+      "type": "Fairy",
+      "attribute": "Light",
+      "level": 1,
+      "stars": [
+        "Sun",
+        "Saturn"
+      ],
+      "frame": "Monster",
+      "password": "27288416",
+      "art": "art/card-372.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-373",
+      "name": "Kozaky",
+      "description": "A workaholic fiend who devotes everything to his research into the languages of Dark World. His mind has collapsed because of working too hard.",
+      "attack": 400,
+      "defense": 400,
+      "type": "Fiend",
+      "level": 1,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Monster",
+      "password": "99171160",
+      "art": "art/card-373.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-374",
+      "name": "Fiend Scorpion",
+      "description": "A huge scorpion inhabited by the soul of a fiend. Usually it holds back, but has untapped potential.",
+      "attack": 900,
+      "defense": 200,
+      "type": "Insect",
+      "level": 2,
+      "stars": [
+        "Jupiter",
+        "Moon"
+      ],
+      "frame": "Monster",
+      "password": "26566878",
+      "art": "art/card-374.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-375",
+      "name": "Pharaoh's Servant",
+      "description": "An apparition of those said to formerly serve the Pharaoh. It has tremendous loyalty that does not waver.",
+      "attack": 900,
+      "defense": 0,
+      "type": "Zombie",
+      "level": 2,
+      "stars": [
+        "Moon",
+        "Uranus"
+      ],
+      "frame": "Monster",
+      "password": "52550973",
+      "art": "art/card-375.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-376",
+      "name": "Pharaonic Protector",
+      "description": "The mummy of a soldier that has been guarding the royal family for thousands of years. Even now, its spirit does not allow anybody to trespass.",
+      "attack": 900,
+      "defense": 0,
+      "type": "Zombie",
+      "attribute": "Earth",
+      "level": 2,
+      "stars": [
+        "Uranus",
+        "Moon"
+      ],
+      "frame": "Monster",
+      "password": "89959682",
+      "art": "art/card-376.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-377",
+      "name": "Charcoal Inpachi",
+      "description": "(Impachi + AQUA)",
+      "attack": 100,
+      "defense": 2100,
+      "type": "Pyro",
+      "attribute": "Fire",
+      "level": 1,
+      "stars": [
+        "Jupiter",
+        "Neptune"
+      ],
+      "frame": "Purple",
+      "password": "13179332",
+      "art": "art/card-377.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-378",
+      "name": "Neo Aqua Madoor",
+      "description": "(Aqua Madoor + AQUA)",
+      "attack": 1200,
+      "defense": 3000,
+      "attribute": "Water",
+      "level": 6,
+      "stars": [
+        "Neptune",
+        "Mercury"
+      ],
+      "frame": "Purple",
+      "password": "49563947",
+      "art": "art/card-378.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-379",
+      "name": "Skull Dog Marron",
+      "description": "A lost dog that wandered off 1000 years ago. He's still waiting for his master to come for him.",
+      "attack": 1350,
+      "defense": 2000,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Sun",
+        "Jupiter"
+      ],
+      "frame": "Monster",
+      "password": "86652646",
+      "art": "art/card-379.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-380",
+      "name": "Goblin Calligrapher",
+      "description": "A Goblin who devotes himself to mastering perfect calligraphy of the word \"False\". He gives his all to each stroke.",
+      "attack": 400,
+      "defense": 400,
+      "type": "Fiend",
+      "level": 1,
+      "stars": [
+        "Jupiter",
+        "Mercury"
+      ],
+      "frame": "Monster",
+      "password": "12057781",
+      "art": "art/card-380.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-381",
+      "name": "Woodborg Inpachi",
+      "description": "(Impachi + MACHINE)",
+      "attack": 500,
+      "defense": 2500,
+      "type": "Machine",
+      "attribute": "Fire",
+      "level": 5,
+      "stars": [
+        "Mars",
+        "Uranus"
+      ],
+      "frame": "Purple",
+      "password": "35322812",
+      "art": "art/card-381.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-382",
+      "name": "Mighty Guard",
+      "description": "A machine soldier that was developed as a guard. It is made of rust-proof metal.",
+      "attack": 500,
+      "defense": 1200,
+      "type": "Machine",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Mercury",
+        "Uranus"
+      ],
+      "frame": "Monster",
+      "password": "62327910",
+      "art": "art/card-382.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-383",
+      "name": "Bokoichi the Freightening Car",
+      "description": "A freight car that is exclusively for Dekoichi. It can transport anything, but most cargo arrives broken.",
+      "attack": 500,
+      "defense": 500,
+      "type": "Machine",
+      "level": 2,
+      "stars": [
+        "Pluto",
+        "Moon"
+      ],
+      "frame": "Monster",
+      "password": "08715625",
+      "art": "art/card-383.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-384",
+      "name": "Harpie Girl",
+      "description": "A Harpie chick who aspires to flit about beautifully and gorgeously, but attack sharply.",
+      "attack": 500,
+      "defense": 500,
+      "type": "Winged Beast",
+      "attribute": "Wind",
+      "level": 2,
+      "stars": [
+        "Saturn",
+        "Venus"
+      ],
+      "frame": "Monster",
+      "password": "34100324",
+      "art": "art/card-384.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-385",
+      "name": "Space Mambo",
+      "description": "A Space Mambo floating in the vast universe. This living relic was found in the ruins of a super civilization on Alphard 4.",
+      "attack": 1700,
+      "defense": 1000,
+      "type": "Fish",
+      "attribute": "Water",
+      "level": 4,
+      "stars": [
+        "Saturn",
+        "Neptune"
+      ],
+      "frame": "Monster",
+      "password": "36119641",
+      "art": "art/card-385.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-386",
+      "name": "Divine Dragon Ragnarok",
+      "description": "A legendary dragon sent by the gods as their instrument. Legends say that if provoked, the whole world will sink beneath the sea.",
+      "attack": 1500,
+      "defense": 1000,
+      "type": "Dragon",
+      "attribute": "Light",
+      "level": 4,
+      "stars": [
+        "Pluto",
+        "Sun"
+      ],
+      "frame": "Monster",
+      "password": "62113340",
+      "art": "art/card-386.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-387",
+      "name": "Chu-Ske the Mouse Fighter",
+      "description": "A fiery mouse, travelling the world to become the strongest fighter in the world of mice. Be careful not to touch him, or you will get burned.",
+      "attack": 1200,
+      "defense": 0,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 3,
+      "stars": [
+        "Mars",
+        "Jupiter"
+      ],
+      "frame": "Monster",
+      "password": "08508055",
+      "art": "art/card-387.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-388",
+      "name": "Insect Knight",
+      "description": "(INSECT + WARRIOR)",
+      "attack": 1900,
+      "defense": 1500,
+      "type": "Insect",
+      "attribute": "Earth",
+      "level": 4,
+      "stars": [
+        "Jupiter",
+        "Mars"
+      ],
+      "frame": "Purple",
+      "password": "35052053",
+      "art": "art/card-388.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-389",
+      "name": "Des Kangaroo",
+      "description": "A swift kangaroo warrior that strikes with powerful punches, using ghostly afterimages to confuse its foes and evade their attacks.",
+      "attack": 1500,
+      "defense": 1700,
+      "type": "Beast",
+      "level": 4,
+      "stars": [
+        "Moon",
+        "Jupiter"
+      ],
+      "frame": "Monster",
+      "password": "78613627",
+      "art": "art/card-389.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-390",
+      "name": "Sanwitch",
+      "description": "(Witch of Black Forest + Sangan)",
+      "attack": 2100,
+      "defense": 1800,
+      "level": 6,
+      "stars": [
+        "Moon",
+        "Sun"
+      ],
+      "frame": "Purple",
+      "password": "53539634",
+      "art": "art/card-390.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-391",
+      "name": "Master of Oz",
+      "description": "(Des Kangaroo + Big Koala)",
+      "attack": 4200,
+      "defense": 3700,
+      "type": "Beast",
+      "attribute": "Earth",
+      "level": 9,
+      "stars": [
+        "Jupiter",
+        "Venus"
+      ],
+      "frame": "Purple",
+      "password": "27134689",
+      "art": "art/card-391.png",
+      "model": 651
+    },
+    {
+      "copy": 722,
+      "id": "card-392",
+      "name": "King Dragun",
+      "description": "(Lord of D. + Divine Dragon Ragnarok)",
+      "attack": 2400,
+      "defense": 1100,
+      "type": "Dragon",
+      "level": 7,
+      "stars": [
+        "Moon",
+        "Pluto"
+      ],
+      "frame": "Purple",
+      "password": "13756293",
+      "art": "art/card-392.png",
+      "model": 651
+    }
+  ]
+}
