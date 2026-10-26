@@ -9,7 +9,7 @@ const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () =>
     const status = document.getElementById('save-storage-status');
     if (status) status.textContent = 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=web-options-01';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=startup-memory-01';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.
@@ -437,7 +437,8 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
             const res = await fetch(romToLaunch);
             romBuffer = await res.arrayBuffer();
         }
-        const romBytes = new Uint8Array(romBuffer);
+        let romBytes = new Uint8Array(romBuffer);
+        romBuffer = null; // MEMFS takes this external buffer without another full-disc copy.
         const nativeMods = await prepareNativeMods((loaded, total) => {
             syncTitle.textContent = `Preparando mods (${Math.round(loaded / 1048576)} / ${Math.round(total / 1048576)} MB)...`;
             const percent = total ? Math.min(100, Math.round(100 * loaded / total)) : 100;
@@ -504,7 +505,8 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                         if (window.Module.FS) {
                             try { window.Module.FS.mkdir('/game'); } catch (e) {}
                             console.log('[Memories Recompiled] Escribiendo ROM en /game/yfm.bin (' + (romBytes.length / (1024*1024)).toFixed(1) + ' MB)...');
-                            window.Module.FS.writeFile('/game/yfm.bin', romBytes);
+                            window.Module.FS.writeFile('/game/yfm.bin', romBytes, {canOwn:true});
+                            romBytes = null;
                             console.log('[Memories Recompiled] Disco montado con éxito.');
 
                             nativeSaves.restore(window.Module.FS);

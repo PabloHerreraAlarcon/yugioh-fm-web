@@ -47,7 +47,9 @@ export async function prepareNativeMods(progress=()=>{}) {
   module.FS.writeFile('/game/settings.cfg',settings.join('\n')+'\n');
   for(const file of files){const parts=file.path.split('/');let dir='';for(const part of parts.slice(1,-1)){dir+='/'+part;try{module.FS.mkdir(dir);}catch(e){if(!module.FS.analyzePath(dir).exists)throw e;}}
    module.FS.writeFile(file.path,file.bytes,{canOwn:true});
+   file.bytes=null; // MEMFS now owns the allocation; release the staging reference.
   }
+  files.length=0;
  }};
 }
 export async function setupNativeModsUI(){
