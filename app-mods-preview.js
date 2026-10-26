@@ -1,4 +1,4 @@
-import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=1';
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=2';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
@@ -538,6 +538,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                             window.Module.ENV.MEMORIES_SCALING = '1';
                             console.log('[Memories Recompiled] Resolución interna inicial:', window.Module.ENV.MEMORIES_INTERNAL_SCALE);
                             console.log('[Memories Recompiled] Iniciando Forbidden Memories a 60 FPS nativo...');
+                            performanceDiagnostics.configure(window.Module.ENV);
                             window.Module.callMain([]);
                             window.dispatchEvent(new Event('yfm-engine-ready'));
                             window._stopGameLayout?.();
