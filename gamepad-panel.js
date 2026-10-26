@@ -1,22 +1,8 @@
 // Browser diagnostics only. SDL remains the single owner of gameplay input.
 export function setupGamepadPanel(getModule, panel, edit) {
     const box=document.createElement('section');box.className='gamepad-panel';
-    box.innerHTML=`<h3>Mando USB / Bluetooth</h3><p class="pad-status" role="status" aria-live="polite" data-status></p><p>Conecta tu mando y pulsa un botón. Para jugar, haz clic dentro de la imagen del juego.</p><div data-action></div><p class="pad-note">Inicia el juego para configurar los controles.</p><details><summary>Comprobar botones y ejes</summary><label>Mando <select aria-label="Mando para comprobar"></select></label><p data-mapping></p><p class="pad-input" data-input></p></details><details><summary>Cómo guardar la configuración</summary><p>Asigna los botones en el editor del juego. Pulsa <strong>Apply</strong> para guardar y <strong>Close</strong> para volver.</p><p>Se guarda en este navegador. USB y Bluetooth pueden usar perfiles diferentes.</p></details>`;
-    const style=document.createElement('style');style.textContent=`
-    #tab-controls .gamepad-panel{font-family:inherit;font-size:12px;line-height:1.65;margin:0 0 24px;padding:0 0 22px;border-bottom:1px solid rgba(145,170,190,.18);min-width:0}
-    #tab-controls .gamepad-panel h3{font-size:11px;line-height:1.5;letter-spacing:.06em;margin:0 0 14px;color:inherit}
-    #tab-controls .gamepad-panel p{font-size:12px;line-height:1.65;margin:0 0 12px;opacity:.8}
-    #tab-controls .gamepad-panel .pad-status{font-size:12px;font-weight:600;opacity:1;padding:10px 12px;border:1px solid rgba(145,170,190,.2);border-radius:8px;background:rgba(145,170,190,.06)}
-    #tab-controls .gamepad-panel button{width:100%;font:inherit;font-weight:600;min-height:42px;border-radius:8px;margin:2px 0 10px}
-    #tab-controls .gamepad-panel .pad-note{font-size:11px;opacity:.65;margin-bottom:16px}
-    #tab-controls .gamepad-panel details{border-top:1px solid rgba(145,170,190,.15);padding:11px 0}
-    #tab-controls .gamepad-panel summary{font-size:12px;font-weight:600;cursor:pointer}
-    #tab-controls .gamepad-panel details[open] summary{margin-bottom:12px}
-    #tab-controls .gamepad-panel label{display:grid;gap:7px;font-size:11px;margin-bottom:10px}
-    #tab-controls .gamepad-panel select{font:inherit;color:inherit;background:transparent;border:1px solid rgba(145,170,190,.3);border-radius:6px;padding:8px;width:100%;min-width:0}
-    #tab-controls .gamepad-panel option{color:CanvasText;background:Canvas}
-    #tab-controls .gamepad-panel .pad-input{font-size:11px;overflow-wrap:anywhere;min-height:2.5em}
-    `;box.append(style);panel.prepend(box);box.querySelector('[data-action]').append(edit);
+    box.innerHTML=`<h3>Mando USB / Bluetooth</h3><p class="pad-status" role="status" aria-live="polite" data-status></p><p>Conecta tu mando y pulsa un botón. Para jugar, haz clic dentro de la imagen del juego.</p><div data-action></div><p class="pad-note">Inicia el juego para configurar los controles.</p><details><summary>Comprobar botones y ejes</summary><label>Mando <select aria-label="Mando para comprobar"></select></label><p data-mapping></p><p class="pad-input" data-input></p></details><details><summary>Steam Deck · modo Escritorio</summary><p>Con Steam abierto, mantén pulsado ☰ unos 3 segundos para alternar al modo mando. Después pulsa A y comprueba la detección.</p><p>Si no aparece, añade el navegador a Steam como juego externo, ábrelo desde Steam y selecciona la plantilla de controles Gamepad.</p></details><details><summary>Cómo guardar la configuración</summary><p>Asigna los botones en el editor del juego. Pulsa <strong>Apply</strong> para guardar y <strong>Close</strong> para volver.</p><p>Se guarda en este navegador. USB y Bluetooth pueden usar perfiles diferentes.</p></details>`;
+    panel.prepend(box);box.querySelector('[data-action]').append(edit);
     window.addEventListener('yfm-engine-ready',()=>{box.querySelector('.pad-note').textContent='Los cambios se guardan en este navegador.';});
     const status=box.querySelector('[data-status]'), select=box.querySelector('select'), mapping=box.querySelector('[data-mapping]'), input=box.querySelector('[data-input]');
     let signature='', previousStatus='', previousInput='';
