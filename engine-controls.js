@@ -1,3 +1,4 @@
+import { setupGamepadPanel } from './gamepad-panel.js?v=1';
 const KEY = 'yfm_web_settings_v1';
 const fields = ['master_volume','music_volume','sfx_volume','internal_scale','aspect','filter','show_hud','hd_text'];
 function preferences() { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } }
@@ -61,17 +62,13 @@ export function setupEngineControls(getModule) {
     const graphicsHelp=graphics.querySelector('.reference-help');if(graphicsHelp)graphicsHelp.textContent='Una resolución mayor exige más al equipo. El arte HD y las animaciones se activan en Mods.';
     const edit=document.createElement('button');edit.className='btn btn-stone';edit.textContent='Configurar teclado y mando';edit.disabled=true;
     const panel=document.getElementById('tab-controls');panel.prepend(edit);
-    const status=document.createElement('p');status.className='ctrl-tip';status.setAttribute('role','status');panel.prepend(status);
-    function gamepadStatus() {const pads=navigator.getGamepads?.() || [];const pad=Array.from(pads).find(p=>p?.connected);status.textContent=pad?'Mando detectado: '+pad.id:'Sin mando detectado. Conéctalo y pulsa uno de sus botones.';}
-    window.addEventListener('gamepadconnected',gamepadStatus);window.addEventListener('gamepaddisconnected',gamepadStatus);gamepadStatus();
-    edit.onclick=()=>{if(!ready)return;getModule()._YfmWeb_OpenControls();getModule().canvas.focus();};
-    const note=document.createElement('p');note.className='ctrl-tip';note.textContent='El editor se abre dentro del juego. La guía inferior muestra las teclas predeterminadas.';edit.after(note);
+    setupGamepadPanel(getModule,panel,edit);
     window.addEventListener('yfm-engine-ready',()=>{
         const module=getModule();ready=typeof module?._YfmWeb_GetSetting==='function' && typeof module?._YfmWeb_SetSetting==='function';
         if(!ready){hint.textContent='Este motor necesita actualizarse para utilizar los ajustes.';return;}
         if(module._YfmWeb_GetSetting(3)>4)module._YfmWeb_SetSetting(3,4);
         for(const control of controls){control.node.disabled=false;control.write(control.node,module._YfmWeb_GetSetting(control.index));}
-        edit.disabled=false;hint.textContent='Los ajustes modifican el juego y se conservan al recargar.';gamepadStatus();
+        edit.disabled=false;hint.textContent='Los ajustes modifican el juego y se conservan al recargar.';
     });
     const originalGuide=panel.querySelector('.controls-guide');if(originalGuide)originalGuide.setAttribute('aria-label','Guía de controles predeterminados');
     for (const button of document.querySelectorAll('.reference-period button')) {button.disabled=true;button.title='Clasificación online pendiente';}
