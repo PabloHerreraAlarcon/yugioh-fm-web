@@ -1,3 +1,4 @@
+import { setupTouchOptions } from './touch-options.js?v=1';
 import { setupGamepadPanel } from './gamepad-panel.js?v=3';
 const KEY = 'yfm_web_settings_v1';
 const fields = ['master_volume','music_volume','sfx_volume','internal_scale','aspect','filter','show_hud','hd_text'];
@@ -63,6 +64,7 @@ export function setupEngineControls(getModule) {
     const edit=document.createElement('button');edit.className='btn btn-stone';edit.textContent='Configurar teclado y mando';edit.disabled=true;
     const panel=document.getElementById('tab-controls');panel.prepend(edit);
     setupGamepadPanel(getModule,panel,edit);
+    setupTouchOptions(panel);
     window.addEventListener('yfm-engine-ready',()=>{
         const module=getModule();ready=typeof module?._YfmWeb_GetSetting==='function' && typeof module?._YfmWeb_SetSetting==='function';
         if(!ready){hint.textContent='Este motor necesita actualizarse para utilizar los ajustes.';return;}

@@ -1,5 +1,6 @@
+import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=gamepad-deck-03';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=touch-options-01';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=2';
 const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () => {
@@ -510,6 +511,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                             window.Module.ENV['MEMORIES_MEMCARD1'] = '/game/memcard1.mcd';
                             window.Module.ENV['MEMORIES_MEMCARD2'] = '/game/memcard2.mcd';
                             window.Module.ENV['MEMORIES_GLES'] = '1';
+                            window.Module.ENV['MEMORIES_TOUCH_CONTROLS'] = touchStartupMode();
                             /* ?hud=1 (solo fps) o ?hud=2 (panel completo: game/present
                              * en us, VBlanks perdidos, audio, disco). Lo dibuja el
                              * motor, no la página. */
