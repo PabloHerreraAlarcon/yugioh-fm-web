@@ -1,4 +1,4 @@
-import { setupGamepadPanel } from './gamepad-panel.js?v=1';
+import { setupGamepadPanel } from './gamepad-panel.js?v=2';
 const KEY = 'yfm_web_settings_v1';
 const fields = ['master_volume','music_volume','sfx_volume','internal_scale','aspect','filter','show_hud','hd_text'];
 function preferences() { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } }
