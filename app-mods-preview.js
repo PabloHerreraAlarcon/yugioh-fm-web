@@ -1,3 +1,5 @@
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=1';
+const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
 import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=touch-options-01';
@@ -482,6 +484,8 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     module.ENV.MEMORIES_INTERNAL_SCALE = internalScale;
                     module.ENV.MEMORIES_SCALING = '1';
                     module.ENV.MEMORIES_ASPECT = localStorage.getItem('yfm_widescreen') === '0' ? '0' : '2';
+                    if (performanceDiagnostics.enabled) module.ENV.MEMORIES_TRACE = 'frames';
+                    performanceDiagnostics.configure(nativeMods.env);
                     nativeMods.mount(module);
                     module.FS.mkdirTree('/game/fonts');
                     module.FS.writeFile('/game/fonts/interface.ttf', uiFontBytes);
@@ -491,8 +495,8 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     module.ENV.MEMORIES_HD_TEXT = '1';
                 }],
                 locateFile: (path) => '/mods-preview-engine/' + path + '?v=cutin-3c471122c0b9',
-                print: (text) => console.log('[Memories Recompiled]:', text),
-                printErr: (text) => console.warn('[Memories Recompiled]:', text),
+                print: (text) => { performanceDiagnostics.record(text); console.log('[Memories Recompiled]:', text); },
+                printErr: (text) => { performanceDiagnostics.record(text); console.warn('[Memories Recompiled]:', text); },
                 onRuntimeInitialized: function() {
                     clearTimeout(timeout);
                     console.log('[Memories Recompiled] Runtime WebAssembly listo. Montando disco virtual...');
@@ -1396,4 +1400,5 @@ setupNativeModsUI();
 
 
 setupEngineControls(() => window.Module);
+performanceDiagnostics.setup();
 
