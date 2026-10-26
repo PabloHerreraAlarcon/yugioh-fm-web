@@ -1,4 +1,4 @@
-import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=4';
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=5';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
@@ -464,7 +464,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
             window.Module = {
                 canvas: el.canvas,
-                yfmExperimentalYield: new URLSearchParams(location.search).get('presentation') === 'experimental',
+                yfmExperimentalYield: new URLSearchParams(location.search).get('presentation') !== 'standard',
                 yfmWaitSample: performanceDiagnostics.enabled ? performanceDiagnostics.recordWait : undefined,
                 arguments: [],
                 preRun: [function(module) {
