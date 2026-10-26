@@ -27,5 +27,5 @@ export function createPerformanceDiagnostics(getModule){
   };
  }
  document.addEventListener('visibilitychange',()=>{epochs++;});
- return {enabled,record,setup,configure(env){settings=Object.fromEntries(['MEMORIES_INTERNAL_SCALE','MEMORIES_ASPECT','MEMORIES_FILTER'].filter(k=>env[k]!==undefined).map(k=>[k,String(env[k])]));meta=Object.fromEntries(Object.entries(env).filter(([k,v])=>/^MEMORIES_MOD_[A-Z0-9_]+$/.test(k)&&['0','1'].includes(String(v))));}};
+ return {enabled,record,setup,configure(env,activeMods){if(activeMods)meta={activeMods:[...activeMods]};settings=Object.fromEntries(['MEMORIES_INTERNAL_SCALE','MEMORIES_ASPECT','MEMORIES_FILTER'].filter(k=>env[k]!==undefined).map(k=>[k,String(env[k])]));if(!meta.activeMods)meta=Object.fromEntries(Object.entries(env).filter(([k,v])=>/^MEMORIES_MOD_[A-Z0-9_]+$/.test(k)&&['0','1'].includes(String(v))));}};
 }

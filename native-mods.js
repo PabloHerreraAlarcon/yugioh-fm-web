@@ -42,7 +42,7 @@ export async function prepareNativeMods(progress=()=>{}) {
   }
  })).catch(error=>{controller.abort();throw error;});
  finishModPreparation();
- return {env,files,nativeAnime:catalog.mods.some(m=>m.id==='anime-duel-cutins'&&active.has(m.id)),mount(module){
+ return {env,files,activeMods:[...active],nativeAnime:catalog.mods.some(m=>m.id==='anime-duel-cutins'&&active.has(m.id)),mount(module){
   try{module.FS.mkdir('/game');}catch(e){if(!module.FS.analyzePath('/game').exists)throw e;}
   module.FS.writeFile('/game/settings.cfg',settings.join('\n')+'\n');
   for(const file of files){const parts=file.path.split('/');let dir='';for(const part of parts.slice(1,-1)){dir+='/'+part;try{module.FS.mkdir(dir);}catch(e){if(!module.FS.analyzePath(dir).exists)throw e;}}

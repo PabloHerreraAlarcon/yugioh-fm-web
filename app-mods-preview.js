@@ -1,4 +1,4 @@
-import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=2';
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=3';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
@@ -9,7 +9,7 @@ const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () =>
     const status = document.getElementById('save-storage-status');
     if (status) status.textContent = 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=startup-memory-01';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=performance-mods-03';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.
@@ -486,7 +486,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     module.ENV.MEMORIES_SCALING = '1';
                     module.ENV.MEMORIES_ASPECT = localStorage.getItem('yfm_widescreen') === '0' ? '0' : '2';
                     if (performanceDiagnostics.enabled) module.ENV.MEMORIES_TRACE = 'frames';
-                    performanceDiagnostics.configure(nativeMods.env);
+                    performanceDiagnostics.configure(nativeMods.env,nativeMods.activeMods);
                     nativeMods.mount(module);
                     module.FS.mkdirTree('/game/fonts');
                     module.FS.writeFile('/game/fonts/interface.ttf', uiFontBytes);
