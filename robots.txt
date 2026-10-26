@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yugiohfm.online/sitemap.xml
