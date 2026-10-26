@@ -64,15 +64,15 @@
     "en": "Automatic loading",
     "pt": "Carregamento automático"
   },
-  "La primera carga prepara el juego en este navegador. Las siguientes sesiones iniciarán al instante.": {
-    "es": "La primera carga prepara el juego en este navegador. Las siguientes sesiones iniciarán al instante.",
-    "en": "First-time setup prepares the game in this browser. Future sessions will launch instantly.",
-    "pt": "O primeiro carregamento prepara o jogo neste navegador. As próximas sessões iniciarão instantaneamente."
+  "La primera carga prepara el juego en este navegador. Las siguientes sesiones iniciarán más rápido.": {
+    "es": "La primera carga prepara el juego en este navegador. Las siguientes sesiones iniciarán más rápido.",
+    "en": "First-time setup prepares the game in this browser. Future sessions will load faster.",
+    "pt": "O primeiro carregamento prepara o jogo neste navegador. As próximas sessões iniciarão mais rápido."
   },
-  "Guardando en memoria local para que tus próximas partidas carguen al instante.": {
-    "es": "Guardando en memoria local para que tus próximas partidas carguen al instante.",
-    "en": "Caching locally so future sessions launch instantly.",
-    "pt": "Salvando na memória local para que as próximas sessões iniciem instantaneamente."
+  "Guardando en memoria local para que tus próximas partidas carguen más rápido.": {
+    "es": "Guardando en memoria local para que tus próximas partidas carguen más rápido.",
+    "en": "Caching locally so future sessions load faster.",
+    "pt": "Salvando na memória local para que as próximas sessões carreguem mais rápido."
   },
   "Para usar el mando:": {
     "es": "Para usar el mando:",
