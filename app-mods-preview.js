@@ -1,4 +1,4 @@
-import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=3';
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=4';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
@@ -464,6 +464,8 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
             window.Module = {
                 canvas: el.canvas,
+                yfmExperimentalYield: new URLSearchParams(location.search).get('presentation') === 'experimental',
+                yfmWaitSample: performanceDiagnostics.enabled ? performanceDiagnostics.recordWait : undefined,
                 arguments: [],
                 preRun: [function(module) {
                     Object.assign(module.ENV, nativeMods.env, {
@@ -571,7 +573,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';
-            script.src = abDir + 'memories-pc.js?v=' + Date.now();
+            script.src = abDir + (window.Module.yfmExperimentalYield ? 'memories-pc-message.js' : 'memories-pc.js') + '?v=' + Date.now();
             script.onerror = (e) => {
                 clearTimeout(timeout);
                 reject(new Error('No se pudo cargar memories-pc.js'));
