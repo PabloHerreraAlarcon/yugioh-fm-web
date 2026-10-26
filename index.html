@@ -6,7 +6,7 @@
     <title>Juega Yu-Gi-Oh! FM | Anime Duel Cutins</title>
     <meta name="description" content="Juega Yu-Gi-Oh! Forbidden Memories desde tu navegador, sin instalación y con carga automática del disco disponible. Anime Duel Cutins y mods HD.">
     
-<script>try{document.documentElement.dataset.theme=localStorage.getItem("yfm_mockup_theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}</script><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="interface.css?v=6">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem("yfm_mockup_theme")==="light"?"light":"dark"}catch{document.documentElement.dataset.theme="dark"}</script><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="interface.css?v=7">
     <script src="network-config.js"></script>
 </head>
 <body class="theme-obsidian">
@@ -102,6 +102,7 @@
                         <div class="progress-bar-fill" id="sync-bar" style="width: 70%;"></div>
                     </div>
                     <span class="sync-percent" id="sync-percent">70%</span>
+                    <p class="sync-cache-tip">Guardando en memoria local para que tus próximas partidas carguen al instante.</p>
                 </div>
 
                 <!-- Game Result Modal (Ganaste / Perdiste) -->
@@ -411,7 +412,7 @@
     </main>
 
     <!-- Client Script -->
-    <script>for(const id of ["rom-detect-status","btn-pick-custom-rom","rom-file-input"]){const n=document.getElementById(id);if(n){n.dataset.discStaging="1";document.body.append(n)}}</script><script src="interface.js?v=3"></script><script src="approved-layout.js?v=2"></script><script src="reference-layout.js?v=hide-character-02"></script><script src="language-choice.js?v=1"></script><script src="localization.js?v=3"></script><script type="module" src="app-mods-preview.js?v=lp-options-01"></script>
+    <script>for(const id of ["rom-detect-status","btn-pick-custom-rom","rom-file-input"]){const n=document.getElementById(id);if(n){n.dataset.discStaging="1";document.body.append(n)}}</script><script src="interface.js?v=3"></script><script src="approved-layout.js?v=3"></script><script src="reference-layout.js?v=hide-character-02"></script><script src="language-choice.js?v=1"></script><script src="localization.js?v=4"></script><script type="module" src="app-mods-preview.js?v=lp-options-01"></script>
 </body>
 </html>
 

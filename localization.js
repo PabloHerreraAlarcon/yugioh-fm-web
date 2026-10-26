@@ -1,7 +1,7 @@
 /* Local UI translations. Never modifies game data, controls or mod preferences. */
 (async()=>{
 const selector=document.getElementById('language-select');if(!selector)return;
-let dictionary;try{const response=await fetch('locales.json?v=3');if(!response.ok)throw new Error('Locale HTTP '+response.status);dictionary=await response.json()}catch(error){console.error('Could not load interface translations',error);selector.value='es';selector.disabled=true;return}
+let dictionary;try{const response=await fetch('locales.json?v=4');if(!response.ok)throw new Error('Locale HTTP '+response.status);dictionary=await response.json()}catch(error){console.error('Could not load interface translations',error);selector.value='es';selector.disabled=true;return}
 let preference='auto';try{const stored=localStorage.getItem('yfm_ui_language');if(['auto','es','en','pt'].includes(stored))preference=stored}catch{}
 let language='es';const nodeSources=new WeakMap(),attributeSources=new WeakMap();
 function translate(source){const key=source.replace(/\s+/g,' ').trim();if(dictionary[key])return dictionary[key][language];for(const prefix of ['Cargando disco en memoria','Cargando mods','Mando detectado:'])if(key.startsWith(prefix+' '))return dictionary[prefix][language]+key.slice(prefix.length);return source}
