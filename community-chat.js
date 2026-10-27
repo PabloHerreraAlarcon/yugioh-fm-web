@@ -1,0 +1,29 @@
+const panel=document.getElementById('tab-chat');
+if(panel){
+ const root=document.createElement('section');root.className='community-chat';
+ root.innerHTML=`<header><span class="community-kicker">COMUNIDAD TP7</span><h3>Entre duelistas</h3><p id="community-status" role="status">Conecta para conversar</p></header><form id="community-join"><label for="community-nick">Tu apodo</label><div class="community-row"><input id="community-nick" minlength="2" maxlength="20" placeholder="Duelista" required autocomplete="nickname"><button>Entrar</button></div></form><p class="community-note">Chat público · Respeto y juego limpio. Sin enlaces ni datos personales. Los bots de ayuda están identificados.</p><div id="community-log" role="log" aria-live="polite" aria-label="Mensajes de la comunidad"></div><form id="community-send" hidden><label class="community-note" for="community-text">Mensaje · hasta 280 caracteres</label><div class="community-row"><input id="community-text" maxlength="280" placeholder="Saluda a la comunidad…" required autocomplete="off"><button>Enviar</button></div></form><footer><button type="button" id="community-help">Ayuda del bot</button><button type="button" id="community-leave" hidden>Salir del chat</button><span>Historial: últimas 24 h, hasta 50 mensajes.</span></footer>`;
+ panel.replaceChildren(root);
+ const $=id=>document.getElementById('community-'+id);
+ let socket=null,joined=false,retry=null,attempt=0,own='';
+ let muted=new Set();try{muted=new Set(JSON.parse(localStorage.getItem('yfm_chat_muted')||'[]'));$('nick').value=localStorage.getItem('yfm_chat_nick')||'';}catch{}
+ const active=()=>panel.classList.contains('active') && !document.hidden;
+ const status=text=>$('status').textContent=text;
+ function notice(text){const p=document.createElement('p');p.className='community-notice';p.textContent=text;$('log').append(p);trim();}
+ function trim(){while($('log').children.length>60)$('log').firstChild.remove();}
+ function render(m){if(muted.has(m.author))return;const log=$('log'),bottom=log.scrollHeight-log.scrollTop-log.clientHeight<60;const row=document.createElement('article');row.dataset.id=m.id;row.dataset.author=m.author;const head=document.createElement('strong');head.textContent=m.nick;const time=document.createElement('time');time.textContent=new Date(m.time).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});const text=document.createElement('p');text.textContent=m.text;row.append(head,time,text);
+ if(m.author!==own){const actions=document.createElement('div');actions.className='community-actions';for(const [label,fn] of [['Silenciar',()=>{muted.add(m.author);try{localStorage.setItem('yfm_chat_muted',JSON.stringify([...muted].slice(-100)));}catch{}for(const n of log.querySelectorAll('article'))if(n.dataset.author===m.author)n.remove();notice('Usuario silenciado en este navegador.');}],['Denunciar',()=>{if(socket?.readyState===1)socket.send(JSON.stringify({type:'report',id:m.id}));}]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=fn;actions.append(b);}row.append(actions);}log.append(row);trim();if(bottom)log.scrollTop=log.scrollHeight;}
+ function disconnect(){clearTimeout(retry);retry=null;if(socket){const old=socket;socket=null;old.close(1000);}$('send').hidden=true;}
+ function connect(){if(!joined || !active() || socket)return;status('Conectando…');const nick=$('nick').value.trim();socket=new WebSocket('wss://yfm-community-chat.phdigital.workers.dev/connect?nick='+encodeURIComponent(nick));const current=socket;
+ current.onopen=()=>{attempt=0;status('Conectado');$('send').hidden=false;$('leave').hidden=false;$('join').hidden=true;};
+ current.onmessage=e=>{let d;try{d=JSON.parse(e.data);}catch{return;}if(d.type==='history'){own=d.author;$('log').replaceChildren();d.messages.forEach(render);}if(d.type==='message')render(d.message);if(d.type==='notice')notice(d.text);if(d.type==='presence')status(`Conectado · ${d.count} en el chat`);if(d.type==='delete')for(const n of $('log').children)if(n.dataset.id===d.id)n.remove();};
+ current.onclose=e=>{if(socket!==current)return;socket=null;$('send').hidden=true;status('Conexión cerrada');if(joined && active() && e.code!==1008 && attempt<4)retry=setTimeout(connect,Math.min(30000,2000*2**attempt++));else{$('join').hidden=false;}};
+ current.onerror=()=>status('No se pudo conectar. Inténtalo más tarde.');}
+ $('join').onsubmit=e=>{e.preventDefault();if($('nick').value.trim().length<2)return;try{localStorage.setItem('yfm_chat_nick',$('nick').value.trim());}catch{}joined=true;attempt=0;connect();};
+ $('send').onsubmit=e=>{e.preventDefault();const text=$('text').value.trim();if(text && socket?.readyState===1){socket.send(JSON.stringify({type:'message',text}));$('text').value='';}};
+ $('leave').onclick=()=>{joined=false;disconnect();$('join').hidden=false;$('leave').hidden=true;status('Has salido del chat');};
+ $('help').onclick=()=>notice('Guía TP7 · Bot: Escribe /ayuda o /novedades. Controles en su pestaña y guías en yugiohfm.online/guias. Para volver a ver usuarios silenciados, borra la lista con el botón de abajo.');
+ const reset=document.createElement('button');reset.type='button';reset.textContent='Restablecer silenciados';reset.onclick=()=>{muted.clear();try{localStorage.removeItem('yfm_chat_muted');}catch{}notice('Lista de silenciados vacía.');};root.querySelector('footer').append(reset);
+ root.addEventListener('keydown',e=>e.stopPropagation());root.addEventListener('keyup',e=>e.stopPropagation());
+ function visibility(){if(active())connect();else{disconnect();status(joined?'Chat en pausa mientras juegas':'Conecta para conversar');}}
+ new MutationObserver(visibility).observe(panel,{attributes:true,attributeFilter:['class']});document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',disconnect);
+}
