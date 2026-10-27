@@ -64,41 +64,6 @@
       "conflicts": [],
       "files": [
         {
-          "path": "mod.json",
-          "bytes": 1767,
-          "version": "7fa41c7dc0d999b4"
-        },
-        {
-          "path": "assets/board-material-source.png",
-          "bytes": 2447616,
-          "version": "bdb55915c3a2a165"
-        },
-        {
-          "path": "assets/board-phase.bin",
-          "bytes": 65536,
-          "version": "3ef9b9ab5a0aaf87"
-        },
-        {
-          "path": "assets/championship-atlas.png",
-          "bytes": 15852,
-          "version": "43a364760e51bd3a"
-        },
-        {
-          "path": "assets/championship-materials.png",
-          "bytes": 96626,
-          "version": "66f367e042ade499"
-        },
-        {
-          "path": "assets/konami-old-source.png",
-          "bytes": 50440,
-          "version": "bb03bdd1f53b7a0c"
-        },
-        {
-          "path": "assets/material-source-ps1.png",
-          "bytes": 1850474,
-          "version": "418c3d19d32625e7"
-        },
-        {
           "path": "assets/board/centre.png",
           "bytes": 204194,
           "version": "328f8ac70fed25b6"
@@ -174,6 +139,16 @@
           "version": "fdf94bd2134dd761"
         },
         {
+          "path": "assets/board-material-source.png",
+          "bytes": 2447616,
+          "version": "bdb55915c3a2a165"
+        },
+        {
+          "path": "assets/board-phase.bin",
+          "bytes": 65536,
+          "version": "3ef9b9ab5a0aaf87"
+        },
+        {
           "path": "assets/board-runtime/centre.png",
           "bytes": 205531,
           "version": "c318de546576ae31"
@@ -247,6 +222,31 @@
           "path": "assets/board-runtime/your_front.png",
           "bytes": 128116,
           "version": "b0a80a1eaeaf9dfd"
+        },
+        {
+          "path": "assets/championship-atlas.png",
+          "bytes": 15852,
+          "version": "43a364760e51bd3a"
+        },
+        {
+          "path": "assets/championship-materials.png",
+          "bytes": 96626,
+          "version": "66f367e042ade499"
+        },
+        {
+          "path": "assets/konami-old-source.png",
+          "bytes": 50440,
+          "version": "bb03bdd1f53b7a0c"
+        },
+        {
+          "path": "assets/material-source-ps1.png",
+          "bytes": 1850474,
+          "version": "418c3d19d32625e7"
+        },
+        {
+          "path": "mod.json",
+          "bytes": 1767,
+          "version": "7fa41c7dc0d999b4"
         }
       ]
     },
@@ -479,35 +479,6 @@
           "path": "mod.json",
           "bytes": 9019,
           "version": "ff4ed45efe5e9526"
-        }
-      ]
-    },
-    {
-      "folder": "Mod-del-editor",
-      "id": "my-mod",
-      "name": "My mod",
-      "enabled": true,
-      "compatible": true,
-      "reason": null,
-      "requiredApi": 1,
-      "library": null,
-      "settings": [],
-      "conflicts": [],
-      "files": [
-        {
-          "path": "mod.json",
-          "bytes": 67,
-          "version": "9570434dc9c33f48"
-        },
-        {
-          "path": "duelists/yugi.json",
-          "bytes": 68,
-          "version": "9de9c97e2e0335b6"
-        },
-        {
-          "path": "portraits/yugi.png",
-          "bytes": 90728,
-          "version": "bcf1c900e7bc04a6"
         }
       ]
     },
@@ -766,7 +737,7 @@
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_duel_start_1.ogg",
           "bytes": 13360,
-          "version": "2e7c907757788019"
+          "version": "483c3fda6695fd91"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_duel_start_2.ogg",
@@ -781,52 +752,52 @@
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_end_turn_2.ogg",
           "bytes": 18626,
-          "version": "5593fb63030f1200"
+          "version": "7712b5298e3c2c49"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_end_turn_3.ogg",
           "bytes": 22406,
-          "version": "bc2f351f812553d3"
+          "version": "65836793c23c7d12"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_equip_card_activate.ogg",
           "bytes": 34838,
-          "version": "070fb741954c1641"
+          "version": "91dca4fa33b29dbc"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_final_attack_1.ogg",
           "bytes": 34683,
-          "version": "31072bf5e84aa2ab"
+          "version": "fc72aa9e15fe3bd4"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_final_attack_2.ogg",
           "bytes": 25476,
-          "version": "e0a9fd67627a1054"
+          "version": "51c2603b99fbb3b4"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_fusion_summon_1.ogg",
           "bytes": 35181,
-          "version": "c7047fbf66b79a73"
+          "version": "de01f8263644dd6a"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_magic_card_activate_normal.ogg",
           "bytes": 35454,
-          "version": "1007c3451a46e804"
+          "version": "3d794e6b4363e8a3"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_magic_card_activate_quick.ogg",
           "bytes": 29900,
-          "version": "1557b4cc4462fd68"
+          "version": "6b64464fed200a35"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_magic_card_continue.ogg",
           "bytes": 32444,
-          "version": "21be893474fd6624"
+          "version": "eab5cf4aa672fa75"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_magic_or_trap_face-down_card_1.ogg",
           "bytes": 20099,
-          "version": "7c953019cfe959e8"
+          "version": "3254293f04fb67ba"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_magic_or_trap_face-down_card_2.ogg",
@@ -836,12 +807,12 @@
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_draw_1.ogg",
           "bytes": 38999,
-          "version": "74a7326cc880a48b"
+          "version": "e21cbc476200383f"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_draw_2.ogg",
           "bytes": 24109,
-          "version": "0276713549cd76dc"
+          "version": "315cf3608b3cb177"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_attack_1.ogg",
@@ -856,52 +827,52 @@
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_attack_3.ogg",
           "bytes": 30352,
-          "version": "62b9032c2f4d818f"
+          "version": "07a3a8746dca9b13"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_direct_attack_1.ogg",
           "bytes": 44863,
-          "version": "c8b0d0e85cf716a9"
+          "version": "49a170ea194b4b16"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_direct_attack_2.ogg",
           "bytes": 44093,
-          "version": "d4a60c22e795644d"
+          "version": "3e1efffbd1d1d39f"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_monster_face-down.ogg",
           "bytes": 26682,
-          "version": "e15bc8d7a281bab4"
+          "version": "1a5691ab730bd474"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_normal_summon.ogg",
           "bytes": 45539,
-          "version": "c9e21d1a01cec4b3"
+          "version": "1c56a6f9855bcf4c"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_ritual_card_activate.ogg",
           "bytes": 23520,
-          "version": "d09b7692aedf7fa0"
+          "version": "f92d80ecf45e140f"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_1.ogg",
           "bytes": 19733,
-          "version": "863c59942e148ed8"
+          "version": "75cb9088a4d69644"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_2.ogg",
           "bytes": 21253,
-          "version": "0f15fc9e446c3d9b"
+          "version": "2409539b79c241d1"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_3.ogg",
           "bytes": 22076,
-          "version": "d461958f786e3d7c"
+          "version": "8789e95b1be66109"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_take_damage_final.ogg",
           "bytes": 41741,
-          "version": "fbdce67ab5f16ad2"
+          "version": "f13ba86b2b398868"
         },
         {
           "path": "audio/jp_voices/jonouchi/000_jonouchi_trap_card_activate.ogg",
@@ -911,652 +882,332 @@
         {
           "path": "audio/jp_voices/jonouchi/004_jonouchi_baby_dragon.ogg",
           "bytes": 40757,
-          "version": "afe5cb5b47ffc758"
+          "version": "257aeadf1419bd89"
         },
         {
           "path": "audio/jp_voices/jonouchi/004_jonouchi_baby_dragon_attack.ogg",
           "bytes": 43387,
-          "version": "503bcea3461af598"
+          "version": "83a882f2436f16fc"
         },
         {
           "path": "audio/jp_voices/jonouchi/015_jonouchi_flame_swordsman.ogg",
           "bytes": 49158,
-          "version": "ded1c28e1e651ac0"
+          "version": "5e8442bb78289a99"
         },
         {
           "path": "audio/jp_voices/jonouchi/015_jonouchi_flame_swordsman_attack.ogg",
           "bytes": 49579,
-          "version": "dfb23fd8303ae77f"
+          "version": "f9c3a71d506cc0a1"
         },
         {
           "path": "audio/jp_voices/jonouchi/016_jonouchi_time_wizard.ogg",
           "bytes": 45411,
-          "version": "2fb9f8933521c6fb"
+          "version": "5bb2f9b0e010a86b"
         },
         {
           "path": "audio/jp_voices/jonouchi/016_jonouchi_time_wizard_attack.ogg",
           "bytes": 53517,
-          "version": "9ad85da833777417"
+          "version": "3da82a81ec580203"
         },
         {
           "path": "audio/jp_voices/jonouchi/062_jonouchi_harpie_lady.ogg",
           "bytes": 57456,
-          "version": "8cce487f03f55fd3"
+          "version": "21924bafe45a0971"
         },
         {
           "path": "audio/jp_voices/jonouchi/062_jonouchi_harpie_lady_attack.ogg",
           "bytes": 37527,
-          "version": "c66059597dd4061d"
+          "version": "fed7fdcfb7009106"
         },
         {
           "path": "audio/jp_voices/jonouchi/068_jonouchi_garoozis.ogg",
           "bytes": 56294,
-          "version": "f8eab73136721aa4"
+          "version": "618df74ae39723e7"
         },
         {
           "path": "audio/jp_voices/jonouchi/068_jonouchi_garoozis_attack.ogg",
           "bytes": 70024,
-          "version": "ed03cd9d6898df72"
+          "version": "54f7aed3b1b0eaf6"
         },
         {
           "path": "audio/jp_voices/jonouchi/069_jonouchi_thousand_dragon.ogg",
           "bytes": 48367,
-          "version": "6fe1df1e6d12d15c"
+          "version": "ad9bb137b6492c08"
         },
         {
           "path": "audio/jp_voices/jonouchi/069_jonouchi_thousand_dragon_attack.ogg",
           "bytes": 50348,
-          "version": "6289c5157da96526"
+          "version": "f8ad871572d03baa"
         },
         {
           "path": "audio/jp_voices/jonouchi/078_jonouchi_axe_raider.ogg",
           "bytes": 64590,
-          "version": "18ac6bdf5a2eceb3"
+          "version": "a2e02ba639401bae"
         },
         {
           "path": "audio/jp_voices/jonouchi/078_jonouchi_axe_raider_attack.ogg",
           "bytes": 61024,
-          "version": "f127808c3f37309d"
+          "version": "4e1ec1023fe1373f"
         },
         {
           "path": "audio/jp_voices/jonouchi/082_jonouchi_red_eyes_black_dragon_1.ogg",
           "bytes": 43112,
-          "version": "4ea5fe55c930b7f5"
+          "version": "38770cf736ef087d"
         },
         {
           "path": "audio/jp_voices/jonouchi/082_jonouchi_red_eyes_black_dragon_2.ogg",
           "bytes": 76125,
-          "version": "0ff1a6b7f9087fea"
+          "version": "ab4058a9c2c82979"
         },
         {
           "path": "audio/jp_voices/jonouchi/082_jonouchi_red_eyes_black_dragon_attack_1.ogg",
           "bytes": 59191,
-          "version": "af3a5b6b3f564c9d"
+          "version": "938246dae93df842"
         },
         {
           "path": "audio/jp_voices/jonouchi/100_jonouchi_battle_warrior.ogg",
           "bytes": 41154,
-          "version": "60eb710d3fa39241"
+          "version": "34de05ebb920e27b"
         },
         {
           "path": "audio/jp_voices/jonouchi/100_jonouchi_battle_warrior_attack.ogg",
           "bytes": 41438,
-          "version": "cc2f73afbd601a31"
+          "version": "99ec40db5aae6ef7"
         },
         {
           "path": "audio/jp_voices/jonouchi/142_jonouchi_flame_manipulator.ogg",
           "bytes": 56559,
-          "version": "07e51cee3bde46a3"
+          "version": "6d1900cfa0eb0344"
         },
         {
           "path": "audio/jp_voices/jonouchi/142_jonouchi_flame_manipulator_attack.ogg",
           "bytes": 46428,
-          "version": "1851559945b04703"
+          "version": "cfadb49bc17fd5f3"
         },
         {
           "path": "audio/jp_voices/jonouchi/217_jonouchi_b_skull_dragon.ogg",
           "bytes": 56286,
-          "version": "8a05595ddbe33fb9"
+          "version": "f79550e66eaa8f57"
         },
         {
           "path": "audio/jp_voices/jonouchi/217_jonouchi_b_skull_dragon_attack.ogg",
           "bytes": 79178,
-          "version": "9ad9860a1b0ec235"
+          "version": "1c88cc22e13bcad0"
         },
         {
           "path": "audio/jp_voices/jonouchi/293_jonouchi_masaki_the_legendary_swordsman.ogg",
           "bytes": 45387,
-          "version": "ac233d3b75f8beec"
+          "version": "e02b58e27e3c05bd"
         },
         {
           "path": "audio/jp_voices/jonouchi/293_jonouchi_masaki_the_legendary_swordsman_attack.ogg",
           "bytes": 57867,
-          "version": "607e94f4278df07e"
+          "version": "04bce2d8627567bc"
         },
         {
           "path": "audio/jp_voices/jonouchi/320_jonouchi_stop_defense.ogg",
           "bytes": 58904,
-          "version": "6a0e42695e4d2e11"
+          "version": "e2b67718e440cfd3"
         },
         {
           "path": "audio/jp_voices/jonouchi/333_jonouchi_sogen.ogg",
           "bytes": 33447,
-          "version": "5d4795d2a7abbde3"
+          "version": "8fd54164efc6fb89"
         },
         {
           "path": "audio/jp_voices/jonouchi/389_jonouchi_giltia_the_d_knight.ogg",
           "bytes": 75450,
-          "version": "cbe43549fc3311a1"
+          "version": "ef1192fa69298f14"
         },
         {
           "path": "audio/jp_voices/jonouchi/389_jonouchi_giltia_the_d_knight_attack.ogg",
           "bytes": 52187,
-          "version": "c19991b503670152"
+          "version": "9a6bc2dfb2b053cf"
         },
         {
           "path": "audio/jp_voices/jonouchi/651_jonouchi_kunai_with_chain.ogg",
           "bytes": 58531,
-          "version": "33a9c0e860fcc861"
+          "version": "95958df0138cfd47"
         },
         {
           "path": "audio/jp_voices/jonouchi/654_jonouchi_salamandra.ogg",
           "bytes": 60099,
-          "version": "e67c5456887a2afc"
+          "version": "566d302a79d06e8d"
         },
         {
           "path": "audio/jp_voices/jonouchi/658_jonouchi_metalmorph.ogg",
           "bytes": 51899,
-          "version": "af42ed1829b987c5"
+          "version": "2a5c128cbe121b0f"
         },
         {
           "path": "audio/jp_voices/jonouchi/672_jonouchi_harpies_feather_duster.ogg",
           "bytes": 56767,
-          "version": "05e3d4a0dbd2e2fe"
+          "version": "9a2ec5a32eabdc12"
         },
         {
           "path": "audio/jp_voices/jonouchi/713_jonouchi_meteor_b_dragon.ogg",
           "bytes": 75020,
-          "version": "e5e8dd9be3ff4907"
+          "version": "99c14d0cf4c47bd6"
         },
         {
           "path": "audio/jp_voices/jonouchi/713_jonouchi_meteor_b_dragon_attack.ogg",
           "bytes": 62722,
-          "version": "631517703d170efa"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_duel_start_1.ogg",
-          "bytes": 23738,
-          "version": "999cff8bd22722bb"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_duel_start_2.ogg",
-          "bytes": 55044,
-          "version": "a35ac39cd660dbec"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_end_turn_1.ogg",
-          "bytes": 49906,
-          "version": "495612f76c82a7e5"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_end_turn_2.ogg",
-          "bytes": 32041,
-          "version": "413f6871ae525744"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_end_turn_3.ogg",
-          "bytes": 42022,
-          "version": "6f899b5e383b7bde"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_equip_card_activate.ogg",
-          "bytes": 69724,
-          "version": "081765b42915351c"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_final_attack_1.ogg",
-          "bytes": 59768,
-          "version": "8260206a839c7c4e"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_final_attack_2.ogg",
-          "bytes": 47810,
-          "version": "46ec7d9084055990"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_fusion_summon_1.ogg",
-          "bytes": 65763,
-          "version": "a41e39770359ea23"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_magic_card_activate_normal.ogg",
-          "bytes": 69747,
-          "version": "afbec832b1b8b1a8"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_magic_card_activate_quick.ogg",
-          "bytes": 58953,
-          "version": "725ccf8f5e5f0364"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_magic_card_continue.ogg",
-          "bytes": 60162,
-          "version": "49c50402f274a815"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_magic_or_trap_face-down_card_1.ogg",
-          "bytes": 34800,
-          "version": "0a367924b3338ff5"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_magic_or_trap_face-down_card_2.ogg",
-          "bytes": 36062,
-          "version": "def4578edf6d1c76"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_draw_1.ogg",
-          "bytes": 69479,
-          "version": "1ec609b40d99ac13"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_draw_2.ogg",
-          "bytes": 49192,
-          "version": "968c4a273bf550e4"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_monster_attack_1.ogg",
-          "bytes": 87272,
-          "version": "509195a7ce67fe81"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_monster_attack_2.ogg",
-          "bytes": 62165,
-          "version": "49cdaa0cd0ad9ea9"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_monster_attack_3.ogg",
-          "bytes": 57521,
-          "version": "ebb4dbbe7712fd31"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_monster_direct_attack_1.ogg",
-          "bytes": 84113,
-          "version": "8599d57d91cd6585"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_monster_direct_attack_2.ogg",
-          "bytes": 80845,
-          "version": "4f6c6e610f2864c9"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_monster_face-down.ogg",
-          "bytes": 51980,
-          "version": "6a38bafcd135e6d3"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_normal_summon.ogg",
-          "bytes": 88145,
-          "version": "5e2c074fb12b121a"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_ritual_card_activate.ogg",
-          "bytes": 42650,
-          "version": "a8a9d2bc212aaa6f"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_take_damage_1.ogg",
-          "bytes": 36640,
-          "version": "f27dfec15a2cdb66"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_take_damage_2.ogg",
-          "bytes": 40924,
-          "version": "5400711dba36bfc1"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_take_damage_3.ogg",
-          "bytes": 43574,
-          "version": "4be7f76cbe985444"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_take_damage_final.ogg",
-          "bytes": 83680,
-          "version": "2b7e302a772919b1"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/000_jonouchi_trap_card_activate.ogg",
-          "bytes": 45482,
-          "version": "9896e16e97666a98"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/004_jonouchi_baby_dragon.ogg",
-          "bytes": 79052,
-          "version": "639d51f00f18b7cf"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/004_jonouchi_baby_dragon_attack.ogg",
-          "bytes": 88021,
-          "version": "b3e99b47ff16bb8b"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/015_jonouchi_flame_swordsman.ogg",
-          "bytes": 97112,
-          "version": "64e1b4baad4f32b5"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/015_jonouchi_flame_swordsman_attack.ogg",
-          "bytes": 96266,
-          "version": "a10b65509576120b"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/016_jonouchi_time_wizard.ogg",
-          "bytes": 89900,
-          "version": "c6ffd471cef00966"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/016_jonouchi_time_wizard_attack.ogg",
-          "bytes": 105569,
-          "version": "245bb69ebe02bdb8"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/062_jonouchi_harpie_lady.ogg",
-          "bytes": 118814,
-          "version": "2c0ec8820e7ed329"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/062_jonouchi_harpie_lady_attack.ogg",
-          "bytes": 71443,
-          "version": "7d9e1226b0027405"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/068_jonouchi_garoozis.ogg",
-          "bytes": 114009,
-          "version": "e80ce030f4c50ea7"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/068_jonouchi_garoozis_attack.ogg",
-          "bytes": 141986,
-          "version": "2bac691b6b36d76b"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/069_jonouchi_thousand_dragon.ogg",
-          "bytes": 93700,
-          "version": "9accb010a6f98de8"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/069_jonouchi_thousand_dragon_attack.ogg",
-          "bytes": 101109,
-          "version": "4eaefab657afe9e5"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/078_jonouchi_axe_raider.ogg",
-          "bytes": 128316,
-          "version": "edfd84535b224f91"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/078_jonouchi_axe_raider_attack.ogg",
-          "bytes": 117548,
-          "version": "2b4048c81b6bd76b"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/082_jonouchi_red_eyes_black_dragon_1.ogg",
-          "bytes": 81785,
-          "version": "8e27e68fd349f2d9"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/082_jonouchi_red_eyes_black_dragon_2.ogg",
-          "bytes": 146955,
-          "version": "6881a8711cc0e3b4"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/082_jonouchi_red_eyes_black_dragon_attack_1.ogg",
-          "bytes": 117601,
-          "version": "cacda765c2f08205"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/100_jonouchi_battle_warrior.ogg",
-          "bytes": 79941,
-          "version": "df2bc2dc2d71fc47"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/100_jonouchi_battle_warrior_attack.ogg",
-          "bytes": 80274,
-          "version": "01b706fc32ab4d1d"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/142_jonouchi_flame_manipulator.ogg",
-          "bytes": 110014,
-          "version": "43f1cfba6405c84a"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/142_jonouchi_flame_manipulator_attack.ogg",
-          "bytes": 93453,
-          "version": "6bcb02a7156f58b2"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/217_jonouchi_b_skull_dragon.ogg",
-          "bytes": 116884,
-          "version": "1459409f80c35f8c"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/217_jonouchi_b_skull_dragon_attack.ogg",
-          "bytes": 154313,
-          "version": "b79120deb947ca54"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/293_jonouchi_masaki_the_legendary_swordsman.ogg",
-          "bytes": 94231,
-          "version": "7d79fc8c69114bc4"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/293_jonouchi_masaki_the_legendary_swordsman_attack.ogg",
-          "bytes": 114324,
-          "version": "1fe8a662ef3b4638"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/320_jonouchi_stop_defense.ogg",
-          "bytes": 116362,
-          "version": "6b6856803016c5a2"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/333_jonouchi_sogen.ogg",
-          "bytes": 68227,
-          "version": "5a8d09128a5884c7"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/389_jonouchi_giltia_the_d_knight.ogg",
-          "bytes": 147353,
-          "version": "9f0e05d60f3efe22"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/389_jonouchi_giltia_the_d_knight_attack.ogg",
-          "bytes": 104595,
-          "version": "3c1561aacffe18b4"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/651_jonouchi_kunai_with_chain.ogg",
-          "bytes": 117708,
-          "version": "e5a78f064dab2bc3"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/654_jonouchi_salamandra.ogg",
-          "bytes": 120130,
-          "version": "bee7a0e1b5b4dd48"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/658_jonouchi_metalmorph.ogg",
-          "bytes": 99843,
-          "version": "4cf8013386f8d761"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/672_jonouchi_harpies_feather_duster.ogg",
-          "bytes": 115658,
-          "version": "0254990eed1054d0"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/713_jonouchi_meteor_b_dragon.ogg",
-          "bytes": 145930,
-          "version": "9577977be4f910af"
-        },
-        {
-          "path": "audio/jp_voices/jonouchi_backup_orig/713_jonouchi_meteor_b_dragon_attack.ogg",
-          "bytes": 124715,
-          "version": "6a30d912f85b44d8"
+          "version": "4c8850f09f8db081"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_duel_start_1.ogg",
           "bytes": 25589,
-          "version": "b0c3139b95db72e3"
+          "version": "ad4a7154d41d29b3"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_duel_start_2.ogg",
           "bytes": 65567,
-          "version": "017850f848b0a97f"
+          "version": "8db3645a15b2225d"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_end_turn_1.ogg",
           "bytes": 43474,
-          "version": "10f6db0a78a98b50"
+          "version": "b5c78adbb19159ef"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_end_turn_2.ogg",
           "bytes": 56674,
-          "version": "2413a1471f5c8eba"
+          "version": "cbb67c9830534be3"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_end_turn_3.ogg",
           "bytes": 43910,
-          "version": "5451b06e053f6dcc"
+          "version": "ca9bfba4eeaa74a8"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_equip_card_activate.ogg",
           "bytes": 69499,
-          "version": "70849ed5060f96f3"
+          "version": "1cbc56d4916c7ac8"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_final_attack_1.ogg",
           "bytes": 83195,
-          "version": "17c129273d697155"
+          "version": "d1cac31a65d14154"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_final_attack_2.ogg",
           "bytes": 120728,
-          "version": "e441b13c87680917"
+          "version": "6522cc5d76423ef4"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_fusion_summon_1.ogg",
           "bytes": 68678,
-          "version": "3a1fcd2c9689166b"
+          "version": "18301bf54a699c91"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_fusion_summon_2.ogg",
           "bytes": 43976,
-          "version": "1443dc4e618dc1b8"
+          "version": "64a179f5b0508d6d"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_magic_card_activate_normal.ogg",
           "bytes": 82407,
-          "version": "52c14aee87249318"
+          "version": "011beeedfa82e1f6"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_magic_card_activate_quick.ogg",
           "bytes": 65438,
-          "version": "94515c456d26e354"
+          "version": "c60af886b7a32098"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_magic_card_continue.ogg",
           "bytes": 68798,
-          "version": "a4cdc64c7bf0b7cd"
+          "version": "27022853335aa328"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_magic_or_trap_face-down_card_1.ogg",
           "bytes": 39925,
-          "version": "22e6d88ad271b2ec"
+          "version": "060584a44163d7de"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_magic_or_trap_face-down_card_2.ogg",
           "bytes": 43828,
-          "version": "b517063e7f8752bd"
+          "version": "ed5d7df370b15a91"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_draw_1.ogg",
           "bytes": 51694,
-          "version": "6b94a534d3a21be4"
+          "version": "355fb7ddbde33012"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_draw_2.ogg",
           "bytes": 63921,
-          "version": "2dae85b53e2f067a"
+          "version": "75e075ea7fd77116"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_monster_attack_1.ogg",
           "bytes": 68127,
-          "version": "84a2bac2e783b8e1"
+          "version": "1d79e26e8d926ab5"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_monster_attack_2.ogg",
           "bytes": 71404,
-          "version": "7a858fd34df52b26"
+          "version": "302558c033c793f8"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_monster_direct_attack_1.ogg",
           "bytes": 141021,
-          "version": "6e39778248650c4c"
+          "version": "15998eed509c509e"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_monster_direct_attack_2.ogg",
           "bytes": 130692,
-          "version": "1739fe310aacde80"
+          "version": "61892ef353354216"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_monster_face-down.ogg",
           "bytes": 45640,
-          "version": "543d048069b9845c"
+          "version": "b32aede234ffe2de"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_normal_summon.ogg",
           "bytes": 92865,
-          "version": "6f6ed4f8da491f27"
+          "version": "89ae732046797155"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_ritual_card_activate.ogg",
           "bytes": 65798,
-          "version": "3fedce1a29f83d91"
+          "version": "a07fa185de1f2311"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_ritual_summon.ogg",
           "bytes": 81113,
-          "version": "1af6a99d6992b078"
+          "version": "a9336a1a660200f8"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_take_damage_1.ogg",
           "bytes": 25380,
-          "version": "f8aaca01e61cb7e1"
+          "version": "09927dbc83fb2fc1"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_take_damage_2.ogg",
           "bytes": 30136,
-          "version": "e41dd47d9b916597"
+          "version": "db3a8eb9a3e5041a"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_take_damage_3.ogg",
           "bytes": 25777,
-          "version": "87018b17e7291eef"
+          "version": "d7f650c744eba955"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_take_damage_final.ogg",
           "bytes": 87622,
-          "version": "59462ea7574058e1"
+          "version": "981206d0f38f9e4b"
         },
         {
           "path": "audio/jp_voices/kaiba/000_kaiba_trap_card_activate.ogg",
           "bytes": 67830,
-          "version": "d025761e2d2c8138"
+          "version": "9a7591bd6d4a3cf2"
         },
         {
           "path": "audio/jp_voices/kaiba/001_kaiba_blue_eyes_attack_1.ogg",
           "bytes": 130573,
-          "version": "db8142d0e3f83916"
+          "version": "bbe7f55896d1c6f8"
         },
         {
           "path": "audio/jp_voices/kaiba/001_kaiba_blue_eyes_attack_2.ogg",
@@ -1571,107 +1222,112 @@
         {
           "path": "audio/jp_voices/kaiba/026_kaiba_battle_ox.ogg",
           "bytes": 150862,
-          "version": "a16e59ec28623e2b"
+          "version": "37bf171ea554631f"
         },
         {
           "path": "audio/jp_voices/kaiba/026_kaiba_battle_ox_attack.ogg",
           "bytes": 138203,
-          "version": "c9598c6f29848799"
+          "version": "4a1d7fc7d8a3706a"
         },
         {
           "path": "audio/jp_voices/kaiba/090_kaiba_gyakutenno_megami.ogg",
           "bytes": 60604,
-          "version": "40f1bd30fccd16d1"
+          "version": "e74aa0c6ec83659d"
         },
         {
           "path": "audio/jp_voices/kaiba/090_kaiba_gyakutenno_megami_attack.ogg",
           "bytes": 172784,
-          "version": "d363f2e966f57a1e"
+          "version": "b8dad4df76425dd7"
         },
         {
           "path": "audio/jp_voices/kaiba/091_kaiba_mystic_horseman.ogg",
           "bytes": 51733,
-          "version": "5aa56dda624fcf22"
+          "version": "63f1ec125ebf7324"
         },
         {
           "path": "audio/jp_voices/kaiba/091_kaiba_mystic_horseman_attack.ogg",
           "bytes": 73733,
-          "version": "ff231a6ff10ca3b1"
+          "version": "c8fa62c5eea556cb"
         },
         {
           "path": "audio/jp_voices/kaiba/092_kaiba_rabid_horseman.ogg",
           "bytes": 103434,
-          "version": "956b11a5876c3a56"
+          "version": "894a812a76c40d25"
         },
         {
           "path": "audio/jp_voices/kaiba/092_kaiba_rabid_horseman_attack.ogg",
           "bytes": 165829,
-          "version": "d28673c49629fb95"
+          "version": "93cc58eeb8e43c3a"
         },
         {
           "path": "audio/jp_voices/kaiba/303_kaiba_dark_energy.ogg",
           "bytes": 124912,
-          "version": "74b8d08a90a543a4"
+          "version": "df55d2a62a618806"
         },
         {
           "path": "audio/jp_voices/kaiba/378_kaiba_Swordstalker.ogg",
           "bytes": 98978,
-          "version": "ec1d7090e87c4914"
+          "version": "083138b0d9674328"
         },
         {
           "path": "audio/jp_voices/kaiba/378_kaiba_Swordstalker_attack.ogg",
           "bytes": 182905,
-          "version": "7ae666786a1f58ab"
+          "version": "293dc2d234a152bc"
         },
         {
           "path": "audio/jp_voices/kaiba/380_kaiba_blue_eyes_ultimate_dragon.ogg",
           "bytes": 269009,
-          "version": "8071cb4508289f15"
+          "version": "1452b613986e51aa"
         },
         {
           "path": "audio/jp_voices/kaiba/380_kaiba_blue_eyes_ultimate_dragon_attack.ogg",
           "bytes": 245345,
-          "version": "c83809c45b970489"
+          "version": "433bee97eb5497dd"
         },
         {
           "path": "audio/jp_voices/kaiba/382_kaiba_rude_kaiser.ogg",
           "bytes": 59563,
-          "version": "e740f537ead8986f"
+          "version": "4f0de0dacaf7af27"
         },
         {
           "path": "audio/jp_voices/kaiba/382_kaiba_rude_kaiser_attack.ogg",
           "bytes": 140537,
-          "version": "37c8ab106ea3d269"
+          "version": "a2d051a9840c8999"
         },
         {
           "path": "audio/jp_voices/kaiba/425_kaiba_thunder_dragon.ogg",
           "bytes": 96130,
-          "version": "e228c64ba5cc4750"
+          "version": "4e8c249f639bf9df"
         },
         {
           "path": "audio/jp_voices/kaiba/425_kaiba_thunder_dragon_attack.ogg",
           "bytes": 149883,
-          "version": "76c057297f8cd66c"
+          "version": "ad06422f4e2d036a"
         },
         {
           "path": "audio/jp_voices/kaiba/611_kaiba_crush_card.ogg",
           "bytes": 101906,
-          "version": "9ddca9a90f141335"
+          "version": "5d69dbd8d2c29d04"
         },
         {
           "path": "audio/jp_voices/kaiba/613_kaiba_Twin_headed_Thunder_Dragon.ogg",
           "bytes": 122849,
-          "version": "e130592756d2edee"
+          "version": "62b8b765c8676925"
         },
         {
           "path": "audio/jp_voices/kaiba/613_kaiba_Twin_headed_Thunder_Dragon_attack.ogg",
           "bytes": 114302,
-          "version": "7cc1579a61a6f818"
+          "version": "28c7457a3c8fe2d2"
+        },
+        {
+          "path": "audio/jp_voices/kaiba/657_kaiba_megamorph.ogg",
+          "bytes": 55136,
+          "version": "6b0e9a66052bff25"
         },
         {
           "path": "audio/jp_voices/kaiba/675_kaiba_ritual_ultimate_dragon.ogg",
           "bytes": 167316,
-          "version": "eed9baac879959c6"
+          "version": "2499134bb753e3b0"
         },
         {
           "path": "audio/jp_voices/life-points/sfx_lp_counter.wav",
@@ -1681,152 +1337,152 @@
         {
           "path": "audio/jp_voices/yugi/000_yugi_duel_start_1.ogg",
           "bytes": 44061,
-          "version": "b15d90bd60c03d3e"
+          "version": "829bab345b6879ea"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_duel_start_2.ogg",
           "bytes": 44061,
-          "version": "b15d90bd60c03d3e"
+          "version": "829bab345b6879ea"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_end_turn_1.ogg",
           "bytes": 22954,
-          "version": "d6c043cab6fd8ff9"
+          "version": "5c3aa7220c4f1bba"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_end_turn_2.ogg",
           "bytes": 18826,
-          "version": "be30efd5bc64a009"
+          "version": "17ac499106373e01"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_end_turn_3.ogg",
           "bytes": 43755,
-          "version": "2f95605a510bbb65"
+          "version": "fb4cdd196ef25871"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_equip_card_activate.ogg",
           "bytes": 66300,
-          "version": "d39d7a1ae66a2851"
+          "version": "59706166f0756bc3"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_final_attack_1.ogg",
           "bytes": 53039,
-          "version": "19aad944b43c4d0e"
+          "version": "bdc43fba24f6be6c"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_final_attack_2.ogg",
           "bytes": 45256,
-          "version": "af332f9838b0dd99"
+          "version": "10336e2fd767cb4d"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_fusion_summon_1.ogg",
           "bytes": 85503,
-          "version": "3c58911f204522ff"
+          "version": "994cb1676d584516"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_fusion_summon_2.ogg",
           "bytes": 51878,
-          "version": "467ab18c59aeda7d"
+          "version": "0d4e956c3e08e7d3"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_magic_card_activate_normal.ogg",
           "bytes": 81910,
-          "version": "ce7486b48b0dee87"
+          "version": "7af25c93a55cf23d"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_magic_card_activate_quick.ogg",
           "bytes": 68233,
-          "version": "e269a4cfe83ea6a5"
+          "version": "f79b16bac71060c8"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_magic_card_continue.ogg",
           "bytes": 70171,
-          "version": "dd46cd6e16af5475"
+          "version": "3cca255b710c908c"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_magic_or_trap_face-down_card_1.ogg",
           "bytes": 48158,
-          "version": "ceb936bbb921d926"
+          "version": "e1db0fcd858dfeab"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_magic_or_trap_face-down_card_2.ogg",
           "bytes": 53726,
-          "version": "8d3fafd180ff3162"
+          "version": "73c9b78247405dc6"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_draw_1.ogg",
           "bytes": 31051,
-          "version": "89414f8832747b55"
+          "version": "305ee8361513afb7"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_draw_2.ogg",
           "bytes": 31051,
-          "version": "89414f8832747b55"
+          "version": "305ee8361513afb7"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_monster_attack_1.ogg",
           "bytes": 90594,
-          "version": "d3908f4d4f842adf"
+          "version": "69c8fb2ed0281fb3"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_monster_attack_2.ogg",
           "bytes": 87061,
-          "version": "8e16b2806b150968"
+          "version": "65e1cda220c502e9"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_monster_direct_attack_1.ogg",
           "bytes": 112790,
-          "version": "ff3e7958ca9ce4bf"
+          "version": "f347c2eacfaec997"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_monster_direct_attack_2.ogg",
           "bytes": 110779,
-          "version": "8d57125125a03df8"
+          "version": "96460421e2f051f2"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_monster_face-down.ogg",
           "bytes": 57246,
-          "version": "799e1add0e5180c2"
+          "version": "9c93c0026a2b626e"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_normal_summon.ogg",
           "bytes": 98278,
-          "version": "aa0a68196dade5a0"
+          "version": "2921556676c92aa7"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_ritual_card_activate.ogg",
           "bytes": 67069,
-          "version": "40a325dbc9b1b3ae"
+          "version": "04b8102b9cc2da0c"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_ritual_summon.ogg",
           "bytes": 88305,
-          "version": "6a33ff6ea93b8c38"
+          "version": "1a74f4d58cf34662"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_take_damage_1.ogg",
           "bytes": 40675,
-          "version": "22fa345ea1be6bde"
+          "version": "add7ff3d9804c62a"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_take_damage_2.ogg",
           "bytes": 38724,
-          "version": "e1fc14dd1dc9b3e7"
+          "version": "a385436b34f4613c"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_take_damage_3.ogg",
           "bytes": 40569,
-          "version": "50bce4f0f7922bd8"
+          "version": "f37626c9354a7ce7"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_take_damage_final.ogg",
           "bytes": 101749,
-          "version": "1d3f04c4fd892615"
+          "version": "09653df0692b8654"
         },
         {
           "path": "audio/jp_voices/yugi/000_yugi_trap_card_activate.ogg",
           "bytes": 50524,
-          "version": "66c639f1ce503e0e"
+          "version": "ae354b3a947487d5"
         },
         {
           "path": "audio/jp_voices/yugi/022_yugi_summoned_skull.ogg",
@@ -1866,12 +1522,12 @@
         {
           "path": "audio/jp_voices/yugi/039_yugi_curse_of_dragon.ogg",
           "bytes": 91780,
-          "version": "7a9e865405ebcb54"
+          "version": "89a737a952777187"
         },
         {
           "path": "audio/jp_voices/yugi/039_yugi_curse_of_dragon_attack.ogg",
           "bytes": 129531,
-          "version": "9d4f511770af558f"
+          "version": "8718d8d0e528bccf"
         },
         {
           "path": "audio/jp_voices/yugi/041_yugi_celtic_guardian.ogg",
@@ -1896,17 +1552,17 @@
         {
           "path": "audio/jp_voices/yugi/082_yugi_red_eyes_black_dragon.ogg",
           "bytes": 192558,
-          "version": "d0a0c17ac50556fb"
+          "version": "8e416428a7146d08"
         },
         {
           "path": "audio/jp_voices/yugi/082_yugi_red_eyes_black_dragon_attack.ogg",
           "bytes": 125640,
-          "version": "4c48be05c4a5a091"
+          "version": "803958dabc2454e8"
         },
         {
           "path": "audio/jp_voices/yugi/348_yugi_spell_card_swords_of_revealing_light.ogg",
           "bytes": 114036,
-          "version": "5caa445afa4945d4"
+          "version": "cbdb9b3a566a3bd6"
         },
         {
           "path": "audio/jp_voices/yugi/364_yugi_black_luster_soldier.ogg",
@@ -1985,8 +1641,8 @@
         },
         {
           "path": "mod.json",
-          "bytes": 26351,
-          "version": "47960d5971206323"
+          "bytes": 26469,
+          "version": "e50f9434e5d69498"
         },
         {
           "path": "textures/avatars/avatar_00.bin",
@@ -11476,11 +11132,6 @@
       ],
       "files": [
         {
-          "path": "mod.json",
-          "bytes": 5498,
-          "version": "2bce17730c5713b6"
-        },
-        {
           "path": "art/35.png",
           "bytes": 45677,
           "version": "3b0f35778a041cea"
@@ -11539,6 +11190,11 @@
           "path": "art/989.tex",
           "bytes": 52742,
           "version": "23597677f4d669d3"
+        },
+        {
+          "path": "mod.json",
+          "bytes": 5498,
+          "version": "2bce17730c5713b6"
         },
         {
           "path": "shipped-art/100_BattleWarrior.tex",
@@ -14773,6 +14429,35 @@
           "path": "mod.json",
           "bytes": 1389,
           "version": "08978eec2ee3549b"
+        }
+      ]
+    },
+    {
+      "folder": "Mod-del-editor",
+      "id": "my-mod",
+      "name": "My mod",
+      "enabled": true,
+      "compatible": true,
+      "reason": null,
+      "requiredApi": 1,
+      "library": null,
+      "settings": [],
+      "conflicts": [],
+      "files": [
+        {
+          "path": "duelists/yugi.json",
+          "bytes": 68,
+          "version": "9de9c97e2e0335b6"
+        },
+        {
+          "path": "mod.json",
+          "bytes": 67,
+          "version": "9570434dc9c33f48"
+        },
+        {
+          "path": "portraits/yugi.png",
+          "bytes": 90728,
+          "version": "bcf1c900e7bc04a6"
         }
       ]
     },

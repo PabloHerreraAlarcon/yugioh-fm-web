@@ -500,7 +500,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     module.ENV.MEMORIES_SERIF_FONT = '/game/fonts/serif.ttf';
                     module.ENV.MEMORIES_HD_TEXT = '1';
                 }],
-                locateFile: (path) => '/mods-preview-engine/' + path + '?v=cutin-3c471122c0b9',
+                locateFile: (path) => '/mods-preview-engine/' + path + '?v=cutin-ac7fc39bbe5d',
                 print: (text) => { performanceDiagnostics.record(text); console.log('[Memories Recompiled]:', text); },
                 printErr: (text) => { performanceDiagnostics.record(text); console.warn('[Memories Recompiled]:', text); },
                 onRuntimeInitialized: function() {
@@ -576,7 +576,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
             const mdecTrial = new URLSearchParams(location.search).get('engine') === 'mdec17';
             window.Module.locateFile = (file) => mdecTrial && file.endsWith('.wasm')
                 ? '/memories-pc-mdec17.wasm?v=c67c5a79ca07'
-                : abDir + file + '?v=cutin-3c471122c0b9';
+                : abDir + file + '?v=cutin-ac7fc39bbe5d';
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';

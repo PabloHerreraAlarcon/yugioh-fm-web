@@ -694,6 +694,10 @@
       "0x7A00": {
         "file": "audio/jp_voices/life-points/sfx_lp_counter.wav",
         "volume": 115
+      },
+      "0x3657": {
+        "file": "audio/jp_voices/kaiba/657_kaiba_megamorph.ogg",
+        "volume": 140
       }
     },
     "music": {
