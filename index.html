@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<style>html.ui-preparing{background:#011627}html.ui-preparing body{visibility:hidden}</style>
+<script>document.documentElement.classList.add('ui-preparing');setTimeout(()=>document.documentElement.classList.remove('ui-preparing'),3000)</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
     <title>Juega Yu-Gi-Oh! FM | Anime Duel Cutins</title>
@@ -423,6 +425,7 @@
     <!-- Client Script -->
     <script>for(const id of ["rom-detect-status","btn-pick-custom-rom","rom-file-input"]){const n=document.getElementById(id);if(n){n.dataset.discStaging="1";document.body.append(n)}}</script><script src="interface.js?v=3"></script><script src="approved-layout.js?v=3"></script><script src="reference-layout.js?v=hide-character-02"></script><script src="language-choice.js?v=1"></script><script src="localization.js?v=4"></script><script type="module" src="app-mods-preview.js?v=mobile-ab-20"></script>
 <script src="sponsor-layout.js?v=3"></script>
+<script>document.documentElement.classList.remove('ui-preparing')</script>
 </body>
 </html>
 
