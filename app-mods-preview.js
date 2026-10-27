@@ -577,7 +577,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';
-            script.src = abDir + (window.Module.yfmExperimentalYield ? 'memories-pc-message.js' : 'memories-pc.js') + '?v=' + Date.now();
+            script.src = abDir + (new URLSearchParams(location.search).get('presentation') === 'reuse' ? 'memories-pc-reuse.js' : window.Module.yfmExperimentalYield ? 'memories-pc-message.js' : 'memories-pc.js') + '?v=' + Date.now();
             script.onerror = (e) => {
                 clearTimeout(timeout);
                 reject(new Error('No se pudo cargar memories-pc.js'));
