@@ -27,3 +27,11 @@
 .patreon-bottom{display:none;margin-top:28px}
 @media(max-width:1200px){.sponsor-rail{display:none}.patreon-bottom{display:block}.patreon-bottom a{min-height:160px}.patreon-bottom img{width:45%;right:0;height:180%;bottom:-35%}.patreon-bottom .patreon-promo-copy{padding:22px;background:linear-gradient(90deg,#06101a 15%,#06101ad9 48%,transparent 90%)}.patreon-bottom strong{margin:12px 0;font-size:23px}.patreon-bottom p{max-width:58%;margin-bottom:14px}.patreon-bottom .patreon-cta{display:inline-flex;min-width:150px}}
 @media print{.patreon-promo{display:none}}
+
+/* AdSense reservations stay independent from the Patreon promotion. */
+.sponsor-placement{box-sizing:border-box;overflow:hidden;border:1px solid var(--ui-border);border-radius:12px;background:rgba(120,150,170,.035);text-align:center;color:var(--ui-muted);padding:10px;margin:0;contain:layout style}
+.sponsor-label{display:block;font-size:9px;line-height:1.4;letter-spacing:.16em;margin-bottom:10px}
+.sponsor-content{display:grid;place-items:center;min-width:0}.sponsor-placeholder{font-size:11px;opacity:.6}
+.sponsor-side .sponsor-content{min-height:230px}.sponsor-bottom{margin-top:28px}.sponsor-bottom .sponsor-content{min-height:90px}
+@media(max-width:600px){.sponsor-bottom{margin-top:24px}.sponsor-bottom .sponsor-content{min-height:100px}}
+@media print{.sponsor-placement{display:none}}
