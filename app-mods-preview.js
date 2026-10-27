@@ -573,11 +573,14 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
              * el script: sin esto el glue de ab-opt pide /memories-pc.wasm y
              * falla con "env invoke_i: function import requires a callable". */
             window.Module = window.Module || {};
-            window.Module.locateFile = (file) => abDir + file + '?v=cutin-3c471122c0b9';
+            const mdecTrial = new URLSearchParams(location.search).get('engine') === 'mdec17';
+            window.Module.locateFile = (file) => mdecTrial && file.endsWith('.wasm')
+                ? '/memories-pc-mdec17.wasm?v=c67c5a79ca07'
+                : abDir + file + '?v=cutin-3c471122c0b9';
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';
-            script.src = abDir + (new URLSearchParams(location.search).get('presentation') === 'reuse' ? 'memories-pc-reuse.js' : window.Module.yfmExperimentalYield ? 'memories-pc-message.js' : 'memories-pc.js') + '?v=' + Date.now();
+            script.src = mdecTrial ? '/memories-pc-mdec17.js?v=mdec-mobile18' : abDir + (new URLSearchParams(location.search).get('presentation') === 'reuse' ? 'memories-pc-reuse.js' : window.Module.yfmExperimentalYield ? 'memories-pc-message.js' : 'memories-pc.js') + '?v=' + Date.now();
             script.onerror = (e) => {
                 clearTimeout(timeout);
                 reject(new Error('No se pudo cargar memories-pc.js'));
