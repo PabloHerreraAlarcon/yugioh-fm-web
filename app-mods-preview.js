@@ -4,7 +4,7 @@ import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=5';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=touch-options-01';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=mobile-scale-01';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=3';
 const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () => {

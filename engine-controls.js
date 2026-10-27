@@ -17,6 +17,9 @@ export function engineStartupOptions() {
     if(Number.isInteger(saved.internal_scale))saved.internal_scale=Math.min(4,Math.max(1,saved.internal_scale));
     const bounds = [[0,100],[0,100],[0,100],[1,4],[0,2],[0,2],[0,2],[0,1]];
     for (const [i,key] of fields.entries()) if (Number.isInteger(saved[key]) && saved[key]>=bounds[i][0] && saved[key]<=bounds[i][1]) result[key]=saved[key];
+    // Explicit diagnostic override; never persist or change the user's preference.
+    const queryScale = new URLSearchParams(globalThis.location?.search || '').get('scale');
+    if (/^[1-4]$/.test(queryScale || '')) result.internal_scale = Number(queryScale);
     return result;
 }
 export function setupEngineControls(getModule) {
