@@ -1,17 +1,18 @@
+import { comparisonStorage, testProfile } from './mobile-comparison.js?v=1';
 import { createSessionMetrics } from './session-metrics.js?v=2';
 const sessionMetrics = createSessionMetrics();
-import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=5';
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=6';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
 import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=mobile-scale-01';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=3';
-const nativeSaves = createSaveStore(localStorage, () => window.Module?.FS, () => {
+const nativeSaves = createSaveStore(comparisonStorage(localStorage), () => window.Module?.FS, () => {
     const status = document.getElementById('save-storage-status');
-    if (status) status.textContent = 'Cambios guardados en este navegador.';
+    if (status) status.textContent = testProfile() ? 'Prueba: cambios temporales, no se guardan al cerrar.' : 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=mobile-arena-13';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=mobile-ab-20';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.

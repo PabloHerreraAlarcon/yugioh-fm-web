@@ -1,3 +1,4 @@
+import { testProfile } from './mobile-comparison.js?v=1';
 // Real engine mods: download before initialization, then mount in private MEMFS.
 import { cachedModBytes, finishModPreparation } from './browser-library.js?v=1';
 const STORAGE='yfm_native_mods_v1';
@@ -18,6 +19,7 @@ export function isPhone(userAgent = globalThis.navigator?.userAgent || '') {
  return /iPhone|iPod|Android.*Mobile/i.test(userAgent);
 }
 function selected(mod,prefs){
+ if(testProfile()==='none')return false;
  const defaultEnabled = mod.id === '3d-duel-arena' && isPhone() ? false : mod.enabled;
  return mod.compatible&&(mod.id==='my-mod'||(prefs[mod.id]?.enabled??defaultEnabled));
 }
