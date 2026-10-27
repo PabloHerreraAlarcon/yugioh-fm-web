@@ -1,3 +1,5 @@
+import { createSessionMetrics } from './session-metrics.js?v=1';
+const sessionMetrics = createSessionMetrics();
 import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=5';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
@@ -365,6 +367,7 @@ function showActiveRoomUI(code, p1, p2) {
 // =========================================================================
 async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 } = {}) {
     if (state.loadingGame) return;
+    const measuredAttempt = sessionMetrics.begin();
     state.loadingGame = true;
     state.inDuel = true;
     el.startScreen.classList.add('hidden');
@@ -544,6 +547,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                             console.log('[Memories Recompiled] Iniciando Forbidden Memories a 60 FPS nativo...');
                             performanceDiagnostics.configure(window.Module.ENV);
                             window.Module.callMain([]);
+                            measuredAttempt.started();
                             window.dispatchEvent(new Event('yfm-engine-ready'));
                             window._stopGameLayout?.();
                             window._stopGameLayout = observeGameLayout(el.canvas, window, () => window.Module);
@@ -608,6 +612,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
         state.loadingGame = false;
 
     } catch (err) {
+        measuredAttempt.failed();
         console.error('Error al iniciar el juego:', err);
         state.loadingGame = false;
         state.inDuel = false;
@@ -1407,3 +1412,5 @@ setupNativeModsUI();
 setupEngineControls(() => window.Module);
 performanceDiagnostics.setup();
 
+
+sessionMetrics.setup();

@@ -1,0 +1,10 @@
+{
+  "name": "yugioh-fm-web",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-10-24",
+  "d1_databases": [{
+    "binding": "YFM_METRICS",
+    "database_name": "yfm-session-metrics",
+    "database_id": "85bb5d63-4b48-492c-8ba5-b67002cd6f37"
+  }]
+}
