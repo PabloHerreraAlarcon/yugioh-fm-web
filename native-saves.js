@@ -38,6 +38,11 @@ export function createSaveStore(storage, getFS, onPersist = () => {}) {
                 for (const name of Object.keys(data.files)) if (name.startsWith('saves/')) delete data.files[name];
                 walk(ROOT + '/saves', 'saves/');
             }
+            // The engine stores saved deck slots separately from campaign saves.
+            if (fs.analyzePath(ROOT + '/decks').exists) {
+                for (const name of Object.keys(data.files)) if (name.startsWith('decks/')) delete data.files[name];
+                walk(ROOT + '/decks', 'decks/');
+            }
             // Mods store chosen skins, decks and settings outside the save-slot folder.
             if (fs.analyzePath(ROOT + '/mod-data').exists) {
                 for (const name of Object.keys(data.files)) if (name.startsWith('mod-data/')) delete data.files[name];

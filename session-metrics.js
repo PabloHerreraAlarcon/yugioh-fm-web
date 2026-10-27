@@ -33,8 +33,8 @@ export function createSessionMetrics(platform = globalThis) {
     const panel = platform.document.getElementById('tab-general');
     if (!panel || panel.querySelector('[data-session-metrics]')) return;
     const box = platform.document.createElement('details');
-    box.className = 'gamepad-panel'; box.dataset.sessionMetrics = '1';
-    box.innerHTML = '<summary>Ayudar a mejorar el juego</summary><label><input type="checkbox"> Compartir contadores de inicio</label><p>Opcional. Cuenta intentos, arranques del motor y errores de inicio por día. No envía partidas, discos, nombres ni detalles del error. No identifica personas únicas. Puedes desactivarlo aquí.</p>';
+    box.className = 'session-metrics-panel'; box.dataset.sessionMetrics = '1';
+    box.innerHTML = '<summary>Ayudar a mejorar el juego <span>Opcional</span></summary><div class="session-metrics-body"><label><span>Compartir estadísticas de inicio</span><input type="checkbox" role="switch"></label><p>Solo cuenta inicios y fallos de carga. Tus partidas, disco y nombres permanecen en tu navegador.</p><small>No identifica jugadores únicos. Puedes desactivarlo cuando quieras.</small></div>';
     const input = box.querySelector('input'); input.checked = consent;
     input.addEventListener('change', () => {
       consent = input.checked;
