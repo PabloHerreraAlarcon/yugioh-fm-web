@@ -24,6 +24,12 @@
       }
     ]
   },
+  "equips": [
+    {
+      "card": "Metalmorph",
+      "bonus": 1000
+    }
+  ],
   "cards": [
     {
       "copy": 722,

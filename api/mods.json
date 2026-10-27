@@ -2102,11 +2102,11 @@
         {
           "path": "textures/cutins/kaiba_cutin_1080x1080_bgra.bin",
           "bytes": 4665600,
-          "version": "5a134451884a7545",
+          "version": "a0497468fe52f3fc",
           "compressed": {
             "path": "textures/cutins/kaiba_cutin_1080x1080_bgra.bin.gz",
-            "bytes": 1118680,
-            "version": "7e2032f60b25a6ee"
+            "bytes": 1372410,
+            "version": "b267f76f52112dc2"
           }
         },
         {
@@ -19179,8 +19179,8 @@
         },
         {
           "path": "mod.json",
-          "bytes": 181056,
-          "version": "4876c51bd0d0c9c1"
+          "bytes": 181143,
+          "version": "af8ddaaa7acf7673"
         }
       ]
     },
