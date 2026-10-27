@@ -1,7 +1,7 @@
-import { comparisonStorage, testProfile } from './mobile-comparison.js?v=1';
+import { comparisonStorage, testProfile } from './mobile-comparison.js?v=2';
 import { createSessionMetrics } from './session-metrics.js?v=2';
 const sessionMetrics = createSessionMetrics();
-import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=6';
+import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=7';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
@@ -12,7 +12,7 @@ const nativeSaves = createSaveStore(comparisonStorage(localStorage), () => windo
     const status = document.getElementById('save-storage-status');
     if (status) status.textContent = testProfile() ? 'Prueba: cambios temporales, no se guardan al cerrar.' : 'Cambios guardados en este navegador.';
 });
-import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=mobile-ab-20';
+import { prepareNativeMods, setupNativeModsUI } from './native-mods.js?v=mobile-groups-22';
 /**
  * Yu-Gi-Oh! Forbidden Memories Web Online — Client Controller
  * Handles WebSocket matchmaking, room state, gamepad/keyboard polling, Nostalgist WebAssembly runtime, and UI.
