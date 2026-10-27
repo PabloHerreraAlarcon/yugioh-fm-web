@@ -14,7 +14,13 @@ if(localStorage.getItem(PC_PRESET)!=='1') {
 }
 
 function getCatalog(){return catalogPromise ||= fetch('/api/mods',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('No se pudo consultar los mods');return r.json();});}
-function selected(mod,prefs){return mod.compatible&&(mod.id==='my-mod'||(prefs[mod.id]?.enabled??mod.enabled));}
+export function isPhone(userAgent = globalThis.navigator?.userAgent || '') {
+ return /iPhone|iPod|Android.*Mobile/i.test(userAgent);
+}
+function selected(mod,prefs){
+ const defaultEnabled = mod.id === '3d-duel-arena' && isPhone() ? false : mod.enabled;
+ return mod.compatible&&(mod.id==='my-mod'||(prefs[mod.id]?.enabled??defaultEnabled));
+}
 // Explicit choices take precedence over defaults; conflicts are symmetric.
 export function resolvedMods(mods,prefs) {
  const enabled=new Set();
@@ -67,6 +73,9 @@ export async function setupNativeModsUI(){
    const label=document.createElement('label'),check=document.createElement('input');check.type='checkbox';check.disabled=!mod.compatible;check.checked=active.has(mod.id);
    label.append(check,document.createTextNode(' '+mod.name));section.append(label);
    const status=document.createElement('p');status.className='ctrl-tip';status.textContent=mod.reason||(check.checked?'Activado al iniciar':'Desactivado');section.append(status);
+   if(mod.id==='3d-duel-arena'&&isPhone()) {
+    const tip=document.createElement('p');tip.className='ctrl-tip';tip.textContent='En celulares comienza desactivado para reducir el trabajo del duelo. Puedes activarlo aquí.';section.append(tip);
+   }
    controls.set(mod.id,{check,status});
    check.addEventListener('change',()=>{
     prefs[mod.id]??={};prefs[mod.id].enabled=check.checked;
