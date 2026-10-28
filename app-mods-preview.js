@@ -396,7 +396,11 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
         // Asegurar que la ROM esté cargada como File/Blob en memoria
         let romToLaunch = state.romSource;
-        if (typeof state.romSource === 'string') {
+        if (new URLSearchParams(location.search).get('discTest') === '1') {
+            const {loadSegmentedDisc}=await import('./segmented-disc-test.js?v=1');
+            romToLaunch=await loadSegmentedDisc((loaded,total)=>{syncTitle.textContent=`Disco segmentado (${Math.round(loaded/1048576)} / ${Math.round(total/1048576)} MiB)…`;syncBar.style.width=Math.round(loaded/total*100)+'%';});
+        }
+        if (typeof romToLaunch === 'string') {
             if (!state.cachedRomFile) {
                 const romUrl = window.location.origin + state.romSource;
                 syncTitle.textContent = 'Descargando Forbidden Memories a memoria (518 MB)...';
@@ -435,7 +439,10 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
         // Obtener el buffer del disco de juego
         let romBuffer;
-        if (romToLaunch instanceof Blob || romToLaunch instanceof File) {
+        if (romToLaunch instanceof ArrayBuffer) {
+            if(romToLaunch.byteLength!==517872768)throw Error('Disco segmentado incompleto.');
+            romBuffer=romToLaunch;
+        } else if (romToLaunch instanceof Blob || romToLaunch instanceof File) {
             romBuffer = await romToLaunch.arrayBuffer();
         } else {
             const res = await fetch(romToLaunch);
@@ -1256,6 +1263,7 @@ function setupEventListeners() {
 }
 
 async function checkServerRom() {
+    if(new URLSearchParams(location.search).get('discTest')==='1'){window.yfmRememberedDisc=true;el.btnPlaySolo.disabled=false;if(el.romDetectStatus)el.romDetectStatus.textContent='Prueba privada: disco remoto segmentado.';return;}
     el.btnPlaySolo.disabled = true;
     try {
         const file = await getRememberedDisc();
