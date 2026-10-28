@@ -1,8 +1,5 @@
-let authorization='';
-async function credentials(){if(authorization)return authorization;const password=await new Promise(resolve=>{const dialog=document.createElement('dialog');dialog.style.cssText='border:1px solid #2c4053;border-radius:14px;padding:24px;background:#0b2235;color:#f9f8f8;max-width:360px;font:13px Arial';dialog.innerHTML='<form method="dialog"><h3>Prueba de disco segmentado</h3><p>Acceso privado · Usuario tester</p><label>Contraseña <input type="password" autocomplete="off" required style="display:block;width:100%;box-sizing:border-box;padding:10px;margin:10px 0"></label><button value="enter">Continuar</button> <button value="cancel" formnovalidate>Cancelar</button></form>';document.body.append(dialog);dialog.addEventListener('close',()=>{const value=dialog.returnValue==='enter'?dialog.querySelector('input').value:'';dialog.remove();resolve(value);},{once:true});dialog.showModal();dialog.querySelector('input').focus();});if(!password)throw Error('Prueba privada cancelada.');authorization='Basic '+btoa('tester:'+password);return authorization;}
 export async function loadSegmentedDisc(progress){
- const auth=await credentials();
- async function remote(path){const response=await fetch('https://yfm-private-disc-test.phdigital.workers.dev'+path,{credentials:'omit',headers:{Authorization:auth}});if(response.status===401){authorization='';throw Error('Contraseña incorrecta. Vuelve a iniciar la prueba.');}return response;}
+ async function remote(path){return fetch('https://yfm-private-disc-test.phdigital.workers.dev'+path,{credentials:'omit'});}
 
  const start=performance.now();const response=await remote('/disc/manifest.json');if(!response.ok)throw Error('No se pudo obtener el manifiesto del disco');const manifest=await response.json();
  if(manifest.size!==517872768 || !Array.isArray(manifest.parts) || manifest.parts.length!==31)throw Error('Manifiesto de disco no válido');

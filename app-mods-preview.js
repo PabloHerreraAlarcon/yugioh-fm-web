@@ -397,7 +397,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
         // Asegurar que la ROM esté cargada como File/Blob en memoria
         let romToLaunch = state.romSource;
         if (new URLSearchParams(location.search).get('discTest') === '1') {
-            const {loadSegmentedDisc}=await import('./segmented-disc-test.js?v=1');
+            const {loadSegmentedDisc}=await import('./segmented-disc-test.js?v=2');
             romToLaunch=await loadSegmentedDisc((loaded,total)=>{syncTitle.textContent=`Disco segmentado (${Math.round(loaded/1048576)} / ${Math.round(total/1048576)} MiB)…`;syncBar.style.width=Math.round(loaded/total*100)+'%';});
         }
         if (typeof romToLaunch === 'string') {
