@@ -55,7 +55,7 @@ export function setupEngineControls(getModule) {
     range(general,'Música',1);range(general,'Efectos y voces del juego',2);
     const oldHelp=general.querySelector('.reference-help');if(oldHelp)oldHelp.textContent='Los controles de sonido modifican el audio del juego en ejecución.';
     const preset=graphics.querySelector('.reference-setting');if(preset)preset.remove();
-    const intro=graphics.querySelector('.reference-intro');if(intro)intro.textContent='Los ajustes se aplican al juego. Resolución predeterminada: ×4.';
+    const intro=graphics.querySelector('.reference-intro');if(intro)intro.textContent='Los ajustes se aplican al juego. Resolución predeterminada: ×1.';
     const row=document.createElement('label');row.className='setting-slider';const title=document.createElement('span');title.textContent='Resolución interna';const resolution=document.createElement('select');resolution.setAttribute('aria-label','Resolución interna');
     for(const scale of [1,2,3,4]){const option=document.createElement('option');option.value=scale;option.textContent='×'+scale;resolution.append(option);}row.append(title,resolution);graphics.prepend(row);
     bind(resolution,3,n=>Number(n.value),(n,v)=>n.value=v);

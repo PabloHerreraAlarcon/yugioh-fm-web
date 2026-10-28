@@ -1,11 +1,12 @@
 import { comparisonStorage, testProfile } from './mobile-comparison.js?v=2';
 import { createSessionMetrics } from './session-metrics.js?v=2';
 const sessionMetrics = createSessionMetrics();
+const useSegmentedDisc = () => {const q=new URLSearchParams(location.search);return q.get('discTest')!=='0' && q.get('disc')!=='local';};
 import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=7';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=solo-design-28';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=home-disc-32';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=3';
 const nativeSaves = createSaveStore(comparisonStorage(localStorage), () => window.Module?.FS, () => {
@@ -396,8 +397,8 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
 
         // Asegurar que la ROM esté cargada como File/Blob en memoria
         let romToLaunch = state.romSource;
-        if (new URLSearchParams(location.search).get('discTest') === '1') {
-            const {loadSegmentedDisc}=await import('./segmented-disc-test.js?v=2');
+        if (useSegmentedDisc() && !(romToLaunch instanceof Blob)) {
+            const {loadSegmentedDisc}=await import('./segmented-disc-test.js?v=3');
             romToLaunch=await loadSegmentedDisc((loaded,total)=>{syncTitle.textContent=`Disco segmentado (${Math.round(loaded/1048576)} / ${Math.round(total/1048576)} MiB)…`;syncBar.style.width=Math.round(loaded/total*100)+'%';});
         }
         if (typeof romToLaunch === 'string') {
@@ -507,7 +508,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     const query = new URLSearchParams(location.search);
                     if (query.get('hd') === '1') module.ENV.MEMORIES_HD_TEXT = '1';
                     for (const [key,value] of Object.entries(engineStartupOptions())) module.ENV['MEMORIES_'+key.toUpperCase()] = String(value);
-                    const internalScale = String(engineStartupOptions().internal_scale ?? 4);
+                    const internalScale = String(engineStartupOptions().internal_scale ?? 1);
                     module.ENV.MEMORIES_INTERNAL_SCALE = internalScale;
                     module.ENV.MEMORIES_SCALING = '1';
                     module.ENV.MEMORIES_ASPECT = localStorage.getItem('yfm_widescreen') === '0' ? '0' : '2';
@@ -562,7 +563,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                         window.addEventListener('pagehide', () => nativeSaves.sync());
                         document.addEventListener('visibilitychange', () => { if (document.hidden) nativeSaves.sync(); });
                         if (typeof window.Module.callMain === 'function') {
-                            window.Module.ENV.MEMORIES_INTERNAL_SCALE = String(engineStartupOptions().internal_scale ?? 4);
+                            window.Module.ENV.MEMORIES_INTERNAL_SCALE = String(engineStartupOptions().internal_scale ?? 1);
                             window.Module.ENV.MEMORIES_SCALING = '1';
                             console.log('[Memories Recompiled] Resolución interna inicial:', window.Module.ENV.MEMORIES_INTERNAL_SCALE);
                             console.log('[Memories Recompiled] Iniciando Forbidden Memories a 60 FPS nativo...');
@@ -1263,7 +1264,7 @@ function setupEventListeners() {
 }
 
 async function checkServerRom() {
-    if(new URLSearchParams(location.search).get('discTest')==='1'){window.yfmRememberedDisc=true;el.btnPlaySolo.disabled=false;if(el.romDetectStatus)el.romDetectStatus.textContent='Prueba privada: disco remoto segmentado.';return;}
+    if(useSegmentedDisc()){window.yfmRememberedDisc=true;el.btnPlaySolo.disabled=false;if(el.btnPickCustomRom)el.btnPickCustomRom.textContent='Disco web disponible · Elegir otro disco';if(el.romDetectStatus)el.romDetectStatus.textContent='Disco web disponible. Pulsa Jugar ahora.';return;}
     el.btnPlaySolo.disabled = true;
     try {
         const file = await getRememberedDisc();
