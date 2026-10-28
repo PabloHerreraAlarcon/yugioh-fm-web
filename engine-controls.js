@@ -77,13 +77,21 @@ export function setupEngineControls(getModule) {
     const cheatHelp=document.createElement('p');cheatHelp.className='ctrl-tip';cheatHelp.textContent='Carga una partida y sal del editor de mazos antes de aplicar un truco. Guarda desde el juego para conservar los cambios.';cheats.append(cheatHelp);
     const cheatStatus=document.createElement('p');cheatStatus.className='ctrl-tip';cheatStatus.setAttribute('role','status');cheats.append(cheatStatus);
     const cheatButtons=[];
-    for(const [action,label] of [[1,'Tener al menos 1 de cada carta'],[2,'Tener al menos 2 de cada carta'],[3,'Tener al menos 3 de cada carta'],[4,'Desbloquear todos los duelistas de Duelo Libre']]) {
-        const button=document.createElement('button');button.type='button';button.className='btn btn-stone';button.textContent=label;button.disabled=true;cheats.append(button);cheatButtons.push(button);
+    const cards=document.createElement('div');cards.className='solo-cheat-card';
+    const quantityLabel=document.createElement('label');quantityLabel.textContent='Copias de cada carta';quantityLabel.htmlFor='solo-card-count';
+    const quantity=document.createElement('select');quantity.id='solo-card-count';quantity.disabled=true;
+    for(const [value,label] of [[1,'1 copia'],[2,'2 copias'],[3,'3 copias']]){const option=document.createElement('option');option.value=value;option.textContent=label;quantity.append(option);}
+    cards.append(quantityLabel,quantity);cheats.append(cards);
+    const roster=document.createElement('div');roster.className='solo-cheat-card';const rosterTitle=document.createElement('h4');rosterTitle.textContent='Duelo Libre';roster.append(rosterTitle);cheats.append(roster);
+    for(const [action,label,parent] of [[0,'Añadir cartas al baúl',cards],[4,'Desbloquear duelistas',roster]]) {
+        const button=document.createElement('button');button.type='button';button.className='solo-cheat-action';button.textContent=label;button.disabled=true;parent.append(button);cheatButtons.push(button);
         button.onclick=()=>{const module=getModule();if(!ready || typeof module?._YfmWeb_Cheat!=='function')return;
+            const selectedAction=action || Number(quantity.value);
             if(!window.confirm((window.yfmT?.(label)||label)+'\n'+(window.yfmT?.('Esto modifica la partida individual actual. ¿Aplicar?')||'Esto modifica la partida individual actual. ¿Aplicar?')))return;
-            const result=module._YfmWeb_Cheat(action);cheatStatus.textContent=({1:'Truco aplicado. Guarda desde el juego para conservarlo.','-1':'Opción no válida.','-2':'Primero inicia o carga una partida.','-3':'Sal del editor de mazos y vuelve a intentarlo.','-4':'No se pudo aplicar el truco.'})[result]||'No se pudo aplicar el truco.';
+            const result=module._YfmWeb_Cheat(selectedAction);cheatStatus.textContent=({1:'Truco aplicado. Guarda desde el juego para conservarlo.','-1':'Opción no válida.','-2':'Primero inicia o carga una partida.','-3':'Sal del editor de mazos y vuelve a intentarlo.','-4':'No se pudo aplicar el truco.'})[result]||'No se pudo aplicar el truco.';
         };
     }
+    cheats.append(cheatStatus);
     document.getElementById('tab-saves').append(cheats);
     const graphicsHelp=graphics.querySelector('.reference-help');if(graphicsHelp)graphicsHelp.textContent='Una resolución mayor exige más al equipo. El arte HD y las animaciones se activan en Mods.';
     const edit=document.createElement('button');edit.className='btn btn-stone';edit.textContent='Configurar teclado y mando';edit.disabled=true;
@@ -95,7 +103,7 @@ export function setupEngineControls(getModule) {
         if(!ready){hint.textContent='Este motor necesita actualizarse para utilizar los ajustes.';return;}
         if(module._YfmWeb_GetSetting(3)>4)module._YfmWeb_SetSetting(3,4);
         for(const control of controls){const supported=control.index<8 || typeof module._YfmWeb_Cheat==='function';control.node.disabled=!supported;if(supported)control.write(control.node,module._YfmWeb_GetSetting(control.index));}
-        for(const button of cheatButtons)button.disabled=typeof module._YfmWeb_Cheat!=='function';
+        for(const button of cheatButtons)button.disabled=typeof module._YfmWeb_Cheat!=='function';quantity.disabled=typeof module._YfmWeb_Cheat!=='function';
         edit.disabled=false;hint.textContent='Los ajustes modifican el juego y se conservan al recargar.';
     });
     const originalGuide=panel.querySelector('.controls-guide');if(originalGuide)originalGuide.setAttribute('aria-label','Guía de controles predeterminados');

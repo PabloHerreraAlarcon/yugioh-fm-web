@@ -1,0 +1,14 @@
+/* Scoped single-player controls: inherit the website palette. */
+#tab-saves .solo-cheats{margin:22px 0;padding:0;border:1px solid var(--ui-border,#2c4053);border-radius:12px;overflow:hidden;background:var(--ui-surface,#0b2235)}
+#tab-saves .solo-cheats>summary{padding:15px 16px;font:700 12px/1.5 Montserrat,sans-serif;cursor:pointer;list-style-position:inside;color:var(--ui-text,#f9f8f8)}
+#tab-saves .solo-cheats[open]>summary{border-bottom:1px solid var(--ui-border,#2c4053)}
+#tab-saves .solo-cheats>.ctrl-tip{margin:12px 16px;font:400 10px/1.7 Montserrat,sans-serif;color:var(--ui-muted,#adb8c6)}
+#tab-saves .solo-cheat-card{display:grid;gap:10px;margin:12px;padding:14px;border:1px solid var(--ui-border,#2c4053);border-radius:9px;background:transparent}
+#tab-saves .solo-cheat-card label,#tab-saves .solo-cheat-card h4{margin:0;font:600 11px/1.5 Montserrat,sans-serif;color:var(--ui-text,#f9f8f8)}
+#tab-saves .solo-cheat-card select{box-sizing:border-box;width:100%;min-height:38px;padding:8px 10px;border:1px solid var(--ui-border,#2c4053);border-radius:6px;background:var(--ui-bg,#011627);color:var(--ui-text,#f9f8f8);font:400 11px/1.5 Montserrat,sans-serif}
+#tab-saves .solo-cheats .solo-cheat-action{box-sizing:border-box;display:block;width:100%;min-height:39px;height:auto;margin:0;padding:10px 12px;border:1px solid #ee303465;border-radius:7px;background:#ee303412;color:var(--ui-text,#f9f8f8);font:600 11px/1.5 Montserrat,sans-serif;text-align:center;white-space:normal;cursor:pointer;transition:background .15s,border-color .15s}
+#tab-saves .solo-cheats .solo-cheat-action:hover:not(:disabled){background:#ee30342b;border-color:#ee3034}
+#tab-saves .solo-cheats .solo-cheat-action:disabled,#tab-saves .solo-cheat-card select:disabled{opacity:.45;cursor:not-allowed}
+#tab-saves .solo-cheats :focus-visible{outline:2px solid #ee3034;outline-offset:3px}
+#tab-saves .solo-cheats [role=status]:empty{display:none}
+#tab-saves .solo-cheats [role=status]:not(:empty){padding:10px;border-radius:7px;background:#2c405333}

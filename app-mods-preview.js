@@ -5,7 +5,7 @@ import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=7';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=solo-controls-27';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=solo-design-28';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=3';
 const nativeSaves = createSaveStore(comparisonStorage(localStorage), () => window.Module?.FS, () => {

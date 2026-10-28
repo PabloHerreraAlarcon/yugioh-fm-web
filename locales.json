@@ -703,5 +703,40 @@
     "es": "No se pudo aplicar el truco.",
     "en": "Could not apply the cheat.",
     "pt": "Não foi possível aplicar o truque."
+  },
+  "Copias de cada carta": {
+    "es": "Copias de cada carta",
+    "en": "Copies of each card",
+    "pt": "Cópias de cada carta"
+  },
+  "1 copia": {
+    "es": "1 copia",
+    "en": "1 copy",
+    "pt": "1 cópia"
+  },
+  "2 copias": {
+    "es": "2 copias",
+    "en": "2 copies",
+    "pt": "2 cópias"
+  },
+  "3 copias": {
+    "es": "3 copias",
+    "en": "3 copies",
+    "pt": "3 cópias"
+  },
+  "Añadir cartas al baúl": {
+    "es": "Añadir cartas al baúl",
+    "en": "Add cards to trunk",
+    "pt": "Adicionar cartas ao baú"
+  },
+  "Desbloquear duelistas": {
+    "es": "Desbloquear duelistas",
+    "en": "Unlock duelists",
+    "pt": "Desbloquear duelistas"
+  },
+  "Duelo Libre": {
+    "es": "Duelo Libre",
+    "en": "Free Duel",
+    "pt": "Duelo Livre"
   }
 }
