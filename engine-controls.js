@@ -1,7 +1,7 @@
 import { setupTouchOptions } from './touch-options.js?v=1';
 import { setupGamepadPanel } from './gamepad-panel.js?v=3';
 const KEY = 'yfm_web_settings_v1';
-const fields = ['master_volume','music_volume','sfx_volume','internal_scale','aspect','filter','show_hud','hd_text'];
+const fields = ['master_volume','music_volume','sfx_volume','internal_scale','aspect','filter','show_hud','hd_text','speed','fusion_helper','language','crt','flash','xbr'];
 function preferences() { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } }
 export function engineStartupOptions() {
     const saved = preferences(), result = {};
@@ -15,7 +15,7 @@ export function engineStartupOptions() {
         }
     } catch { /* Keep valid web choices when an old profile cannot be read. */ }
     if(Number.isInteger(saved.internal_scale))saved.internal_scale=Math.min(4,Math.max(1,saved.internal_scale));
-    const bounds = [[0,100],[0,100],[0,100],[1,4],[0,2],[0,2],[0,2],[0,1]];
+    const bounds = [[0,100],[0,100],[0,100],[1,4],[0,2],[0,2],[0,2],[0,1],[-1,400],[0,1],[0,5],[0,1],[0,1],[0,1]];
     for (const [i,key] of fields.entries()) if (Number.isInteger(saved[key]) && saved[key]>=bounds[i][0] && saved[key]<=bounds[i][1]) result[key]=saved[key];
     // Explicit diagnostic override; never persist or change the user's preference.
     const queryScale = new URLSearchParams(globalThis.location?.search || '').get('scale');
@@ -39,7 +39,7 @@ export function setupEngineControls(getModule) {
             write(node,module._YfmWeb_GetSetting(index));refresh();
             if (result!==1) { hint.textContent='No se pudo guardar el ajuste. Exporta tu partida antes de cerrar.'; return; }
             const saved=preferences();saved[fields[index]]=value;
-            try { localStorage.setItem(KEY,JSON.stringify(saved)); hint.textContent='Ajustes aplicados al juego y guardados.'; }
+            try { localStorage.setItem(KEY,JSON.stringify(saved)); hint.textContent=index===10?'Idioma guardado. Guarda tu partida y pulsa Reiniciar para aplicarlo.':'Ajustes aplicados al juego y guardados.'; }
             catch { hint.textContent='Ajuste aplicado. El navegador no pudo conservarlo para la próxima visita.'; }
         });
     }
@@ -61,8 +61,30 @@ export function setupEngineControls(getModule) {
     bind(resolution,3,n=>Number(n.value),(n,v)=>n.value=v);
     const wide=document.getElementById('widescreen-toggle');wide.parentElement.querySelector('span').textContent='Panorámico 16:9';bind(wide,4,n=>n.checked?2:0,(n,v)=>{n.checked=v===2;localStorage.setItem('yfm_widescreen',n.checked?'1':'0');const screen=document.getElementById('screen-container');screen.style.aspectRatio=n.checked?'16/9':'4/3';screen.style.setProperty('--player-aspect',n.checked?'16/9':'4/3');});
     const smooth=document.getElementById('hd-toggle');bind(smooth,5,n=>n.checked?1:0,(n,v)=>{n.checked=v!==0;getModule().canvas.style.imageRendering=v?'auto':'pixelated';});
-    function toggle(label,index) {const row=document.createElement('label');row.className='setting-toggle';const text=document.createElement('span');text.textContent=label;const input=document.createElement('input');input.type='checkbox';row.append(text,input);graphics.append(row);bind(input,index,n=>Number(n.checked),(n,v)=>n.checked=v!==0);}
+    function toggle(label,index,parent=graphics) {const row=document.createElement('label');row.className='setting-toggle';const text=document.createElement('span');text.textContent=label;const input=document.createElement('input');input.type='checkbox';row.append(text,input);parent.append(row);bind(input,index,n=>Number(n.checked),(n,v)=>n.checked=v!==0);}
     toggle('Mostrar FPS',6);toggle('Texto HD',7);
+    function selectOption(parent,label,index,options) {
+        const row=document.createElement('label');row.className='setting-slider';const title=document.createElement('span');title.textContent=label;const select=document.createElement('select');select.setAttribute('aria-label',label);
+        for(const [value,label] of options){const option=document.createElement('option');option.value=value;option.textContent=label;select.append(option);}row.append(title,select);parent.append(row);bind(select,index,n=>Number(n.value),(n,v)=>n.value=v);
+    }
+    const solo=document.createElement('section');solo.className='settings-group';const soloTitle=document.createElement('h3');soloTitle.textContent='Juego individual';solo.append(soloTitle);general.append(solo);
+    selectOption(solo,'Velocidad del juego',8,[[50,'50%'],[100,'100% · Normal'],[150,'150%'],[200,'200%'],[300,'300%'],[400,'400%'],[-1,'Sin límite']]);
+    toggle('Ayuda de fusiones',9,solo);
+    selectOption(solo,'Idioma del juego',10,[[0,'English (US)'],[1,'English (Europe)'],[2,'Français'],[3,'Deutsch'],[4,'Italiano'],[5,'Español']]);
+    const langHelp=document.createElement('p');langHelp.className='ctrl-tip';langHelp.textContent='El idioma del juego se aplica al reiniciar. Guarda antes tu partida. El idioma de la web se elige en la cabecera.';solo.append(langHelp);
+    toggle('Líneas CRT',11);toggle('Reducir destellos',12);toggle('Suavizado de píxeles xBR',13);
+    const cheats=document.createElement('details');cheats.className='solo-cheats settings-group';const summary=document.createElement('summary');summary.textContent='Trucos · Juego individual';cheats.append(summary);
+    const cheatHelp=document.createElement('p');cheatHelp.className='ctrl-tip';cheatHelp.textContent='Carga una partida y sal del editor de mazos antes de aplicar un truco. Guarda desde el juego para conservar los cambios.';cheats.append(cheatHelp);
+    const cheatStatus=document.createElement('p');cheatStatus.className='ctrl-tip';cheatStatus.setAttribute('role','status');cheats.append(cheatStatus);
+    const cheatButtons=[];
+    for(const [action,label] of [[1,'Tener al menos 1 de cada carta'],[2,'Tener al menos 2 de cada carta'],[3,'Tener al menos 3 de cada carta'],[4,'Desbloquear todos los duelistas de Duelo Libre']]) {
+        const button=document.createElement('button');button.type='button';button.className='btn btn-stone';button.textContent=label;button.disabled=true;cheats.append(button);cheatButtons.push(button);
+        button.onclick=()=>{const module=getModule();if(!ready || typeof module?._YfmWeb_Cheat!=='function')return;
+            if(!window.confirm((window.yfmT?.(label)||label)+'\n'+(window.yfmT?.('Esto modifica la partida individual actual. ¿Aplicar?')||'Esto modifica la partida individual actual. ¿Aplicar?')))return;
+            const result=module._YfmWeb_Cheat(action);cheatStatus.textContent=({1:'Truco aplicado. Guarda desde el juego para conservarlo.','-1':'Opción no válida.','-2':'Primero inicia o carga una partida.','-3':'Sal del editor de mazos y vuelve a intentarlo.','-4':'No se pudo aplicar el truco.'})[result]||'No se pudo aplicar el truco.';
+        };
+    }
+    document.getElementById('tab-saves').append(cheats);
     const graphicsHelp=graphics.querySelector('.reference-help');if(graphicsHelp)graphicsHelp.textContent='Una resolución mayor exige más al equipo. El arte HD y las animaciones se activan en Mods.';
     const edit=document.createElement('button');edit.className='btn btn-stone';edit.textContent='Configurar teclado y mando';edit.disabled=true;
     const panel=document.getElementById('tab-controls');panel.prepend(edit);
@@ -72,7 +94,8 @@ export function setupEngineControls(getModule) {
         const module=getModule();ready=typeof module?._YfmWeb_GetSetting==='function' && typeof module?._YfmWeb_SetSetting==='function';
         if(!ready){hint.textContent='Este motor necesita actualizarse para utilizar los ajustes.';return;}
         if(module._YfmWeb_GetSetting(3)>4)module._YfmWeb_SetSetting(3,4);
-        for(const control of controls){control.node.disabled=false;control.write(control.node,module._YfmWeb_GetSetting(control.index));}
+        for(const control of controls){const supported=control.index<8 || typeof module._YfmWeb_Cheat==='function';control.node.disabled=!supported;if(supported)control.write(control.node,module._YfmWeb_GetSetting(control.index));}
+        for(const button of cheatButtons)button.disabled=typeof module._YfmWeb_Cheat!=='function';
         edit.disabled=false;hint.textContent='Los ajustes modifican el juego y se conservan al recargar.';
     });
     const originalGuide=panel.querySelector('.controls-guide');if(originalGuide)originalGuide.setAttribute('aria-label','Guía de controles predeterminados');

@@ -588,5 +588,120 @@
     "es": "Mando detectado:",
     "en": "Controller detected:",
     "pt": "Controle detectado:"
+  },
+  "Juego individual": {
+    "es": "Juego individual",
+    "en": "Single player",
+    "pt": "Jogo individual"
+  },
+  "Velocidad del juego": {
+    "es": "Velocidad del juego",
+    "en": "Game speed",
+    "pt": "Velocidade do jogo"
+  },
+  "100% · Normal": {
+    "es": "100% · Normal",
+    "en": "100% · Normal",
+    "pt": "100% · Normal"
+  },
+  "Sin límite": {
+    "es": "Sin límite",
+    "en": "Uncapped",
+    "pt": "Sem limite"
+  },
+  "Ayuda de fusiones": {
+    "es": "Ayuda de fusiones",
+    "en": "Fusion helper",
+    "pt": "Ajuda de fusões"
+  },
+  "Idioma del juego": {
+    "es": "Idioma del juego",
+    "en": "Game language",
+    "pt": "Idioma do jogo"
+  },
+  "Líneas CRT": {
+    "es": "Líneas CRT",
+    "en": "CRT scanlines",
+    "pt": "Linhas CRT"
+  },
+  "Reducir destellos": {
+    "es": "Reducir destellos",
+    "en": "Reduce flashes",
+    "pt": "Reduzir flashes"
+  },
+  "Suavizado de píxeles xBR": {
+    "es": "Suavizado de píxeles xBR",
+    "en": "xBR pixel smoothing",
+    "pt": "Suavização de pixels xBR"
+  },
+  "Trucos · Juego individual": {
+    "es": "Trucos · Juego individual",
+    "en": "Cheats · Single player",
+    "pt": "Truques · Jogo individual"
+  },
+  "El idioma del juego se aplica al reiniciar. Guarda antes tu partida. El idioma de la web se elige en la cabecera.": {
+    "es": "El idioma del juego se aplica al reiniciar. Guarda antes tu partida. El idioma de la web se elige en la cabecera.",
+    "en": "The game language changes after restarting. Save your game first. Choose the website language in the header.",
+    "pt": "O idioma do jogo muda após reiniciar. Salve sua partida antes. Escolha o idioma do site no cabeçalho."
+  },
+  "Idioma guardado. Guarda tu partida y pulsa Reiniciar para aplicarlo.": {
+    "es": "Idioma guardado. Guarda tu partida y pulsa Reiniciar para aplicarlo.",
+    "en": "Language saved. Save your game and press Restart to apply.",
+    "pt": "Idioma salvo. Salve sua partida e pressione Reiniciar para aplicar."
+  },
+  "Carga una partida y sal del editor de mazos antes de aplicar un truco. Guarda desde el juego para conservar los cambios.": {
+    "es": "Carga una partida y sal del editor de mazos antes de aplicar un truco. Guarda desde el juego para conservar los cambios.",
+    "en": "Load a game and leave the deck editor before applying a cheat. Save in the game to keep the changes.",
+    "pt": "Carregue uma partida e saia do editor de decks antes de aplicar um truque. Salve no jogo para manter as alterações."
+  },
+  "Tener al menos 1 de cada carta": {
+    "es": "Tener al menos 1 de cada carta",
+    "en": "Have at least 1 of every card",
+    "pt": "Ter pelo menos 1 de cada carta"
+  },
+  "Tener al menos 2 de cada carta": {
+    "es": "Tener al menos 2 de cada carta",
+    "en": "Have at least 2 of every card",
+    "pt": "Ter pelo menos 2 de cada carta"
+  },
+  "Tener al menos 3 de cada carta": {
+    "es": "Tener al menos 3 de cada carta",
+    "en": "Have at least 3 of every card",
+    "pt": "Ter pelo menos 3 de cada carta"
+  },
+  "Desbloquear todos los duelistas de Duelo Libre": {
+    "es": "Desbloquear todos los duelistas de Duelo Libre",
+    "en": "Unlock all Free Duel duelists",
+    "pt": "Desbloquear todos os duelistas do Duelo Livre"
+  },
+  "Esto modifica la partida individual actual. ¿Aplicar?": {
+    "es": "Esto modifica la partida individual actual. ¿Aplicar?",
+    "en": "This changes the current single-player game. Apply?",
+    "pt": "Isso altera a partida individual atual. Aplicar?"
+  },
+  "Truco aplicado. Guarda desde el juego para conservarlo.": {
+    "es": "Truco aplicado. Guarda desde el juego para conservarlo.",
+    "en": "Cheat applied. Save in the game to keep it.",
+    "pt": "Truque aplicado. Salve no jogo para mantê-lo."
+  },
+  "Opción no válida.": {
+    "es": "Opción no válida.",
+    "en": "Invalid option.",
+    "pt": "Opção inválida."
+  },
+  "Primero inicia o carga una partida.": {
+    "es": "Primero inicia o carga una partida.",
+    "en": "Start or load a game first.",
+    "pt": "Inicie ou carregue uma partida primeiro."
+  },
+  "Sal del editor de mazos y vuelve a intentarlo.": {
+    "es": "Sal del editor de mazos y vuelve a intentarlo.",
+    "en": "Leave the deck editor and try again.",
+    "pt": "Saia do editor de decks e tente novamente."
+  },
+  "No se pudo aplicar el truco.": {
+    "es": "No se pudo aplicar el truco.",
+    "en": "Could not apply the cheat.",
+    "pt": "Não foi possível aplicar o truque."
   }
 }

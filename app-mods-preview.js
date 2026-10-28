@@ -5,7 +5,7 @@ import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=7';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=mobile-scale-01';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=solo-controls-27';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=3';
 const nativeSaves = createSaveStore(comparisonStorage(localStorage), () => window.Module?.FS, () => {
@@ -460,6 +460,14 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
         const serifFontBytes = new Uint8Array(await serifResponse.arrayBuffer());
 
 
+        const gameLanguageFile = [null,'en-eu.txt','fr.txt','de.txt','it.txt','es.txt'][engineStartupOptions().language ?? 0];
+        let gameLanguageBytes = null;
+        if (gameLanguageFile) {
+            const response = await fetch('/languages/' + gameLanguageFile + '?v=1');
+            if (!response.ok || response.headers.get('content-type')?.includes('text/html')) throw new Error('No se pudo cargar el idioma del juego.');
+            gameLanguageBytes = new Uint8Array(await response.arrayBuffer());
+        }
+
         // Preparamos Module para Emscripten y esperamos onRuntimeInitialized
         await new Promise((resolve, reject) => {
             const timeout = setTimeout(() => {
@@ -480,6 +488,11 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                         MEMORIES_MEMCARD2: '/game/memcard2.mcd',
                         MEMORIES_GLES: '1', MEMORIES_MENU_BAR: new URLSearchParams(location.search).get('bar') === '1' ? '1' : '0'
                     });
+                    if (gameLanguageBytes) {
+                        module.FS.mkdirTree('/game/languages');
+                        module.FS.writeFile('/game/languages/' + gameLanguageFile, gameLanguageBytes);
+                        module.ENV.MEMORIES_LANGUAGES_DIR = '/game/languages';
+                    }
                     const hud = new URLSearchParams(location.search).get('hud');
                     if (hud) module.ENV.MEMORIES_SHOW_HUD = hud;
                     /* ?hd=1: texto HD del motor. ?scale=N: resolucion interna
@@ -501,7 +514,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     module.ENV.MEMORIES_SERIF_FONT = '/game/fonts/serif.ttf';
                     module.ENV.MEMORIES_HD_TEXT = '1';
                 }],
-                locateFile: (path) => '/mods-preview-engine/' + path + '?v=engine-4f321adb8399',
+                locateFile: (path) => '/mods-preview-engine/' + path + '?v=solo-d922d0a94a92',
                 print: (text) => { performanceDiagnostics.record(text); console.log('[Memories Recompiled]:', text); },
                 printErr: (text) => { performanceDiagnostics.record(text); console.warn('[Memories Recompiled]:', text); },
                 onRuntimeInitialized: function() {
@@ -577,7 +590,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
             const mdecTrial = new URLSearchParams(location.search).get('engine') === 'mdec17';
             window.Module.locateFile = (file) => mdecTrial && file.endsWith('.wasm')
                 ? '/memories-pc-mdec17.wasm?v=c67c5a79ca07'
-                : abDir + file + '?v=engine-4f321adb8399';
+                : abDir + file + '?v=solo-d922d0a94a92';
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';
