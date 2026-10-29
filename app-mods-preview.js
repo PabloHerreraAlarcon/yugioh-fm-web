@@ -6,7 +6,7 @@ import { createPerformanceDiagnostics } from './performance-diagnostics.js?v=7';
 const performanceDiagnostics = createPerformanceDiagnostics(() => window.Module);
 import { touchStartupMode } from './touch-options.js?v=1';
 import { getRememberedDisc, rememberDisc, shouldRememberDisc, setupBrowserLibrary } from './browser-library.js?v=1';
-import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=home-disc-32';
+import { setupEngineControls, engineStartupOptions } from './engine-controls.js?v=production42';
 import { observeGameLayout } from './game-layout.js?v=2';
 import { createSaveStore } from './native-saves.js?v=3';
 const nativeSaves = createSaveStore(comparisonStorage(localStorage), () => window.Module?.FS, () => {
@@ -508,7 +508,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                     const query = new URLSearchParams(location.search);
                     if (query.get('hd') === '1') module.ENV.MEMORIES_HD_TEXT = '1';
                     for (const [key,value] of Object.entries(engineStartupOptions())) module.ENV['MEMORIES_'+key.toUpperCase()] = String(value);
-                    const internalScale = String(engineStartupOptions().internal_scale ?? 1);
+                    const internalScale = String(engineStartupOptions().internal_scale ?? 4);
                     module.ENV.MEMORIES_INTERNAL_SCALE = internalScale;
                     module.ENV.MEMORIES_SCALING = '1';
                     module.ENV.MEMORIES_ASPECT = localStorage.getItem('yfm_widescreen') === '0' ? '0' : '2';
@@ -563,7 +563,7 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
                         window.addEventListener('pagehide', () => nativeSaves.sync());
                         document.addEventListener('visibilitychange', () => { if (document.hidden) nativeSaves.sync(); });
                         if (typeof window.Module.callMain === 'function') {
-                            window.Module.ENV.MEMORIES_INTERNAL_SCALE = String(engineStartupOptions().internal_scale ?? 1);
+                            window.Module.ENV.MEMORIES_INTERNAL_SCALE = String(engineStartupOptions().internal_scale ?? 4);
                             window.Module.ENV.MEMORIES_SCALING = '1';
                             console.log('[Memories Recompiled] Resolución interna inicial:', window.Module.ENV.MEMORIES_INTERNAL_SCALE);
                             console.log('[Memories Recompiled] Iniciando Forbidden Memories a 60 FPS nativo...');
@@ -1411,7 +1411,7 @@ function restoreUserSettings() {
 }
 
 // Inicialización
-window.addEventListener('DOMContentLoaded', () => {
+const initializeGamePage = () => {
     if (el.inputNick) el.inputNick.value = state.userName;
     setupEventListeners();
     setupGamepadPolling();
@@ -1421,7 +1421,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     checkServerRom();
     connectWebSocket();
-});
+};
+if(document.readyState==='loading')window.addEventListener('DOMContentLoaded',initializeGamePage,{once:true});else initializeGamePage();
 
 /* ?clean=1: la barra de vida con avatares es de la página, no del juego. Con
  * este parámetro se oculta y queda solo la imagen del juego. El juego dibuja

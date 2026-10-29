@@ -4,7 +4,7 @@ const KEY = 'yfm_web_settings_v1';
 const fields = ['master_volume','music_volume','sfx_volume','internal_scale','aspect','filter','show_hud','hd_text','speed','fusion_helper','language','crt','flash','xbr'];
 function preferences() { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } }
 export function engineStartupOptions() {
-    const saved = preferences(), result = {};
+    const saved = preferences(), result = {internal_scale:4,hd_text:1};
     // Native menu edits must also survive reload after a field was managed here.
     try {
         const profile=JSON.parse(localStorage.getItem('yfm_native_saves_v1') || '{}');
