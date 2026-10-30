@@ -7,18 +7,22 @@ const discPicker=document.getElementById('btn-pick-custom-rom');
 const savesPanel=document.getElementById('tab-saves');
 if(discPicker && savesPanel)savesPanel.append(discPicker);
 function describePlay(button,isComplete){
- button.replaceChildren();
- const title=document.createElement('span');title.textContent=isComplete?'Descargar y jugar':'Jugar ahora';
- const description=document.createElement('small');description.textContent=isComplete?'Descarga completa antes de empezar.':'Inicio rápido; los datos se cargan mientras juegas.';
- description.style.cssText='display:block;font-size:11px;font-weight:400;line-height:1.5;opacity:.85;margin-top:4px';
- button.append(title,description);button.style.whiteSpace='normal';
+ button.textContent=isComplete?'Descargar y jugar':'Jugar ahora';
+ const description=document.createElement('p');
+ description.textContent=isComplete?'Descarga completa antes de empezar.':'Inicio rápido; los datos se cargan mientras juegas.';
+ description.style.cssText='font-size:11px;font-weight:400;line-height:1.5;color:var(--text-muted,#9db3c9);text-align:center;margin:0 0 8px;width:100%';
+ const id=button.id+'-description';description.id=id;button.setAttribute('aria-describedby',id);
+ button.after(description);
+ return description;
 }
+
 if(primary){
- describePlay(primary,complete);
+ const primaryDescription=describePlay(primary,complete);
  const other=document.createElement('button');other.type='button';other.id='entry-other-mode';other.className=primary.className;other.style.cssText='background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.2)';
- describePlay(other,!complete);
+
  other.addEventListener('click',()=>{const target=new URL(location.href);if(complete)target.searchParams.delete('play');else target.searchParams.set('play','complete');target.searchParams.set('autostart','1');location.assign(target.href);});
- primary.after(other);
+ primaryDescription.after(other);
+ describePlay(other,!complete);
 
 }
 if(online){online.textContent='Duelo online · Próximamente';online.disabled=true;online.onclick=null;}
