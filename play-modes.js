@@ -9,8 +9,8 @@ if(discPicker && savesPanel)savesPanel.append(discPicker);
 function describePlay(button,isComplete){
  button.textContent=isComplete?'Descargar y jugar':'Jugar ahora';
  const description=document.createElement('p');
- description.textContent=isComplete?'Descarga completa antes de empezar.':'Inicio rápido; los datos se cargan mientras juegas.';
- description.style.cssText='font-size:11px;font-weight:400;line-height:1.5;color:var(--text-muted,#9db3c9);text-align:center;margin:0 0 8px;width:100%';
+ description.textContent=isComplete?'Descarga todo una vez y queda guardado en este navegador para tus próximas partidas.':'Empieza antes: los datos se descargan mientras juegas y quedan guardados para la próxima vez.';
+ description.style.cssText='font-size:11px;font-weight:400;line-height:1.5;color:var(--text-muted,#9db3c9);text-align:center;margin:0 0 8px;width:100%;max-width:360px';
  const id=button.id+'-description';description.id=id;button.setAttribute('aria-describedby',id);
  button.after(description);
  return description;
