@@ -1,4 +1,4 @@
-import { createDeferredIO } from './deferred-io.js?v=production42';
+import { createDeferredIO } from './deferred-io.js?v=homolog59';
 import { comparisonStorage, testProfile } from './mobile-comparison.js?v=2';
 import { createSessionMetrics } from './session-metrics.js?v=2';
 const sessionMetrics = createSessionMetrics();
@@ -371,7 +371,7 @@ function showActiveRoomUI(code, p1, p2) {
 async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 } = {}) {
     if (state.loadingGame) return;
     const clickedAt=Date.now();
-    const engineVersion='instant38';
+    const engineVersion='homolog59';
     const scriptPreload=document.createElement('link');scriptPreload.rel='preload';scriptPreload.as='script';scriptPreload.href='/instant-engine/memories-pc.js?v='+engineVersion;document.head.appendChild(scriptPreload);
     const measuredAttempt = sessionMetrics.begin();
     state.loadingGame = true;
@@ -553,11 +553,11 @@ async function launchGameSession({ isOnline = false, seed = 0, playerIndex = 0 }
              * falla con "env invoke_i: function import requires a callable". */
             window.Module = window.Module || {};
             const mdecTrial = new URLSearchParams(location.search).get('engine') === 'mdec17';
-            window.Module.locateFile = file => '/instant-engine/'+file+'?v=instant38';
+            window.Module.locateFile = file => '/instant-engine/'+file+'?v=homolog59';
 
             const script = document.createElement('script');
             script.id = 'memories-pc-script';
-            script.src = '/instant-engine/memories-pc.js?v=instant38';
+            script.src = '/instant-engine/memories-pc.js?v=homolog59';
             script.onerror = (e) => {
                 clearTimeout(timeout);
                 reject(new Error('No se pudo cargar memories-pc.js'));

@@ -42,7 +42,7 @@ module.yfmPrepareDuel=async(ids,opponent,character,skin)=>{
   // Fetch the original full PNG only if the engine actually reads its body.
   if(module.yfmImageHeaders?.[path] && path.includes('/tp7-extra-cards/art/'))return false;
   const card=path.match(/\/(?:card|thumb)-(\d+)\.png$/);if(card)return wanted.has(Number(card[1]));
-  const art=path.match(/\/(\d+)_.*\.tex$/);if(art)return wanted.has(Number(art[1]));
+  const art=path.match(/\/(\d+)(?:_.*)?\.tex$/);if(art)return wanted.has(Number(art[1]));
   if(path.includes('/textures/cutins/'))return !/_(720|800|960)x/.test(path) && ((path.includes('header') && ([...participants].some(name=>path.includes('/'+name+'_'))||/\/hd_(attack|summon)_/.test(path)))||path.includes('/'+portrait+'_cutin_1080')||[...participants].some(name=>path.includes('/'+name+'_cutin_1080')));
   return path.includes('/assets-hd/textures/attribute-')||path.includes('/assets-hd/textures/type-');
  });
