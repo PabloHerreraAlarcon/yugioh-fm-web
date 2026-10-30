@@ -14,7 +14,7 @@ if(primary){
  const actions=document.getElementById('entry-actions')||primary.parentElement;actions.append(note);
 }
 if(online){online.textContent='Duelo online · Próximamente';online.disabled=true;online.onclick=null;}
-await import(complete?'./app-mods-preview.js?v=production42':'./app-instant.js?v=production42');
+await import(complete?'./app-mods-preview.js?v=production43':'./app-instant.js?v=production43');
 const autoStart=()=>{if(query.get('autostart')!=='1')return;
  if(!query.has('disc')||query.get('disc')!=='local'){window.yfmRememberedDisc=true;primary?.click();}
  const clean=new URL(location.href);clean.searchParams.delete('autostart');history.replaceState(null,'',clean.href);

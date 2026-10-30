@@ -620,6 +620,8 @@ function showResultModal(isWin, cause) {
 }
 
 function addChatMessage(sender, text, isMe = false) {
+    // The community panel replaces the legacy online-match chat before lazy imports.
+    if (!el.chatLog?.isConnected) return;
     const div = document.createElement('div');
     div.className = 'chat-msg';
     div.innerHTML = `<strong style="${isMe ? 'color: var(--text-primary);' : ''}">${sender}:</strong> <span>${escapeHtml(text)}</span>`;
