@@ -2,16 +2,24 @@ const query=new URLSearchParams(location.search);
 const complete=query.get('play')==='complete';
 const primary=document.getElementById('btn-play-solo');
 const online=document.getElementById('entry-online');
+// Keep the optional local-disc picker in Partidas, outside the launch choices.
+const discPicker=document.getElementById('btn-pick-custom-rom');
+const savesPanel=document.getElementById('tab-saves');
+if(discPicker && savesPanel)savesPanel.append(discPicker);
+function describePlay(button,isComplete){
+ button.replaceChildren();
+ const title=document.createElement('span');title.textContent=isComplete?'Descargar y jugar':'Jugar ahora';
+ const description=document.createElement('small');description.textContent=isComplete?'Descarga completa antes de empezar.':'Inicio rápido; los datos se cargan mientras juegas.';
+ description.style.cssText='display:block;font-size:11px;font-weight:400;line-height:1.5;opacity:.85;margin-top:4px';
+ button.append(title,description);button.style.whiteSpace='normal';
+}
 if(primary){
- primary.textContent=complete?'Descargar y jugar':'Jugar ahora';
- primary.setAttribute('aria-describedby','play-mode-note');
+ describePlay(primary,complete);
  const other=document.createElement('button');other.type='button';other.id='entry-other-mode';other.className=primary.className;other.style.cssText='background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.2)';
- other.textContent=complete?'Jugar ahora · Inicio rápido':'Descargar y jugar';
+ describePlay(other,!complete);
  other.addEventListener('click',()=>{const target=new URL(location.href);if(complete)target.searchParams.delete('play');else target.searchParams.set('play','complete');target.searchParams.set('autostart','1');location.assign(target.href);});
  primary.after(other);
- const note=document.createElement('p');note.id='play-mode-note';note.className='entry-description';note.textContent=complete?'Descarga todos los datos antes de comenzar.':'Inicio rápido · Preparación por escenas y descargas en segundo plano.';
- note.style.cssText='font-size:12px;line-height:1.6;max-width:360px;margin:8px auto 0;color:var(--text-muted,#9db3c9)';
- const actions=document.getElementById('entry-actions')||primary.parentElement;actions.append(note);
+
 }
 if(online){online.textContent='Duelo online · Próximamente';online.disabled=true;online.onclick=null;}
 await import(complete?'./app-mods-preview.js?v=production43':'./app-instant.js?v=production43');
