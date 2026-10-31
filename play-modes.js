@@ -25,7 +25,7 @@ if(primary){
  describePlay(other,!complete);
 
 }
-if(online){online.textContent='Duelo online · Próximamente';online.disabled=true;online.onclick=null;}
+if(online){online.textContent='Duelo online · Beta';online.disabled=false;online.onclick=()=>location.assign('/online/');}
 await import(complete?'./app-mods-preview.js?v=homolog59':'./app-instant.js?v=homolog59');
 const autoStart=()=>{if(query.get('autostart')!=='1')return;
  if(!query.has('disc')||query.get('disc')!=='local'){window.yfmRememberedDisc=true;primary?.click();}

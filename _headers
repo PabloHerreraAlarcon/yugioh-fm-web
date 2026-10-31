@@ -28,3 +28,12 @@
 
 /index.html
   Cache-Control: no-cache
+
+/online/*
+  Cache-Control: no-cache
+
+/online-assets/*
+  Cache-Control: no-cache
+
+/online-engine75/*
+  Cache-Control: public, max-age=31536000, immutable
