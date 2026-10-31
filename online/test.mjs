@@ -54,7 +54,7 @@ function pad(){
 }
 const engine={isolatedOnline:true,
   prepare:manifest=>new Promise(resolve=>{
-    loadResolve=resolve;iframe=document.createElement('iframe');iframe.src='runtime.html';
+    loadResolve=resolve;iframe=document.createElement('iframe');iframe.src='runtime.html?v=privacy81';
     iframe.title='Duelo online aislado';el('runtime').replaceChildren(iframe);
     iframe.manifest=manifest;
   }),

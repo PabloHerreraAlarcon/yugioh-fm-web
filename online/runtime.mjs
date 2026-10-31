@@ -59,7 +59,7 @@ window.addEventListener('message',async e=>{
           if(results&&!window.Module.resultNotified){window.Module.resultNotified=true;notify('RESULTS',{winner:window.Module._WebOnline_ViewWord?.(2)});}
           document.getElementById('private-label').hidden=true;
           const viewer=window.Module._WebOnline_ViewWord?.(1)||0;
-          document.getElementById('private-detail').hidden=!inGame||results||!state.privateDetails||!viewer;
+          // Native render hooks retain private-card masking without covering the table.
           const text=inGame?`Tus LP: ${state.lp[m.playerIndex]} · Rival: ${state.lp[1-m.playerIndex]}`:'Preparando la mesa, las voces y tus cartas';
           if(document.getElementById('turn').textContent!==state.text)document.getElementById('turn').textContent=state.text;
           if(document.getElementById('life').textContent!==text)document.getElementById('life').textContent=text;
