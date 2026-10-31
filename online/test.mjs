@@ -73,6 +73,7 @@ function newController(){session=new OnlineEngineSession({engine,send,readPad:pa
   }
 }});}
 function setPlayerMode(mode){
+ if(parent!==window)parent.postMessage({onlineShell:true,type:'MODE',mode},location.origin);
  document.querySelector('.player-heading h1').textContent=mode==='playing'?'Duelo en curso':mode==='loading'?'Preparando el duelo':'OPCIONES DE DUELO ONLINE';
  el('online-lobby').hidden=mode!=='lobby';el('runtime').hidden=mode==='lobby';el('loading-panel').hidden=mode!=='loading';
  el('player-stage').classList.toggle('is-playing',mode==='playing');el('player-stage').classList.toggle('is-loading',mode==='loading');
@@ -113,7 +114,7 @@ ws.addEventListener('message',async e=>{
     if(m.type==='SEARCH_CANCELLED'){stopSearch();el('cancel-search').hidden=true;el('create').disabled=el('join').disabled=el('find').disabled=false;el('status').textContent='Busqueda cancelada';}
     if(m.type==='JOINED'){stopSearch();foundAnnounced=false;
       el('cancel-search').hidden=true;el('find').disabled=true;
-      const inviteUrl=new URL(location.href);inviteUrl.searchParams.set('room',m.code);el('invite').value=inviteUrl.href;el('invite-row').hidden=false;
+      const inviteUrl=new URL(location.href);if(parent!==window){inviteUrl.pathname='/';inviteUrl.search='?online=1';}inviteUrl.searchParams.set('room',m.code);el('invite').value=inviteUrl.href;el('invite-row').hidden=false;
 
       roomCode=m.code;sessionStorage.setItem(savedKey,JSON.stringify({code:m.code,token:m.token}));
       el('reset').disabled=el('leave').disabled=false;
@@ -158,3 +159,5 @@ el('leave').onclick=()=>send({type:'LEAVE'});
 el('find').onclick=()=>send({type:'FIND',protocol:config.protocol,build:config.build,name:el('name').value,selection:{...selection(),lifePoints:8000}});
 el('cancel-search').onclick=()=>send({type:'CANCEL_SEARCH'});
 el('copy-invite').onclick=async()=>{try{await navigator.clipboard.writeText(el('invite').value);el('notice').textContent='Invitacion copiada';}catch{el('invite').select();el('notice').textContent='Copia el enlace seleccionado';}};
+
+if(parent!==window){const back=document.createElement('button');back.id='back-to-home';back.textContent='Volver';back.onclick=()=>parent.postMessage({onlineShell:true,type:'EXIT'},location.origin);document.querySelector('.player-heading').append(back);}
