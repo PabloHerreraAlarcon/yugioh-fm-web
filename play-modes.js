@@ -25,7 +25,7 @@ if(primary){
  describePlay(other,!complete);
 
 }
-const {openOnline}=await import('./online-embed.js?v=78');
+const {openOnline}=await import('./online-embed.js?v=79');
 if(online){online.textContent='Jugar online';online.disabled=false;online.onclick=openOnline;}
 await import(complete?'./app-mods-preview.js?v=homolog59':'./app-instant.js?v=homolog59');
 const autoStart=()=>{if(query.get('autostart')!=='1')return;
