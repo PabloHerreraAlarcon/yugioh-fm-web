@@ -13,7 +13,7 @@ export class OnlineEngineSession {
     if(message.type==='LOAD') {
       if(this.state!=='idle')throw Error('Carga duplicada');
       const window=message.manifest.inputWindow??1;
-      if(!Number.isInteger(window)||window<1||window>8)throw Error('Ventana de entrada inválida');
+      if(!Number.isInteger(window)||window<1||window>16)throw Error('Ventana de entrada inválida');
       this.window=window;this.state='loading';const generation=++this.generation;
       await this.engine.prepare(structuredClone(message.manifest));
       if(generation!==this.generation)return;
@@ -22,7 +22,7 @@ export class OnlineEngineSession {
       if(this.state!=='loaded'||message.tick!==0)throw Error('Inicio inesperado');
       this.state='playing';this.submit();
     } else if(message.type==='FRAME') {
-      if(this.state!=='playing'||message.tick!==this.received||this.queue.length>=8||
+      if(this.state!=='playing'||message.tick!==this.received||this.queue.length>=32||
         !Array.isArray(message.pads)||message.pads.length!==2||
         message.pads.some(p=>!Number.isInteger(p)||p<0||p>65535))throw Error('Secuencia de controles inválida');
       this.received++;this.queue.push(message);

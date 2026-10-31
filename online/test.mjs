@@ -1,4 +1,4 @@
-import {OnlineEngineSession} from './engine-session.mjs';
+import {OnlineEngineSession} from './engine-session.mjs?v=network80';
 const el=id=>document.getElementById(id),log=t=>{el('log').textContent=(el('log').textContent+'\n'+t).slice(-4000);};
 const config=await(await fetch('https://yfm-duel-online.phdigital.workers.dev/online-config')).json();
 const character=el('character'),skin=el('skin');
