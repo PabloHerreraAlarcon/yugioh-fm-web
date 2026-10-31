@@ -20,12 +20,12 @@ if(primary){
  const primaryDescription=describePlay(primary,complete);
  const other=document.createElement('button');other.type='button';other.id='entry-other-mode';other.className=primary.className;other.style.cssText='background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.2)';
 
- other.addEventListener('click',()=>{const target=new URL(location.href);if(complete)target.searchParams.delete('play');else target.searchParams.set('play','complete');target.searchParams.set('autostart','1');location.assign(target.href);});
+ other.addEventListener('click',()=>{const target=new URL(location.href);if(complete)target.searchParams.delete('play');else target.searchParams.set('play','complete');target.searchParams.set('autostart','1');setTimeout(()=>location.assign(target.href),140);});
  primaryDescription.after(other);
  describePlay(other,!complete);
 
 }
-const {openOnline}=await import('./online-embed.js?v=77');
+const {openOnline}=await import('./online-embed.js?v=78');
 if(online){online.textContent='Jugar online';online.disabled=false;online.onclick=openOnline;}
 await import(complete?'./app-mods-preview.js?v=homolog59':'./app-instant.js?v=homolog59');
 const autoStart=()=>{if(query.get('autostart')!=='1')return;
